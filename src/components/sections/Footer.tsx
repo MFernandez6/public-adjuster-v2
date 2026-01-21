@@ -46,7 +46,7 @@ export default function Footer() {
 
                     {/* Brand Column */}
                     <div className="lg:col-span-4 space-y-8">
-                        <Logo className="scale-125 origin-left" />
+                        <Logo className="scale-100 md:scale-125 origin-left" />
                         <p className="text-brand-slate text-sm leading-relaxed max-w-sm font-sans">
                             A policy-driven powerhouse treating insurance contracts as absolute authority. We hold the carrier to the strict letter of the policy until the claim is settled in full.
                         </p>

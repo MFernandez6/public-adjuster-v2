@@ -9,7 +9,7 @@ export default function Contact() {
     return (
         <section className="py-32 bg-[#020617] overflow-hidden">
             <div className="container mx-auto px-4">
-                <div className="relative glass rounded-[40px] p-8 md:p-20 overflow-hidden border-brand-white/5">
+                <div className="relative glass rounded-[40px] p-5 md:p-20 overflow-hidden border-brand-white/5">
 
                     {/* Background Ambient Light */}
                     <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(198,168,91,0.1),_transparent_50%)]" />
@@ -47,7 +47,7 @@ export default function Contact() {
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            className="bg-white/[0.03] backdrop-blur-3xl rounded-3xl p-6 md:p-10 border border-brand-white/10 shadow-2xl space-y-8"
+                            className="bg-white/[0.03] backdrop-blur-3xl rounded-3xl p-5 md:p-10 border border-brand-white/10 shadow-2xl space-y-8"
                         >
                             <div className="space-y-2">
                                 <h3 className="font-serif text-3xl font-bold tracking-tight">Case Submission</h3>
@@ -68,7 +68,7 @@ export default function Contact() {
                                     <Input placeholder="Existing insurance provider" className="h-14 bg-brand-navy/50 border-brand-white/10 focus:border-brand-gold transition-all rounded-xl text-brand-white" />
                                 </div>
 
-                                <Button className="w-full h-16 bg-brand-gold text-brand-navy hover:scale-[1.02] transition-all font-sans uppercase tracking-[0.3em] font-black text-xs shadow-[0_10px_40px_rgba(198,168,91,0.2)] group">
+                                <Button className="w-full h-16 bg-brand-gold text-brand-navy hover:scale-[1.02] transition-all font-sans uppercase tracking-[0.1em] sm:tracking-[0.3em] font-black text-[10px] sm:text-xs shadow-[0_10px_40px_rgba(198,168,91,0.2)] group">
                                     Initiate Forensic Audit
                                     <ArrowRight className="ml-3 w-4 h-4 transition-transform group-hover:translate-x-1" />
                                 </Button>
