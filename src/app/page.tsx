@@ -1,8 +1,10 @@
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
 import Philosophy from "@/components/sections/Philosophy";
+import ClaimTypes from "@/components/sections/ClaimTypes";
 import Process from "@/components/sections/Process";
 import Contact from "@/components/sections/Contact";
+import Footer from "@/components/sections/Footer";
 
 export default function Home() {
   return (
@@ -10,15 +12,10 @@ export default function Home() {
       <Navbar />
       <Hero />
       <Philosophy />
+      <ClaimTypes />
       <Process />
       <Contact />
-      <footer className="py-12 border-t border-brand-white/5 bg-brand-navy text-center">
-        <div className="container mx-auto px-4 opacity-40">
-          <p className="text-sm tracking-widest uppercase">
-            © 2026 IRONCLAUSE Adjusting. Precision Adjusting for Policyholders.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

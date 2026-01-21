@@ -14,7 +14,7 @@ const cinzel = Cinzel({
 });
 
 export const metadata: Metadata = {
-  title: "IRONCLAUSE Adjusting | We Hold the Policy Accountable",
+  title: "IRONCLAUSE Adjusting LLC | We Hold the Policy Accountable",
   description: "Professional, authority-based public adjusting firm enforcing insurance contracts with precision and professionalism.",
 };
 

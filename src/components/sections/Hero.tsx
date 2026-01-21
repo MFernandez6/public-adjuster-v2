@@ -60,6 +60,19 @@ export default function Hero() {
                         </motion.h1>
 
                         <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 1, delay: 0.6 }}
+                            viewport={{ once: true }}
+                            className="mt-12 inline-flex flex-col items-center gap-2 px-10 py-6 glass rounded-[30px] border-brand-gold/20 shadow-[0_0_40px_rgba(198,168,91,0.1)] group cursor-default"
+                        >
+                            <span className="font-serif text-3xl md:text-5xl font-black gold-gradient group-hover:scale-110 transition-transform duration-500">+747%</span>
+                            <span className="font-sans text-[8px] md:text-[10px] uppercase tracking-[0.3em] text-brand-white/70 max-w-[250px] leading-relaxed">
+                                Avg. settlement increase <br /> vs. filing without representation
+                            </span>
+                        </motion.div>
+
+                        <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 0.02 }}
                             transition={{ duration: 2, delay: 1 }}
@@ -73,10 +86,10 @@ export default function Hero() {
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.6 }}
-                        className="flex flex-col items-center space-y-10 w-full"
+                        transition={{ duration: 0.8, delay: 0.8 }}
+                        className="flex flex-col items-center space-y-12 w-full"
                     >
-                        <p className="max-w-2xl text-brand-slate md:text-lg lg:text-xl font-sans leading-relaxed tracking-wide opacity-80">
+                        <p className="max-w-2xl text-brand-slate md:text-lg lg:text-xl font-sans leading-relaxed tracking-wide">
                             A policy-driven powerhouse that treats insurance contracts as absolute authority. <br className="hidden md:block" /> No negotiations. Just enforcement.
                         </p>
 

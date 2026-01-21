@@ -11,7 +11,7 @@ export default function Logo({ className }: LogoProps) {
                 IRONCLAUSE
             </span>
             <span className="font-sans text-[0.6rem] uppercase tracking-[0.4em] text-brand-slate mt-1 self-center w-full text-center">
-                Adjusting
+                Adjusting LLC
             </span>
         </div>
     );

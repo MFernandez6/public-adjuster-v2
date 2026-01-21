@@ -48,7 +48,7 @@ export default function Philosophy() {
                             <h2 className="font-serif text-4xl md:text-6xl leading-[0.95] tracking-tighter">
                                 AUTHORITY <br />
                                 IS RECLAIMED <br />
-                                <span className="text-brand-slate opacity-40">THROUGH DATA.</span>
+                                <span className="text-brand-slate opacity-70">THROUGH DATA.</span>
                             </h2>
                         </div>
 
