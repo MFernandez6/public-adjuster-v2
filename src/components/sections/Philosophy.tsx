@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Shield, Microscope, Scale, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 
 const principles = [
     {
@@ -62,6 +63,25 @@ export default function Philosophy() {
                             </div>
                             <span className="font-serif text-xl font-bold tracking-tight">Meet the Command Team</span>
                         </div>
+
+                        {/* Forensic Visual */}
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            className="relative rounded-2xl overflow-hidden border border-brand-gold/20 aspect-video group"
+                        >
+                            <Image
+                                src="/images/properties/forensic.png"
+                                alt="Forensic Analysis"
+                                fill
+                                className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent" />
+                            <div className="absolute bottom-4 left-4">
+                                <span className="text-[8px] uppercase tracking-[0.3em] text-brand-gold font-bold">Evidence Protocol 04-A</span>
+                            </div>
+                        </motion.div>
                     </motion.div>
 
                     {/* Principles Grid */}

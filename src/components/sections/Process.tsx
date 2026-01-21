@@ -64,7 +64,7 @@ export default function Process() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6, delay: i * 0.1 }}
-                            className="group relative p-10 h-[480px] flex flex-col justify-between items-center text-center border border-brand-white/10 hover:border-brand-gold/40 transition-all rounded-[40px] overflow-hidden glass shadow-2xl"
+                            className="group relative p-8 md:p-10 min-h-[400px] md:h-[480px] flex flex-col justify-between items-center text-center border border-brand-white/10 hover:border-brand-gold/40 transition-all rounded-[30px] md:rounded-[40px] overflow-hidden glass shadow-2xl"
                         >
                             {/* Background Number */}
                             <div className="absolute top-0 right-0 font-serif text-[10rem] font-black opacity-[0.02] translate-x-1/4 -translate-y-1/4 group-hover:opacity-[0.05] group-hover:scale-110 transition-all duration-1000 select-none">

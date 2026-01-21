@@ -21,7 +21,7 @@ export default function Contact() {
                                     <Lock className="w-3 h-3" />
                                     Secure Protocol Initiation
                                 </span>
-                                <h2 className="font-serif text-5xl md:text-8xl leading-[0.85] tracking-tighter">
+                                <h2 className="font-serif text-4xl sm:text-5xl md:text-8xl leading-[0.9] md:leading-[0.85] tracking-tighter">
                                     SECURE YOUR <br />
                                     <span className="gold-gradient">FINALITY.</span>
                                 </h2>
@@ -47,7 +47,7 @@ export default function Contact() {
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            className="bg-white/[0.03] backdrop-blur-3xl rounded-3xl p-10 border border-brand-white/10 shadow-2xl space-y-8"
+                            className="bg-white/[0.03] backdrop-blur-3xl rounded-3xl p-6 md:p-10 border border-brand-white/10 shadow-2xl space-y-8"
                         >
                             <div className="space-y-2">
                                 <h3 className="font-serif text-3xl font-bold tracking-tight">Case Submission</h3>

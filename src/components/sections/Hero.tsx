@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, ShieldCheck, Scale, Microscope } from "lucide-react";
 import { useRef } from "react";
 
+import Image from "next/image";
+
 export default function Hero() {
     const containerRef = useRef<HTMLElement>(null);
     const { scrollYProgress } = useScroll({
@@ -25,9 +27,19 @@ export default function Hero() {
             <div className="absolute inset-0 z-0">
                 <motion.div
                     style={{ y, opacity, scale }}
-                    className="absolute inset-0 bg-[radial-gradient(circle_at_50%_40%,_rgba(198,168,91,0.15),_transparent_50%)]"
-                />
-                <div className="absolute inset-0 bg-[#020617]/40 backdrop-blur-[2px]" />
+                    className="absolute inset-0"
+                >
+                    <Image
+                        src="/images/properties/commercial.png"
+                        alt="Commercial Property Forensics"
+                        fill
+                        priority
+                        className="object-cover"
+                        sizes="100vw"
+                    />
+                    <div className="absolute inset-0 bg-[#020617]/70 backdrop-blur-[1px]" />
+                </motion.div>
+                <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/20 via-transparent to-brand-navy" />
             </div>
 
             <div className="container relative z-10 px-4 mx-auto max-w-7xl">
@@ -38,7 +50,7 @@ export default function Hero() {
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 1, ease: "easeOut" }}
-                        className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass border border-brand-gold/20 shadow-[0_0_20px_rgba(198,168,91,0.1)]"
+                        className="mt-2 md:mt-4 inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass border border-brand-gold/20 shadow-[0_0_20px_rgba(198,168,91,0.1)]"
                     >
                         <div className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
                         <span className="font-sans text-[10px] md:text-xs uppercase tracking-[0.4em] text-brand-gold font-bold">
@@ -52,7 +64,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 1, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                            className="font-serif text-5xl md:text-7xl lg:text-8xl leading-[1] tracking-tighter"
+                            className="font-serif text-4xl sm:text-5xl md:text-7xl lg:text-8xl leading-[1.1] md:leading-[1] tracking-tighter"
                         >
                             WE HOLD THE <br />
                             <span className="gold-gradient text-glow">POLICY</span> <br />
@@ -64,10 +76,10 @@ export default function Hero() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1, delay: 0.6 }}
                             viewport={{ once: true }}
-                            className="mt-12 inline-flex flex-col items-center gap-2 px-10 py-6 glass rounded-[30px] border-brand-gold/20 shadow-[0_0_40px_rgba(198,168,91,0.1)] group cursor-default"
+                            className="mt-8 md:mt-12 inline-flex flex-col items-center gap-2 px-6 md:px-10 py-4 md:py-6 glass rounded-[24px] md:rounded-[30px] border-brand-gold/20 shadow-[0_0_40px_rgba(198,168,91,0.1)] group cursor-default"
                         >
-                            <span className="font-serif text-3xl md:text-5xl font-black gold-gradient group-hover:scale-110 transition-transform duration-500">+747%</span>
-                            <span className="font-sans text-[8px] md:text-[10px] uppercase tracking-[0.3em] text-brand-white/70 max-w-[250px] leading-relaxed">
+                            <span className="font-serif text-2xl md:text-5xl font-black gold-gradient group-hover:scale-110 transition-transform duration-500">+747%</span>
+                            <span className="font-sans text-[7px] md:text-[10px] uppercase tracking-[0.3em] text-brand-white/70 max-w-[180px] md:max-w-[250px] leading-relaxed">
                                 Avg. settlement increase <br /> vs. filing without representation
                             </span>
                         </motion.div>
@@ -89,21 +101,21 @@ export default function Hero() {
                         transition={{ duration: 0.8, delay: 0.8 }}
                         className="flex flex-col items-center space-y-12 w-full"
                     >
-                        <p className="max-w-2xl text-brand-slate md:text-lg lg:text-xl font-sans leading-relaxed tracking-wide">
+                        <p className="max-w-2xl text-brand-slate text-sm sm:text-base md:text-lg lg:text-xl font-sans leading-relaxed tracking-wide px-4">
                             A policy-driven powerhouse that treats insurance contracts as absolute authority. <br className="hidden md:block" /> No negotiations. Just enforcement.
                         </p>
 
-                        <div className="flex flex-col sm:flex-row items-center gap-6">
-                            <Button size="lg" className="h-16 px-10 text-lg font-sans tracking-[0.1em] uppercase bg-brand-gold text-brand-navy hover:scale-105 transition-transform duration-300 shadow-[0_10px_40px_rgba(198,168,91,0.3)] group relative overflow-hidden">
-                                <span className="relative z-10 flex items-center">
+                        <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-6 w-full sm:w-auto px-6 sm:px-0">
+                            <Button size="lg" className="h-14 md:h-16 w-full sm:w-auto px-8 md:px-10 text-sm md:text-lg font-sans tracking-[0.1em] uppercase bg-brand-gold text-brand-navy hover:scale-105 transition-transform duration-300 shadow-[0_10px_40px_rgba(198,168,91,0.3)] group relative overflow-hidden">
+                                <span className="relative z-10 flex items-center justify-center">
                                     Consult a Specialist
-                                    <ChevronRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                                    <ChevronRight className="ml-2 w-4 md:w-5 h-4 md:h-5 transition-transform group-hover:translate-x-1" />
                                 </span>
                             </Button>
 
-                            <button className="h-16 px-10 text-lg font-sans tracking-[0.1em] uppercase text-brand-white/80 hover:text-brand-gold transition-colors flex items-center group">
+                            <button className="h-14 md:h-16 px-8 md:px-10 text-sm md:text-lg font-sans tracking-[0.1em] uppercase text-brand-white/80 hover:text-brand-gold transition-colors flex items-center justify-center group">
                                 Review Our Ethos
-                                <div className="ml-4 w-12 h-[1px] bg-brand-white/20 group-hover:w-16 group-hover:bg-brand-gold transition-all" />
+                                <div className="hidden sm:block ml-4 w-12 h-[1px] bg-brand-white/20 group-hover:w-16 group-hover:bg-brand-gold transition-all" />
                             </button>
                         </div>
                     </motion.div>

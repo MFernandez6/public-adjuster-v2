@@ -2,37 +2,44 @@
 
 import { motion } from "framer-motion";
 import { Wind, Flame, CloudLightning, Waves, Ghost, CloudFog } from "lucide-react";
+import Image from "next/image";
 
 const claimTypes = [
     {
         icon: <Flame className="w-8 h-8" />,
         title: "Fire Damage",
-        description: "Complete forensic analysis of smoke, char, and structural integrity following fire loss."
+        description: "Complete forensic analysis of smoke, char, and structural integrity following fire loss.",
+        image: "/images/properties/residential.png"
     },
     {
         icon: <Waves className="w-8 h-8" />,
         title: "Water Damage",
-        description: "Precision moisture mapping and hidden leak detection to ensure total remediation coverage."
+        description: "Precision moisture mapping and hidden leak detection to ensure total remediation coverage.",
+        image: "/images/properties/industrial.png"
     },
     {
         icon: <CloudLightning className="w-8 h-8" />,
         title: "Storm Damage",
-        description: "Atmospheric data-driven documentation for hurricanes, tornadoes, and catastrophic weather."
+        description: "Atmospheric data-driven documentation for hurricanes, tornadoes, and catastrophic weather.",
+        image: "/images/properties/commercial.png"
     },
     {
         icon: <CloudFog className="w-8 h-8" />,
         title: "Wind Damage",
-        description: "Detailed uplift and shingle analysis to protect the building envelope from systemic failure."
+        description: "Detailed uplift and shingle analysis to protect the building envelope from systemic failure.",
+        image: "/images/properties/wind.png"
     },
     {
         icon: <Ghost className="w-8 h-8" />,
         title: "Vandalism",
-        description: "Theft and intentional damage assessments focused on restoration to pre-loss security levels."
+        description: "Theft and intentional damage assessments focused on restoration to pre-loss security levels.",
+        image: "/images/properties/vandalism.png"
     },
     {
         icon: <Wind className="w-8 h-8" />,
         title: "Hail Damage",
-        description: "Surgical inspection of soft metals and roof components using high-resolution forensic imaging."
+        description: "Surgical inspection of soft metals and roof components using high-resolution forensic imaging.",
+        image: "/images/properties/forensic.png"
     }
 ];
 
@@ -60,8 +67,19 @@ export default function ClaimTypes() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.5, delay: i * 0.1 }}
-                            className="group p-10 glass rounded-3xl border-brand-white/5 hover:border-brand-gold/30 transition-all duration-500 hover:shadow-[0_0_30px_rgba(198,168,91,0.1)]"
+                            className="group relative p-10 glass rounded-3xl border-brand-white/5 hover:border-brand-gold/30 transition-all duration-500 hover:shadow-[0_0_30px_rgba(198,168,91,0.1)] overflow-hidden"
                         >
+                            {type.image && (
+                                <div className="absolute inset-0 z-0">
+                                    <Image
+                                        src={type.image}
+                                        alt={type.title}
+                                        fill
+                                        className="object-cover opacity-[0.05] group-hover:opacity-20 transition-opacity duration-700 blur-[2px] group-hover:blur-0"
+                                    />
+                                    <div className="absolute inset-0 bg-brand-navy/60" />
+                                </div>
+                            )}
                             <div className="mb-8 text-brand-gold group-hover:scale-110 transition-transform duration-500">
                                 {type.icon}
                             </div>
