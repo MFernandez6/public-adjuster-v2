@@ -99,7 +99,7 @@
 
 :root {
   --radius: 0.5rem;
-  /* Dark Default Theme for IRONCLAUSE - Optimized with OKLCH depth */
+  /* Dark Default Theme for BLACKLINE - Optimized with OKLCH depth */
   --background: #020617;
   /* Deeper Black-Navy */
   --foreground: #F8FAFC;
@@ -143,11 +143,13 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+      background-image: url("/noise.svg");
       opacity: 0.05;
       pointer-events: none;
       animation: noise 8s steps(10) infinite;
       z-index: 0;
+      will-change: transform;
+      contain: layout style paint;
     }
   }
 

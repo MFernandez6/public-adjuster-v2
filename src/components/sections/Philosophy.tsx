@@ -20,7 +20,7 @@ const principles = [
     {
         icon: <Scale className="w-9 h-9" />,
         title: "Evidence First",
-        description: "Indisputable forensic reports and industry-standard data form the ironclad foundation of every claim we handle.",
+        description: "Indisputable forensic reports and industry-standard data form the unwavering foundation of every claim we handle.",
         color: "from-brand-gold/10 to-transparent"
     }
 ];
@@ -44,7 +44,7 @@ export default function Philosophy() {
                     >
                         <div className="space-y-6">
                             <span className="font-sans text-[10px] md:text-xs uppercase tracking-[0.5em] text-brand-gold font-bold">
-                                The Iron Ethos
+                                The Blackline Ethos
                             </span>
                             <h2 className="font-serif text-4xl md:text-6xl leading-[0.95] tracking-tighter">
                                 AUTHORITY <br />
@@ -54,7 +54,7 @@ export default function Philosophy() {
                         </div>
 
                         <p className="text-brand-slate text-lg leading-relaxed font-sans tracking-wide">
-                            IronClause was born from a refusal to accept "standard" settlement practices. We leverage forensic science and forensic rigor to shift the power dynamic in your favor.
+                            BlackLine was born from a refusal to accept "standard" settlement practices. We leverage forensic science and forensic rigor to shift the power dynamic in your favor.
                         </p>
 
                         <div className="pt-10 border-t border-brand-white/10 flex items-center gap-6 group cursor-pointer">
@@ -76,6 +76,10 @@ export default function Philosophy() {
                                 alt="Forensic Analysis"
                                 fill
                                 className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700"
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                quality={85}
+                                placeholder="blur"
+                                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA3gAA//9k="
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent" />
                             <div className="absolute bottom-4 left-4">

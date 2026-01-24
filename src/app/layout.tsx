@@ -6,32 +6,36 @@ import Providers from "@/components/providers";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: true,
 });
 
 const cinzel = Cinzel({
   variable: "--font-cinzel",
   subsets: ["latin"],
+  display: "swap",
+  adjustFontFallback: true,
 });
 
 export const metadata: Metadata = {
   title: {
-    default: "IRONCLAUSE Adjusting LLC | We Hold the Policy Accountable",
-    template: "%s | IRONCLAUSE Adjusting"
+    default: "BLACKLINE Adjusting LLC | We Hold the Policy Accountable",
+    template: "%s | BLACKLINE Adjusting"
   },
   description: "Professional, authority-based public adjusting firm enforcing insurance contracts with precision. Expert claims management for residential, commercial, and industrial losses.",
   keywords: ["public adjuster", "insurance claims", "fire damage", "water damage", "storm damage", "forensic public adjusting", "insurance advocate"],
-  authors: [{ name: "IRONCLAUSE Adjusting LLC" }],
+  authors: [{ name: "BLACKLINE Adjusting LLC" }],
   openGraph: {
-    title: "IRONCLAUSE Adjusting LLC | We Hold the Policy Accountable",
+    title: "BLACKLINE Adjusting LLC | We Hold the Policy Accountable",
     description: "Professional, authority-based public adjusting firm enforcing insurance contracts with precision.",
-    url: "https://ironclause.com",
-    siteName: "IRONCLAUSE Adjusting",
+    url: "https://blacklineadjusting.com",
+    siteName: "BLACKLINE Adjusting",
     images: [
       {
         url: "/images/properties/commercial.png",
         width: 1200,
         height: 630,
-        alt: "IRONCLAUSE Adjusting - Commercial Property Analysis",
+        alt: "BLACKLINE Adjusting - Commercial Property Analysis",
       },
     ],
     locale: "en_US",
@@ -39,7 +43,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "IRONCLAUSE Adjusting LLC | We Hold the Policy Accountable",
+    title: "BLACKLINE Adjusting LLC | We Hold the Policy Accountable",
     description: "Professional, authority-based public adjusting firm enforcing insurance contracts with precision.",
     images: ["/images/properties/commercial.png"],
   },

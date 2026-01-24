@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, Lock } from "lucide-react";
+import { ArrowRight, Lock, ShieldCheck } from "lucide-react";
 
 export default function Contact() {
     return (
@@ -50,7 +50,7 @@ export default function Contact() {
                             className="bg-white/[0.03] backdrop-blur-3xl rounded-3xl p-5 md:p-10 border border-brand-white/10 shadow-2xl space-y-8"
                         >
                             <div className="space-y-2">
-                                <h3 className="font-serif text-3xl font-bold tracking-tight">Case Submission</h3>
+                                <h3 className="font-serif text-3xl font-bold tracking-tight">Claim Submission</h3>
                                 <p className="text-brand-slate text-sm">Please provide the preliminary claim details for forensic auditing.</p>
                             </div>
 
@@ -85,5 +85,3 @@ export default function Contact() {
         </section>
     );
 }
-
-import { ShieldCheck } from "lucide-react";

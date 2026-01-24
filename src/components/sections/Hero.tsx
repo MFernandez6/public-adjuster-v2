@@ -4,19 +4,22 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ShieldCheck, Scale, Microscope } from "lucide-react";
 import { useRef } from "react";
+import { useReducedMotion } from "@/hooks/use-reduced-motion";
 
 import Image from "next/image";
 
 export default function Hero() {
     const containerRef = useRef<HTMLElement>(null);
+    const prefersReducedMotion = useReducedMotion();
+
     const { scrollYProgress } = useScroll({
         target: containerRef,
         offset: ["start start", "end start"],
     });
 
-    const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]);
+    const y = useTransform(scrollYProgress, [0, 1], prefersReducedMotion ? ["0%", "0%"] : ["0%", "50%"]);
     const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
-    const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.9]);
+    const scale = useTransform(scrollYProgress, [0, 0.5], prefersReducedMotion ? [1, 1] : [1, 0.9]);
 
     return (
         <section
@@ -31,11 +34,14 @@ export default function Hero() {
                 >
                     <Image
                         src="/images/properties/commercial.png"
-                        alt="Commercial Property Forensics"
+                        alt="Blackline Property Forensics"
                         fill
                         priority
                         className="object-cover"
                         sizes="100vw"
+                        quality={85}
+                        placeholder="blur"
+                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA3gAA//9k="
                     />
                     <div className="absolute inset-0 bg-[#020617]/70 backdrop-blur-[1px]" />
                 </motion.div>
@@ -53,9 +59,10 @@ export default function Hero() {
                         className="mt-2 md:mt-4 inline-flex items-center gap-3 px-5 py-2.5 rounded-full glass border border-brand-gold/20 shadow-[0_0_20px_rgba(198,168,91,0.1)]"
                     >
                         <div className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
-                        <span className="font-sans text-[10px] md:text-xs uppercase tracking-[0.4em] text-brand-gold font-bold">
-                            Contractual Finality • Policy Forensics
+                        <span className="font-sans text-[10px] md:text-xs uppercase tracking-[0.4em] text-brand-gold font-bold mr-[-0.4em]">
+                            Policy. Defined. Applied
                         </span>
+                        <div className="w-1.5 h-1.5 rounded-full bg-brand-gold animate-pulse" />
                     </motion.div>
 
                     {/* Main Balanced Heading */}
@@ -90,7 +97,7 @@ export default function Hero() {
                             transition={{ duration: 2, delay: 1 }}
                             className="absolute -top-12 left-1/2 -translate-x-1/2 -z-10 font-serif text-[18vw] pointer-events-none select-none overflow-hidden"
                         >
-                            IRON
+                            BLACK
                         </motion.div>
                     </div>
 

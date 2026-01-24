@@ -66,7 +66,7 @@ export default function ClaimTypes() {
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: i * 0.1 }}
+                            transition={{ duration: 0.5, delay: i * 0.05 }}
                             className="group relative p-10 glass rounded-3xl border-brand-white/5 hover:border-brand-gold/30 transition-all duration-500 hover:shadow-[0_0_30px_rgba(198,168,91,0.1)] overflow-hidden"
                         >
                             {type.image && (
@@ -75,9 +75,12 @@ export default function ClaimTypes() {
                                         src={type.image}
                                         alt={type.title}
                                         fill
-                                        className="object-cover opacity-[0.05] group-hover:opacity-20 transition-opacity duration-700 blur-[2px] group-hover:blur-0"
+                                        className="object-cover opacity-[0.2] md:opacity-[0.15] group-hover:opacity-30 transition-opacity duration-700 blur-[1px] group-hover:blur-0"
+                                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                        quality={75}
+                                        placeholder="blur"
+                                        blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA3gAA//9k="
                                     />
-                                    <div className="absolute inset-0 bg-brand-navy/60" />
                                 </div>
                             )}
                             <div className="mb-8 text-brand-gold group-hover:scale-110 transition-transform duration-500">
@@ -86,7 +89,7 @@ export default function ClaimTypes() {
                             <h3 className="font-serif text-2xl font-bold mb-4 tracking-tight group-hover:text-brand-gold transition-colors">
                                 {type.title}
                             </h3>
-                            <p className="text-brand-slate text-sm leading-relaxed font-sans transition-opacity">
+                            <p className="text-brand-slate text-sm leading-relaxed font-sans transition-colors group-hover:text-brand-white">
                                 {type.description}
                             </p>
                         </motion.div>

@@ -46,12 +46,11 @@ export default function Process() {
                             Execution Protocol
                         </span>
                         <h2 className="font-serif text-4xl md:text-6xl leading-[1] tracking-tighter">
-                            THE <span className="gold-gradient">IRON</span> <br />
-                            PROCESS.
+                            BLACKLINED.
                         </h2>
                     </div>
                     <p className="text-brand-slate text-lg lg:text-xl max-w-sm font-sans tracking-wide leading-relaxed pb-2">
-                        Professional representation to ensure maximum settlement amounts. We don't just file; we enforce.
+                        From Redline to Blackline. We enforce the strict letter of your policy to ensure maximum settlement recovery.
                     </p>
                 </div>
 
@@ -63,7 +62,7 @@ export default function Process() {
                             initial={{ opacity: 0, scale: 0.95 }}
                             whileInView={{ opacity: 1, scale: 1 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: i * 0.1 }}
+                            transition={{ duration: 0.6, delay: i * 0.05 }}
                             className="group relative p-8 md:p-10 min-h-[400px] md:h-[480px] flex flex-col justify-between items-center text-center border border-brand-white/10 hover:border-brand-gold/40 transition-all rounded-[30px] md:rounded-[40px] overflow-hidden glass shadow-2xl"
                         >
                             {/* Background Number */}

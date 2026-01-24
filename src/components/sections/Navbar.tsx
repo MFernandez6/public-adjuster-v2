@@ -11,7 +11,7 @@ const aboutMenu = [
         title: "Philosophy",
         href: "#philosophy",
         icon: <Shield className="w-4 h-4" />,
-        description: "The Ironclad commitment to policy accountability."
+        description: "An unwavering commitment to policy accountability."
     },
     {
         title: "Adjusters",
@@ -29,10 +29,10 @@ const aboutMenu = [
 
 const claimsMenu = [
     {
-        title: "Claims Process",
+        title: "The Blackline Standard",
         href: "#process",
         icon: <Workflow className="w-4 h-4" />,
-        description: "The Iron Process from audit to recovery."
+        description: "From Redline to Blackline — Our Forensic Audit Protocol."
     },
     {
         title: "Homeowner Claims",

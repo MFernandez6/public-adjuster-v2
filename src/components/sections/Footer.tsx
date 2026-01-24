@@ -9,7 +9,7 @@ const footerLinks = [
         title: "Platform",
         links: [
             { name: "Philosophy", href: "#philosophy" },
-            { name: "The Iron Process", href: "#process" },
+            { name: "The Blackline Standard", href: "#process" },
             { name: "Forensic Scope", href: "#claims" },
             { name: "Contact", href: "#contact" },
         ],
@@ -28,7 +28,7 @@ const footerLinks = [
         links: [
             { name: "Audit Request", href: "#contact" },
             { name: "Direct Portal", href: "#" },
-            { name: "Email Analysis", href: "mailto:contact@ironclause.com" },
+            { name: "Email Analysis", href: "mailto:contact@blacklineadjusting.com" },
         ],
     },
 ];
@@ -38,7 +38,7 @@ export default function Footer() {
         <footer className="relative bg-[#020617] pt-32 pb-12 overflow-hidden border-t border-brand-white/5">
             {/* Background Watermark */}
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/3 pointer-events-none select-none opacity-[0.02] font-serif text-[20vw] leading-none whitespace-nowrap text-brand-white">
-                IRONCLAUSE
+                BLACKLINE
             </div>
 
             <div className="container mx-auto px-4 relative z-10">
@@ -98,7 +98,7 @@ export default function Footer() {
                                 </div>
                                 <div className="text-brand-slate text-xs font-sans tracking-wide leading-relaxed transition-opacity">
                                     123 Forensic Plaza <br />
-                                    Suite 500, Iron City, IC 90210
+                                    Suite 500, Blackline District, IC 90210
                                 </div>
                             </div>
                             <div className="flex items-center gap-4 group">
@@ -106,7 +106,7 @@ export default function Footer() {
                                     <Phone className="w-4 h-4" />
                                 </div>
                                 <div className="text-brand-slate text-xs font-sans tracking-wide transition-opacity">
-                                    +1 (800) IRON-999
+                                    +1 (800) BLK-LINE
                                 </div>
                             </div>
                             <div className="flex items-center gap-4 group">
@@ -114,7 +114,7 @@ export default function Footer() {
                                     <Mail className="w-4 h-4" />
                                 </div>
                                 <div className="text-brand-slate text-xs font-sans tracking-wide transition-opacity">
-                                    audit@ironclause.com
+                                    audit@blacklineadjusting.com
                                 </div>
                             </div>
                         </div>
@@ -124,7 +124,7 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-brand-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
                     <p className="text-[10px] uppercase tracking-[0.3em] text-brand-slate/60 text-center md:text-left">
-                        © 2026 IRONCLAUSE ADJUSTING LLC. ALL PROPERTY DATA PROTECTED BY SECURE FORENSIC PROTOCOL.
+                        © 2026 BLACKLINE ADJUSTING LLC. ALL PROPERTY DATA PROTECTED BY SECURE FORENSIC PROTOCOL.
                     </p>
                     <div className="flex items-center gap-8 text-[10px] uppercase tracking-[0.2em] text-brand-slate/60">
                         <a href="#" className="hover:text-brand-gold transition-colors">Privacy Protocol</a>
