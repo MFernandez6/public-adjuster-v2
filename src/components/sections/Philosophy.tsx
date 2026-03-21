@@ -4,29 +4,17 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Shield, Microscope, Scale, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import { useLanguage } from "@/contexts/language-context";
 
-const principles = [
-    {
-        icon: <Microscope className="w-9 h-9" />,
-        title: "Surgical Precision",
-        description: "We dissect policy language and disaster evidence to build an undeniable case. We don't adjust; we forensicize.",
-        color: "from-brand-gold/20 to-transparent"
-    },
-    {
-        icon: <Shield className="w-9 h-9" />,
-        title: "Contractual Force",
-        description: "Insurance policies are binding contractual documents. We ensure they are enforced exactly as written, with zero compromise.",
-        color: "from-brand-slate/20 to-transparent"
-    },
-    {
-        icon: <Scale className="w-9 h-9" />,
-        title: "Evidence First",
-        description: "Indisputable forensic reports and industry-standard data form the unwavering foundation of every claim we handle.",
-        color: "from-brand-gold/10 to-transparent"
-    }
-];
+const principleMeta = [
+    { icon: <Microscope className="w-9 h-9" />, color: "from-brand-gold/20 to-transparent" },
+    { icon: <Shield className="w-9 h-9" />, color: "from-brand-slate/20 to-transparent" },
+    { icon: <Scale className="w-9 h-9" />, color: "from-brand-gold/10 to-transparent" },
+] as const;
 
 export default function Philosophy() {
+    const { t } = useLanguage();
+
     return (
         <section id="philosophy" className="scroll-mt-24 py-32 bg-[#020617] text-brand-white relative overflow-hidden">
             {/* Decorative Blur */}
@@ -45,17 +33,17 @@ export default function Philosophy() {
                     >
                         <div className="space-y-6">
                             <span className="font-sans text-[10px] md:text-xs uppercase tracking-[0.5em] text-brand-gold font-bold">
-                                The Blackline Ethos
+                                {t("philosophy.eyebrow")}
                             </span>
                             <h2 className="font-serif text-4xl md:text-6xl leading-[0.95] tracking-tighter">
-                                AUTHORITY <br />
-                                IS RECLAIMED <br />
-                                <span className="text-brand-slate opacity-70">THROUGH DATA.</span>
+                                {t("philosophy.h2a")} <br />
+                                {t("philosophy.h2b")} <br />
+                                <span className="text-brand-slate opacity-70">{t("philosophy.h2c")}</span>
                             </h2>
                         </div>
 
                         <p className="text-brand-slate text-lg leading-relaxed font-sans tracking-wide">
-                            BlackLine was born from a refusal to accept "standard" settlement practices. We leverage forensic science and forensic rigor to shift the power dynamic in your favor.
+                            {t("philosophy.intro")}
                         </p>
 
                         <Link
@@ -66,7 +54,7 @@ export default function Philosophy() {
                                 <ArrowUpRight className="w-5 h-5 text-brand-gold group-hover:text-brand-navy transition-colors" />
                             </div>
                             <span className="font-serif text-xl font-bold tracking-tight group-hover:text-brand-gold transition-colors">
-                                Meet Our Command Team
+                                {t("philosophy.meetTeam")}
                             </span>
                         </Link>
 
@@ -79,7 +67,7 @@ export default function Philosophy() {
                         >
                             <Image
                                 src="/images/properties/forensic.png"
-                                alt="Forensic Analysis"
+                                alt={t("philosophy.imageAlt")}
                                 fill
                                 className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700"
                                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -89,14 +77,14 @@ export default function Philosophy() {
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-transparent to-transparent" />
                             <div className="absolute bottom-4 left-4">
-                                <span className="text-[8px] uppercase tracking-[0.3em] text-brand-gold font-bold">Evidence Protocol 04-A</span>
+                                <span className="text-[8px] uppercase tracking-[0.3em] text-brand-gold font-bold">{t("philosophy.protocol")}</span>
                             </div>
                         </motion.div>
                     </motion.div>
 
                     {/* Principles Grid */}
                     <div className="flex-1 grid gap-8 w-full">
-                        {principles.map((p, i) => (
+                        {principleMeta.map((p, i) => (
                             <motion.div
                                 key={i}
                                 initial={{ opacity: 0, y: 40 }}
@@ -113,13 +101,13 @@ export default function Philosophy() {
                                         {p.icon}
                                     </div>
                                     <div className="space-y-3 flex-1">
-                                        <h3 className="font-serif text-2xl font-bold tracking-tight">{p.title}</h3>
+                                        <h3 className="font-serif text-2xl font-bold tracking-tight">{t(`philosophy.principles.${i}.title`)}</h3>
                                         <p className="text-brand-slate text-base md:text-lg leading-relaxed max-w-md">
-                                            {p.description}
+                                            {t(`philosophy.principles.${i}.description`)}
                                         </p>
                                     </div>
                                     <div className="hidden md:block opacity-0 group-hover:opacity-30 transition-opacity font-serif text-5xl font-black text-brand-white uppercase select-none">
-                                        FORCE
+                                        {t("philosophy.hoverWord")}
                                     </div>
                                 </div>
                             </motion.div>

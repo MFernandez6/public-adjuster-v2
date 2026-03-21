@@ -2,11 +2,14 @@
 
 import { motion } from "framer-motion";
 import { Clock, MonitorSmartphone } from "lucide-react";
+import { useLanguage } from "@/contexts/language-context";
 
 export default function PositioningStrip() {
+    const { t, locale } = useLanguage();
+
     return (
         <section
-            aria-label="Firm positioning and service commitments"
+            aria-label={t("positioning.aria")}
             className="relative border-y border-brand-white/6 bg-[#020617]/90 backdrop-blur-sm"
         >
             <div className="absolute inset-0 bg-linear-to-r from-brand-gold/3 via-transparent to-brand-gold/3 pointer-events-none" />
@@ -18,10 +21,16 @@ export default function PositioningStrip() {
                     transition={{ duration: 0.6 }}
                     className="text-center font-serif text-lg md:text-xl lg:text-[1.35rem] leading-snug tracking-tight text-brand-white/95"
                 >
-                    Defining a higher standard for{" "}
-                    <span className="text-brand-white">responsiveness</span>,{" "}
-                    <span className="text-brand-white">transparency</span>, and{" "}
-                    <span className="text-brand-white">sophisticated</span> claims handling in Florida.
+                    {locale === "en" ? (
+                        <>
+                            Defining a higher standard for{" "}
+                            <span className="text-brand-white">{t("positioning.responsiveness")}</span>,{" "}
+                            <span className="text-brand-white">{t("positioning.transparency")}</span>, and{" "}
+                            <span className="text-brand-white">{t("positioning.sophisticated")}</span> claims handling in Florida.
+                        </>
+                    ) : (
+                        t("positioning.line")
+                    )}
                 </motion.p>
                 <motion.div
                     initial={{ opacity: 0, y: 8 }}
@@ -32,12 +41,12 @@ export default function PositioningStrip() {
                 >
                     <div className="flex items-center justify-center gap-2.5 text-[11px] font-sans uppercase tracking-[0.22em] text-brand-slate md:text-xs">
                         <Clock className="h-3.5 w-3.5 shrink-0 text-brand-gold/80" aria-hidden />
-                        <span>Same-business-day response to new inquiries</span>
+                        <span>{t("positioning.sameDay")}</span>
                     </div>
                     <span className="hidden h-4 w-px shrink-0 bg-brand-white/15 sm:mx-8 md:block" aria-hidden />
                     <div className="flex items-center justify-center gap-2.5 text-[11px] font-sans uppercase tracking-[0.22em] text-brand-slate md:text-xs">
                         <MonitorSmartphone className="h-3.5 w-3.5 shrink-0 text-brand-gold/80" aria-hidden />
-                        <span>Weekly status cadence via secure online client portal</span>
+                        <span>{t("positioning.weekly")}</span>
                     </div>
                 </motion.div>
             </div>

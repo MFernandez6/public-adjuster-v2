@@ -1,37 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Microscope, FileSearch, FileSignature, Handshake } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/contexts/language-context";
 
-const steps = [
-    {
-        number: "01",
-        title: "Forensic Inspection",
-        tagline: "Total Property Audit",
-        description: "A sloppy insurance adjustment can cause your claim to be denied. We utilize advanced technology to correctly account for all loss, ensuring no damage goes undocumented."
-    },
-    {
-        number: "02",
-        title: "Contractual Review",
-        tagline: "Policy Forensics",
-        description: "Did you read the fine print? Our team deconstructs your policy language, providing expert analysis on the optimal course of action for your specific claim."
-    },
-    {
-        number: "03",
-        title: "Filing & Documentation",
-        tagline: "Forensic Paperwork",
-        description: "Tedious but critical. We create a detailed loss estimate and file all required documentation. When it comes to value, the dollars are in the details."
-    },
-    {
-        number: "04",
-        title: "Enforcement",
-        tagline: "Forceful Negotiation",
-        description: "We fully represent you. We review carrier reports and offers to ensure you are paid fairly. If not, we fight for the funds needed to fully restore your property."
-    }
-];
+const stepMeta = [{ number: "01" }, { number: "02" }, { number: "03" }, { number: "04" }] as const;
 
 export default function Process() {
+    const { t } = useLanguage();
+
     return (
         <section id="process" className="scroll-mt-24 py-32 bg-[#020617] text-brand-white relative overflow-hidden">
             {/* Background Graphic */}
@@ -43,20 +19,20 @@ export default function Process() {
                 <div className="flex flex-col md:flex-row justify-between items-end mb-24 lg:mb-32 gap-12">
                     <div className="max-w-2xl space-y-4">
                         <span className="font-sans text-[10px] md:text-xs uppercase tracking-[0.5em] text-brand-gold font-bold">
-                            Execution Protocol
+                            {t("process.eyebrow")}
                         </span>
                         <h2 className="font-serif text-4xl md:text-6xl leading-[1] tracking-tighter">
-                            BLACKLINED.
+                            {t("process.heading")}
                         </h2>
                     </div>
                     <p className="text-brand-slate text-lg lg:text-xl max-w-sm font-sans tracking-wide leading-relaxed pb-2">
-                        From Redline to Blackline. We enforce the strict letter of your policy to ensure maximum settlement recovery.
+                        {t("process.sub")}
                     </p>
                 </div>
 
                 {/* Dynamic Timeline Grid */}
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                    {steps.map((step, i) => (
+                    {stepMeta.map((step, i) => (
                         <motion.div
                             key={i}
                             initial={{ opacity: 0, scale: 0.95 }}
@@ -73,16 +49,16 @@ export default function Process() {
                             <div className="space-y-6 relative z-10 flex flex-col items-center">
                                 <div className="w-12 h-1 bg-brand-gold rounded-full group-hover:w-20 transition-all duration-500 mx-auto" />
                                 <span className="block font-sans text-[9px] uppercase tracking-[0.5em] text-brand-gold font-bold">
-                                    {step.tagline}
+                                    {t(`process.steps.${i}.tagline`)}
                                 </span>
                                 <h3 className="font-serif text-3xl font-bold tracking-tight">
-                                    {step.title}
+                                    {t(`process.steps.${i}.title`)}
                                 </h3>
                             </div>
 
                             <div className="relative z-10 space-y-6">
                                 <p className="text-brand-slate text-sm leading-relaxed transition-opacity duration-500">
-                                    {step.description}
+                                    {t(`process.steps.${i}.description`)}
                                 </p>
                                 <div className="flex items-center gap-4 text-brand-gold/40 group-hover:text-brand-gold transition-colors duration-500">
                                     <div className="h-[1px] flex-1 bg-current" />

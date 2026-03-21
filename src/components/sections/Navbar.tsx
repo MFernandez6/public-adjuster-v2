@@ -1,53 +1,62 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import Link from "next/link";
 import Logo from "@/components/brand/Logo";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Home, Building2, Workflow, Users, Landmark, Menu, X, Plus } from "lucide-react";
-
-const aboutMenu = [
-    {
-        title: "Who we are",
-        href: "/about#who-we-are",
-        icon: <Landmark className="w-4 h-4" />,
-        description: "How BLACKLINE was formed and the standards we operate under.",
-    },
-    {
-        title: "Adjusters",
-        href: "/about#adjusters",
-        icon: <Users className="w-4 h-4" />,
-        description: "Our licensed professionals — starting with the founding adjuster.",
-    },
-];
-
-const claimsMenu = [
-    {
-        title: "The Blackline Standard",
-        href: "/#process",
-        icon: <Workflow className="w-4 h-4" />,
-        description: "From Redline to Blackline — Our Forensic Audit Protocol."
-    },
-    {
-        title: "Homeowner Claims",
-        href: "/#claims",
-        icon: <Home className="w-4 h-4" />,
-        description: "Professional representation for residential losses."
-    },
-    {
-        title: "Commercial Claims",
-        href: "/#claims",
-        icon: <Building2 className="w-4 h-4" />,
-        description: "High-stakes adjusting for business and industrial assets."
-    },
-];
+import { useLanguage } from "@/contexts/language-context";
+import LanguageSwitcher from "@/components/i18n/LanguageSwitcher";
 
 export default function Navbar() {
+    const { t } = useLanguage();
     const [isClaimsOpen, setIsClaimsOpen] = useState(false);
     const [isAboutOpen, setIsAboutOpen] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const [expandedMobileSection, setExpandedMobileSection] = useState<string | null>(null);
+
+    const aboutMenu = useMemo(
+        () => [
+            {
+                title: t("navAbout.whoWeAre.title"),
+                href: "/about#who-we-are",
+                icon: <Landmark className="w-4 h-4" />,
+                description: t("navAbout.whoWeAre.description"),
+            },
+            {
+                title: t("navAbout.adjusters.title"),
+                href: "/about#adjusters",
+                icon: <Users className="w-4 h-4" />,
+                description: t("navAbout.adjusters.description"),
+            },
+        ],
+        [t]
+    );
+
+    const claimsMenu = useMemo(
+        () => [
+            {
+                title: t("navClaims.standard.title"),
+                href: "/#process",
+                icon: <Workflow className="w-4 h-4" />,
+                description: t("navClaims.standard.description"),
+            },
+            {
+                title: t("navClaims.homeowner.title"),
+                href: "/#claims",
+                icon: <Home className="w-4 h-4" />,
+                description: t("navClaims.homeowner.description"),
+            },
+            {
+                title: t("navClaims.commercial.title"),
+                href: "/#claims",
+                icon: <Building2 className="w-4 h-4" />,
+                description: t("navClaims.commercial.description"),
+            },
+        ],
+        [t]
+    );
 
     const toggleMobileSection = (section: string) => {
         setExpandedMobileSection(expandedMobileSection === section ? null : section);
@@ -56,7 +65,7 @@ export default function Navbar() {
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 border-b border-brand-white/5 bg-brand-navy/80 backdrop-blur-md">
             <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-                <Link href="/" className="shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 rounded-sm" aria-label="BLACKLINE Adjusting — Home">
+                <Link href="/" className="shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 rounded-sm" aria-label={t("footer.homeAria")}>
                     <Logo />
                 </Link>
 
@@ -68,7 +77,7 @@ export default function Navbar() {
                         onMouseLeave={() => setIsAboutOpen(false)}
                     >
                         <button className="flex items-center gap-1 hover:text-brand-gold transition-colors group">
-                            ABOUT
+                            {t("nav.about")}
                             <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${isAboutOpen ? 'rotate-180 text-brand-gold' : ''}`} />
                         </button>
 
@@ -114,7 +123,7 @@ export default function Navbar() {
                         onMouseLeave={() => setIsClaimsOpen(false)}
                     >
                         <button className="flex items-center gap-1 hover:text-brand-gold transition-colors group">
-                            CLAIMS
+                            {t("nav.claims")}
                             <ChevronDown className={`w-3 h-3 transition-transform duration-300 ${isClaimsOpen ? 'rotate-180 text-brand-gold' : ''}`} />
                         </button>
 
@@ -153,17 +162,32 @@ export default function Navbar() {
                         </AnimatePresence>
                     </div>
 
-                    <Link href="/#philosophy" className="hover:text-brand-gold transition-colors">Philosophy</Link>
-                    <Link href="/#contact" className="hover:text-brand-gold transition-colors">Contact</Link>
+                    <Link href="/#philosophy" className="hover:text-brand-gold transition-colors">{t("nav.philosophy")}</Link>
+                    <Link href="/#contact" className="hover:text-brand-gold transition-colors">{t("nav.contact")}</Link>
+                    <LanguageSwitcher />
                 </div>
 
-                <div className="flex items-center gap-4">
-                    <Button size="sm" className="hidden lg:inline-flex bg-brand-navy border border-brand-gold/20 text-brand-gold hover:bg-brand-gold hover:text-brand-navy transition-all font-sans uppercase tracking-tighter font-bold text-[10px] px-6" asChild>
-                        <Link href="/#contact">Emergency Check</Link>
-                    </Button>
-                    <Button size="sm" className="hidden sm:inline-flex bg-brand-white text-brand-navy hover:bg-brand-gold transition-all font-sans uppercase tracking-tighter font-bold text-[10px] px-6" asChild>
-                        <Link href="/#contact">Get Started</Link>
-                    </Button>
+                <div className="flex items-center gap-3 md:gap-4">
+                    <div className="md:hidden">
+                        <LanguageSwitcher />
+                    </div>
+                    <div className="hidden sm:flex items-stretch overflow-hidden rounded-md border border-brand-gold/20 bg-brand-navy/90 shadow-[0_0_24px_rgba(198,168,91,0.08)]">
+                        <Link
+                            href="/#contact"
+                            className="flex items-center px-4 py-2.5 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold transition-colors hover:bg-brand-gold/10 hover:text-brand-white"
+                        >
+                            {t("nav.signup")}
+                        </Link>
+                        <span className="select-none px-1 font-sans text-[10px] text-brand-slate/50" aria-hidden>
+                            /
+                        </span>
+                        <Link
+                            href="/login"
+                            className="flex items-center px-4 py-2.5 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold transition-colors hover:bg-brand-gold hover:text-brand-navy"
+                        >
+                            {t("nav.login")}
+                        </Link>
+                    </div>
 
                     {/* Mobile Menu Button */}
                     <button
@@ -192,7 +216,7 @@ export default function Navbar() {
                                         onClick={() => toggleMobileSection('about')}
                                         className="w-full flex items-center justify-between text-xs font-sans uppercase tracking-[0.2em] text-brand-white/90"
                                     >
-                                        About
+                                        {t("nav.aboutSection")}
                                         <Plus className={`w-4 h-4 transition-transform duration-300 ${expandedMobileSection === 'about' ? 'rotate-45 text-brand-gold' : ''}`} />
                                     </button>
                                     <AnimatePresence>
@@ -225,7 +249,7 @@ export default function Navbar() {
                                         onClick={() => toggleMobileSection('claims')}
                                         className="w-full flex items-center justify-between text-xs font-sans uppercase tracking-[0.2em] text-brand-white/90"
                                     >
-                                        Claims
+                                        {t("nav.claimsSection")}
                                         <Plus className={`w-4 h-4 transition-transform duration-300 ${expandedMobileSection === 'claims' ? 'rotate-45 text-brand-gold' : ''}`} />
                                     </button>
                                     <AnimatePresence>
@@ -252,17 +276,22 @@ export default function Navbar() {
                                     </AnimatePresence>
                                 </div>
 
-                                <Link href="/#philosophy" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs font-sans uppercase tracking-[0.2em] text-brand-white/90">Philosophy</Link>
-                                <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs font-sans uppercase tracking-[0.2em] text-brand-white/90">Contact</Link>
+                                <Link href="/#philosophy" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs font-sans uppercase tracking-[0.2em] text-brand-white/90">{t("nav.philosophy")}</Link>
+                                <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs font-sans uppercase tracking-[0.2em] text-brand-white/90">{t("nav.contact")}</Link>
                             </div>
 
-                            <div className="pt-8 border-t border-brand-white/10 flex flex-col gap-4">
-                                <Button size="lg" className="w-full bg-brand-gold text-brand-navy font-bold uppercase tracking-widest text-[10px]" asChild>
-                                    <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Get Started</Link>
-                                </Button>
-                                <Button size="lg" variant="outline" className="w-full border-brand-gold/20 text-brand-gold font-bold uppercase tracking-widest text-[10px]" asChild>
-                                    <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Emergency Check</Link>
-                                </Button>
+                            <div className="pt-8 border-t border-brand-white/10 flex flex-col gap-3">
+                                <p className="text-center font-sans text-[10px] font-bold uppercase tracking-[0.35em] text-brand-slate/80">
+                                    {t("nav.mobileSignupLogin")}
+                                </p>
+                                <div className="flex gap-3">
+                                    <Button size="lg" className="flex-1 bg-brand-gold text-brand-navy font-bold uppercase tracking-widest text-[10px]" asChild>
+                                        <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.signup")}</Link>
+                                    </Button>
+                                    <Button size="lg" variant="outline" className="flex-1 border-brand-gold/20 text-brand-gold font-bold uppercase tracking-widest text-[10px]" asChild>
+                                        <Link href="/login" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.login")}</Link>
+                                    </Button>
+                                </div>
                             </div>
                         </div>
                     </motion.div>

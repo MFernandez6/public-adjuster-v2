@@ -1,41 +1,47 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useMemo } from "react";
 import Link from "next/link";
 import Logo from "@/components/brand/Logo";
 import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from "lucide-react";
-
-const footerLinks = [
-    {
-        title: "Platform",
-        links: [
-            { name: "About", href: "/about" },
-            { name: "Philosophy", href: "/#philosophy" },
-            { name: "The Blackline Standard", href: "/#process" },
-            { name: "Forensic Scope", href: "/#claims" },
-            { name: "Contact", href: "/#contact" },
-        ],
-    },
-    {
-        title: "Claims",
-        links: [
-            { name: "Homeowner Claims", href: "/#claims" },
-            { name: "Commercial Claims", href: "/#claims" },
-            { name: "Claims Process", href: "/#process" },
-            { name: "Emergency Check", href: "/#contact" },
-        ],
-    },
-    {
-        title: "Contact",
-        links: [
-            { name: "Audit Request", href: "/#contact" },
-            { name: "Direct Portal", href: "#" },
-            { name: "Email Analysis", href: "mailto:contact@blacklineadjusting.com" },
-        ],
-    },
-];
+import { useLanguage } from "@/contexts/language-context";
 
 export default function Footer() {
+    const { t } = useLanguage();
+
+    const footerLinks = useMemo(
+        () => [
+            {
+                title: t("footer.platform"),
+                links: [
+                    { name: t("footer.links.about"), href: "/about" },
+                    { name: t("footer.links.philosophy"), href: "/#philosophy" },
+                    { name: t("footer.links.standard"), href: "/#process" },
+                    { name: t("footer.links.scope"), href: "/#claims" },
+                    { name: t("footer.links.contact"), href: "/#contact" },
+                ],
+            },
+            {
+                title: t("footer.claims"),
+                links: [
+                    { name: t("footer.links.homeowner"), href: "/#claims" },
+                    { name: t("footer.links.commercial"), href: "/#claims" },
+                    { name: t("footer.links.process"), href: "/#process" },
+                    { name: t("footer.links.clientLogin"), href: "/login" },
+                ],
+            },
+            {
+                title: t("footer.contact"),
+                links: [
+                    { name: t("footer.links.audit"), href: "/#contact" },
+                    { name: t("footer.links.portal"), href: "#" },
+                    { name: t("footer.links.email"), href: "mailto:contact@blacklineadjusting.com" },
+                ],
+            },
+        ],
+        [t]
+    );
+
     return (
         <footer className="relative bg-[#020617] pt-32 pb-12 overflow-hidden border-t border-brand-white/5">
             {/* Background Watermark */}
@@ -48,11 +54,11 @@ export default function Footer() {
 
                     {/* Brand Column */}
                     <div className="lg:col-span-4 space-y-8">
-                        <Link href="/" className="inline-block outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 rounded-sm" aria-label="BLACKLINE Adjusting — Home">
+                        <Link href="/" className="inline-block outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 rounded-sm" aria-label={t("footer.homeAria")}>
                             <Logo className="scale-100 md:scale-125 origin-left" />
                         </Link>
                         <p className="text-brand-slate text-sm leading-relaxed max-w-sm font-sans">
-                            A policy-driven powerhouse treating insurance contracts as absolute authority. We hold the carrier to the strict letter of the policy until the claim is settled in full.
+                            {t("footer.blurb")}
                         </p>
                         <div className="flex items-center gap-4">
                             {[Instagram, Linkedin, Twitter].map((Icon, i) => (
@@ -93,7 +99,7 @@ export default function Footer() {
                     {/* Contact Info Column */}
                     <div className="lg:col-span-3 space-y-8">
                         <h4 className="font-serif text-[10px] uppercase tracking-[0.4em] text-brand-gold font-bold">
-                            HQ Protocol
+                            {t("footer.hq")}
                         </h4>
                         <div className="space-y-4">
                             <div className="flex items-start gap-4 group">
@@ -128,11 +134,11 @@ export default function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-brand-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
                     <p className="text-[10px] uppercase tracking-[0.3em] text-brand-slate/60 text-center md:text-left">
-                        © 2026 BLACKLINE ADJUSTING LLC. ALL PROPERTY DATA PROTECTED BY SECURE FORENSIC PROTOCOL.
+                        {t("footer.copyright")}
                     </p>
                     <div className="flex items-center gap-8 text-[10px] uppercase tracking-[0.2em] text-brand-slate/60">
-                        <a href="#" className="hover:text-brand-gold transition-colors">Privacy Protocol</a>
-                        <a href="#" className="hover:text-brand-gold transition-colors">Terms of Authority</a>
+                        <a href="#" className="hover:text-brand-gold transition-colors">{t("footer.privacy")}</a>
+                        <a href="#" className="hover:text-brand-gold transition-colors">{t("footer.terms")}</a>
                     </div>
                 </div>
             </div>
