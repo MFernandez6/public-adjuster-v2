@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import Logo from "@/components/brand/Logo";
 import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from "lucide-react";
 
@@ -8,25 +9,26 @@ const footerLinks = [
     {
         title: "Platform",
         links: [
-            { name: "Philosophy", href: "#philosophy" },
-            { name: "The Blackline Standard", href: "#process" },
-            { name: "Forensic Scope", href: "#claims" },
-            { name: "Contact", href: "#contact" },
+            { name: "About", href: "/about" },
+            { name: "Philosophy", href: "/#philosophy" },
+            { name: "The Blackline Standard", href: "/#process" },
+            { name: "Forensic Scope", href: "/#claims" },
+            { name: "Contact", href: "/#contact" },
         ],
     },
     {
         title: "Claims",
         links: [
-            { name: "Homeowner Claims", href: "#homeowner" },
-            { name: "Commercial Claims", href: "#commercial" },
-            { name: "Claims Process", href: "#process" },
-            { name: "Emergency Check", href: "#" },
+            { name: "Homeowner Claims", href: "/#claims" },
+            { name: "Commercial Claims", href: "/#claims" },
+            { name: "Claims Process", href: "/#process" },
+            { name: "Emergency Check", href: "/#contact" },
         ],
     },
     {
         title: "Contact",
         links: [
-            { name: "Audit Request", href: "#contact" },
+            { name: "Audit Request", href: "/#contact" },
             { name: "Direct Portal", href: "#" },
             { name: "Email Analysis", href: "mailto:contact@blacklineadjusting.com" },
         ],
@@ -46,7 +48,9 @@ export default function Footer() {
 
                     {/* Brand Column */}
                     <div className="lg:col-span-4 space-y-8">
-                        <Logo className="scale-100 md:scale-125 origin-left" />
+                        <Link href="/" className="inline-block outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 rounded-sm" aria-label="BLACKLINE Adjusting — Home">
+                            <Logo className="scale-100 md:scale-125 origin-left" />
+                        </Link>
                         <p className="text-brand-slate text-sm leading-relaxed max-w-sm font-sans">
                             A policy-driven powerhouse treating insurance contracts as absolute authority. We hold the carrier to the strict letter of the policy until the claim is settled in full.
                         </p>

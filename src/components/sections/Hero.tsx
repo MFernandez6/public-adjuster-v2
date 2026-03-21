@@ -1,6 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "framer-motion";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ShieldCheck, Scale, Microscope } from "lucide-react";
 import { useRef } from "react";
@@ -83,12 +84,20 @@ export default function Hero() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1, delay: 0.6 }}
                             viewport={{ once: true }}
-                            className="mt-8 md:mt-12 inline-flex flex-col items-center gap-2 px-6 md:px-10 py-4 md:py-6 glass rounded-[24px] md:rounded-[30px] border-brand-gold/20 shadow-[0_0_40px_rgba(198,168,91,0.1)] group cursor-default"
+                            className="mt-8 md:mt-12 mx-auto flex max-w-xl flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:gap-0 md:px-10 md:py-6 glass rounded-[24px] md:rounded-[30px] border-brand-gold/20 shadow-[0_0_40px_rgba(198,168,91,0.1)]"
                         >
-                            <span className="font-serif text-2xl md:text-5xl font-black gold-gradient group-hover:scale-110 transition-transform duration-500">+747%</span>
-                            <span className="font-sans text-[7px] md:text-[10px] uppercase tracking-[0.3em] text-brand-white/70 max-w-[180px] md:max-w-[250px] leading-relaxed">
-                                Avg. settlement increase <br /> vs. filing without representation
-                            </span>
+                            <div className="flex flex-col items-center gap-1 border-b border-brand-white/10 px-2 pb-4 md:border-b-0 md:border-r md:px-6 md:pb-0 md:pr-10">
+                                <span className="font-serif text-2xl font-black gold-gradient md:text-4xl">Same day</span>
+                                <span className="max-w-[240px] text-center font-sans text-[7px] uppercase tracking-[0.22em] text-brand-white/70 md:text-[9px] md:tracking-[0.25em]">
+                                    Prioritized same-day response to new inquiries
+                                </span>
+                            </div>
+                            <div className="flex flex-col items-center gap-1 px-2 pt-2 md:px-6 md:pt-0 md:pl-10">
+                                <span className="font-serif text-2xl font-black text-brand-white/95 md:text-4xl">Weekly</span>
+                                <span className="max-w-[240px] text-center font-sans text-[7px] uppercase tracking-[0.22em] text-brand-white/70 md:text-[9px] md:tracking-[0.25em]">
+                                    Prioritized weekly status updates for your claim
+                                </span>
+                            </div>
                         </motion.div>
 
                         <motion.div
@@ -113,17 +122,17 @@ export default function Hero() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center gap-4 md:gap-6 w-full sm:w-auto px-6 sm:px-0">
-                            <Button size="lg" className="h-14 md:h-16 w-full sm:w-auto px-8 md:px-10 text-sm md:text-lg font-sans tracking-[0.1em] uppercase bg-brand-gold text-brand-navy hover:scale-105 transition-transform duration-300 shadow-[0_10px_40px_rgba(198,168,91,0.3)] group relative overflow-hidden">
-                                <span className="relative z-10 flex items-center justify-center">
+                            <Button size="lg" className="h-14 md:h-16 w-full sm:w-auto px-8 md:px-10 text-sm md:text-lg font-sans tracking-[0.1em] uppercase bg-brand-gold text-brand-navy hover:scale-105 transition-transform duration-300 shadow-[0_10px_40px_rgba(198,168,91,0.3)] group relative overflow-hidden" asChild>
+                                <Link href="/#contact" className="relative z-10 flex items-center justify-center">
                                     Consult a Specialist
                                     <ChevronRight className="ml-2 w-4 md:w-5 h-4 md:h-5 transition-transform group-hover:translate-x-1" />
-                                </span>
+                                </Link>
                             </Button>
 
-                            <button className="h-14 md:h-16 px-8 md:px-10 text-sm md:text-lg font-sans tracking-[0.1em] uppercase text-brand-white/80 hover:text-brand-gold transition-colors flex items-center justify-center group">
+                            <Link href="/#philosophy" className="h-14 md:h-16 px-8 md:px-10 text-sm md:text-lg font-sans tracking-[0.1em] uppercase text-brand-white/80 hover:text-brand-gold transition-colors flex items-center justify-center group">
                                 Review Our Ethos
                                 <div className="hidden sm:block ml-4 w-12 h-[1px] bg-brand-white/20 group-hover:w-16 group-hover:bg-brand-gold transition-all" />
-                            </button>
+                            </Link>
                         </div>
                     </motion.div>
                 </div>

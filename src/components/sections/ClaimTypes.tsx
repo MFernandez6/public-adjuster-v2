@@ -45,7 +45,7 @@ const claimTypes = [
 
 export default function ClaimTypes() {
     return (
-        <section className="py-24 bg-[#020617] text-brand-white relative">
+        <section id="claims" className="scroll-mt-24 py-24 bg-[#020617] text-brand-white relative">
             <div className="container mx-auto px-4 max-w-7xl">
                 <div className="flex flex-col items-center text-center space-y-6 mb-20">
                     <span className="font-sans text-[10px] md:text-xs uppercase tracking-[0.5em] text-brand-gold font-bold">

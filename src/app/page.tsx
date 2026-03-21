@@ -1,6 +1,7 @@
 import dynamic from "next/dynamic";
 import Navbar from "@/components/sections/Navbar";
 import Hero from "@/components/sections/Hero";
+import PositioningStrip from "@/components/sections/PositioningStrip";
 
 // Dynamic imports for below-the-fold sections
 const Philosophy = dynamic(() => import("@/components/sections/Philosophy"), {
@@ -24,6 +25,7 @@ export default function Home() {
     <main className="min-h-screen bg-brand-navy text-brand-white font-sans">
       <Navbar />
       <Hero />
+      <PositioningStrip />
       <Philosophy />
       <ClaimTypes />
       <Process />

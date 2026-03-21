@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Shield, Microscope, Scale, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 
@@ -27,7 +28,7 @@ const principles = [
 
 export default function Philosophy() {
     return (
-        <section className="py-32 bg-[#020617] text-brand-white relative overflow-hidden">
+        <section id="philosophy" className="scroll-mt-24 py-32 bg-[#020617] text-brand-white relative overflow-hidden">
             {/* Decorative Blur */}
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-gold/5 rounded-full blur-[120px] -mr-64 -mt-32" />
 
@@ -57,12 +58,17 @@ export default function Philosophy() {
                             BlackLine was born from a refusal to accept "standard" settlement practices. We leverage forensic science and forensic rigor to shift the power dynamic in your favor.
                         </p>
 
-                        <div className="pt-10 border-t border-brand-white/10 flex items-center gap-6 group cursor-pointer">
+                        <Link
+                            href="/about#adjusters"
+                            className="pt-10 border-t border-brand-white/10 flex items-center gap-6 group cursor-pointer transition-colors hover:border-brand-gold/20"
+                        >
                             <div className="w-14 h-14 rounded-full border border-brand-gold/30 flex items-center justify-center group-hover:bg-brand-gold group-hover:border-brand-gold transition-all duration-500">
                                 <ArrowUpRight className="w-5 h-5 text-brand-gold group-hover:text-brand-navy transition-colors" />
                             </div>
-                            <span className="font-serif text-xl font-bold tracking-tight">Meet the Command Team</span>
-                        </div>
+                            <span className="font-serif text-xl font-bold tracking-tight group-hover:text-brand-gold transition-colors">
+                                Meet Our Command Team
+                            </span>
+                        </Link>
 
                         {/* Forensic Visual */}
                         <motion.div

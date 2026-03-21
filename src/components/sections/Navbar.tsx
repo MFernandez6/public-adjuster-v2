@@ -1,48 +1,43 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import Logo from "@/components/brand/Logo";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, FileText, Home, Building2, Workflow, Shield, Users, HelpCircle, Menu, X, Plus } from "lucide-react";
+import { ChevronDown, Home, Building2, Workflow, Users, Landmark, Menu, X, Plus } from "lucide-react";
 
 const aboutMenu = [
     {
-        title: "Philosophy",
-        href: "#philosophy",
-        icon: <Shield className="w-4 h-4" />,
-        description: "An unwavering commitment to policy accountability."
+        title: "Who we are",
+        href: "/about#who-we-are",
+        icon: <Landmark className="w-4 h-4" />,
+        description: "How BLACKLINE was formed and the standards we operate under.",
     },
     {
         title: "Adjusters",
-        href: "#adjusters",
+        href: "/about#adjusters",
         icon: <Users className="w-4 h-4" />,
-        description: "Expert recovery specialists working for you."
-    },
-    {
-        title: "FAQ",
-        href: "#faq",
-        icon: <HelpCircle className="w-4 h-4" />,
-        description: "Clarity on the public adjusting process."
+        description: "Our licensed professionals — starting with the founding adjuster.",
     },
 ];
 
 const claimsMenu = [
     {
         title: "The Blackline Standard",
-        href: "#process",
+        href: "/#process",
         icon: <Workflow className="w-4 h-4" />,
         description: "From Redline to Blackline — Our Forensic Audit Protocol."
     },
     {
         title: "Homeowner Claims",
-        href: "#homeowner",
+        href: "/#claims",
         icon: <Home className="w-4 h-4" />,
         description: "Professional representation for residential losses."
     },
     {
         title: "Commercial Claims",
-        href: "#commercial",
+        href: "/#claims",
         icon: <Building2 className="w-4 h-4" />,
         description: "High-stakes adjusting for business and industrial assets."
     },
@@ -61,7 +56,9 @@ export default function Navbar() {
     return (
         <nav className="fixed top-0 left-0 right-0 z-50 border-b border-brand-white/5 bg-brand-navy/80 backdrop-blur-md">
             <div className="container mx-auto px-4 h-20 flex items-center justify-between">
-                <Logo />
+                <Link href="/" className="shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 rounded-sm" aria-label="BLACKLINE Adjusting — Home">
+                    <Logo />
+                </Link>
 
                 <div className="hidden md:flex items-center space-x-10 text-[10px] font-sans uppercase tracking-[0.2em] text-brand-white/70">
                     {/* About Dropdown */}
@@ -82,11 +79,11 @@ export default function Navbar() {
                                     animate={{ opacity: 1, y: 0, scale: 1 }}
                                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                                     transition={{ duration: 0.2, ease: "easeOut" }}
-                                    className="absolute top-full -left-4 mt-2 w-72 glass rounded-2xl p-4 border-brand-gold/10 shadow-2xl"
+                                    className="absolute top-full -left-4 mt-2 w-80 glass rounded-2xl p-4 border-brand-gold/10 shadow-2xl"
                                 >
                                     <div className="space-y-2">
                                         {aboutMenu.map((item, i) => (
-                                            <a
+                                            <Link
                                                 key={i}
                                                 href={item.href}
                                                 className="flex items-start gap-4 p-3 rounded-xl hover:bg-brand-white/5 transition-colors group/item"
@@ -102,7 +99,7 @@ export default function Navbar() {
                                                         {item.description}
                                                     </p>
                                                 </div>
-                                            </a>
+                                            </Link>
                                         ))}
                                     </div>
                                 </motion.div>
@@ -132,7 +129,7 @@ export default function Navbar() {
                                 >
                                     <div className="space-y-2">
                                         {claimsMenu.map((item, i) => (
-                                            <a
+                                            <Link
                                                 key={i}
                                                 href={item.href}
                                                 className="flex items-start gap-4 p-3 rounded-xl hover:bg-brand-white/5 transition-colors group/item"
@@ -148,7 +145,7 @@ export default function Navbar() {
                                                         {item.description}
                                                     </p>
                                                 </div>
-                                            </a>
+                                            </Link>
                                         ))}
                                     </div>
                                 </motion.div>
@@ -156,16 +153,16 @@ export default function Navbar() {
                         </AnimatePresence>
                     </div>
 
-                    <a href="#precision" className="hover:text-brand-gold transition-colors">Precision</a>
-                    <a href="#contact" className="hover:text-brand-gold transition-colors">Contact</a>
+                    <Link href="/#philosophy" className="hover:text-brand-gold transition-colors">Philosophy</Link>
+                    <Link href="/#contact" className="hover:text-brand-gold transition-colors">Contact</Link>
                 </div>
 
                 <div className="flex items-center gap-4">
-                    <Button size="sm" className="hidden lg:inline-flex bg-brand-navy border border-brand-gold/20 text-brand-gold hover:bg-brand-gold hover:text-brand-navy transition-all font-sans uppercase tracking-tighter font-bold text-[10px] px-6">
-                        Emergency Check
+                    <Button size="sm" className="hidden lg:inline-flex bg-brand-navy border border-brand-gold/20 text-brand-gold hover:bg-brand-gold hover:text-brand-navy transition-all font-sans uppercase tracking-tighter font-bold text-[10px] px-6" asChild>
+                        <Link href="/#contact">Emergency Check</Link>
                     </Button>
-                    <Button size="sm" className="hidden sm:inline-flex bg-brand-white text-brand-navy hover:bg-brand-gold transition-all font-sans uppercase tracking-tighter font-bold text-[10px] px-6">
-                        Get Started
+                    <Button size="sm" className="hidden sm:inline-flex bg-brand-white text-brand-navy hover:bg-brand-gold transition-all font-sans uppercase tracking-tighter font-bold text-[10px] px-6" asChild>
+                        <Link href="/#contact">Get Started</Link>
                     </Button>
 
                     {/* Mobile Menu Button */}
@@ -207,7 +204,7 @@ export default function Navbar() {
                                                 className="pl-4 space-y-4 pt-2"
                                             >
                                                 {aboutMenu.map((item, i) => (
-                                                    <a
+                                                    <Link
                                                         key={i}
                                                         href={item.href}
                                                         onClick={() => setIsMobileMenuOpen(false)}
@@ -215,7 +212,7 @@ export default function Navbar() {
                                                     >
                                                         <div className="text-brand-gold">{item.icon}</div>
                                                         <span className="text-[10px] uppercase tracking-widest text-brand-white/70">{item.title}</span>
-                                                    </a>
+                                                    </Link>
                                                 ))}
                                             </motion.div>
                                         )}
@@ -240,7 +237,7 @@ export default function Navbar() {
                                                 className="pl-4 space-y-4 pt-2"
                                             >
                                                 {claimsMenu.map((item, i) => (
-                                                    <a
+                                                    <Link
                                                         key={i}
                                                         href={item.href}
                                                         onClick={() => setIsMobileMenuOpen(false)}
@@ -248,23 +245,23 @@ export default function Navbar() {
                                                     >
                                                         <div className="text-brand-gold">{item.icon}</div>
                                                         <span className="text-[10px] uppercase tracking-widest text-brand-white/70">{item.title}</span>
-                                                    </a>
+                                                    </Link>
                                                 ))}
                                             </motion.div>
                                         )}
                                     </AnimatePresence>
                                 </div>
 
-                                <a href="#precision" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs font-sans uppercase tracking-[0.2em] text-brand-white/90">Precision</a>
-                                <a href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs font-sans uppercase tracking-[0.2em] text-brand-white/90">Contact</a>
+                                <Link href="/#philosophy" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs font-sans uppercase tracking-[0.2em] text-brand-white/90">Philosophy</Link>
+                                <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs font-sans uppercase tracking-[0.2em] text-brand-white/90">Contact</Link>
                             </div>
 
                             <div className="pt-8 border-t border-brand-white/10 flex flex-col gap-4">
-                                <Button size="lg" className="w-full bg-brand-gold text-brand-navy font-bold uppercase tracking-widest text-[10px]">
-                                    Get Started
+                                <Button size="lg" className="w-full bg-brand-gold text-brand-navy font-bold uppercase tracking-widest text-[10px]" asChild>
+                                    <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Get Started</Link>
                                 </Button>
-                                <Button size="lg" variant="outline" className="w-full border-brand-gold/20 text-brand-gold font-bold uppercase tracking-widest text-[10px]">
-                                    Emergency Check
+                                <Button size="lg" variant="outline" className="w-full border-brand-gold/20 text-brand-gold font-bold uppercase tracking-widest text-[10px]" asChild>
+                                    <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>Emergency Check</Link>
                                 </Button>
                             </div>
                         </div>

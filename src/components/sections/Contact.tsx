@@ -7,7 +7,7 @@ import { ArrowRight, Lock, ShieldCheck } from "lucide-react";
 
 export default function Contact() {
     return (
-        <section className="py-32 bg-[#020617] overflow-hidden">
+        <section id="contact" className="scroll-mt-24 py-32 bg-[#020617] overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="relative glass rounded-[40px] p-5 md:p-20 overflow-hidden border-brand-white/5">
 
@@ -22,8 +22,8 @@ export default function Contact() {
                                     Secure Protocol Initiation
                                 </span>
                                 <h2 className="font-serif text-4xl sm:text-5xl md:text-8xl leading-[0.9] md:leading-[0.85] tracking-tighter">
-                                    SECURE YOUR <br />
-                                    <span className="gold-gradient">FINALITY.</span>
+                                    BEGIN YOUR <br />
+                                    <span className="gold-gradient">CLAIM INTAKE.</span>
                                 </h2>
                             </div>
 
