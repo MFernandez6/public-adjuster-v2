@@ -1,13 +1,13 @@
-/** Cadenas en español — mantener las mismas claves que `en.ts`. */
+/** Cadenas en español (latinoamericano) — mantener las mismas claves que `en.ts`. */
 export const es = {
     nav: {
         about: "NOSOTROS",
-        claims: "SINIESTROS",
+        claims: "RECLAMACIONES",
         insights: "Perspectivas",
         philosophy: "Filosofía",
         contact: "Contacto",
         aboutSection: "Nosotros",
-        claimsSection: "Siniestros",
+        claimsSection: "Reclamaciones",
         ctaContact: "Hable con un especialista",
         emailUpdatesPitch:
             "Los clientes activos reciben actualizaciones semanales priorizadas del siniestro por correo — documentadas, fechadas y archivables. Sin contraseñas de portal. Sin cuenta que mantener.",
@@ -19,12 +19,12 @@ export const es = {
                 "Cómo se formó BLACKLINE y los estándares bajo los cuales operamos.",
         },
         adjusters: {
-            title: "Peritos BLACKLINE",
+            title: "Ajustadores BLACKLINE",
             description:
-                "Nuestros profesionales licenciados — a partir del perito fundador.",
+                "Nuestros profesionales licenciados — a partir del ajustador fundador.",
         },
         faq: {
-            title: "Preguntas sobre peritos públicos",
+            title: "Preguntas sobre ajustadores públicos de seguros",
             description:
                 "Respuestas claras sobre licencias, honorarios, inspecciones y cuándo contratar representación.",
         },
@@ -39,11 +39,11 @@ export const es = {
             description: "De la línea roja a Blackline — nuestro protocolo de auditoría forense.",
         },
         homeowner: {
-            title: "Siniestros residenciales",
+            title: "Reclamaciones residenciales",
             description: "Defensa firme para propietarios en Florida — cómo le ayudamos.",
         },
         commercial: {
-            title: "Siniestros comerciales",
+            title: "Reclamaciones comerciales",
             description: "Defensa a nivel de cartera para activos comerciales en Florida — cómo le ayudamos.",
         },
     },
@@ -75,13 +75,13 @@ export const es = {
         side1: "Fuerza vinculante",
         side2: "Prueba forense",
         side3: "Auditoría quirúrgica",
-        imageAlt: "Peritación de propiedades Blackline",
+        imageAlt: "Ajuste de reclamaciones de propiedad Blackline",
     },
     homeIntro: {
-        eyebrow: "Peritación pública",
+        eyebrow: "Ajustador público de seguros",
         title: "Profesionales licenciados de su lado de la mesa",
-        body: "Los peritos públicos interpretan su póliza, documentan y estiman el daño cubierto, presentan el siniestro y negocian con su aseguradora — con un deber que corre a favor suyo, no del portador. BLACKLINE une ese rol con evidencia disciplinada y los estándares de licencia de Florida.",
-        linkFaq: "Lea las preguntas frecuentes sobre peritos públicos",
+        body: "Los ajustadores públicos de seguros interpretan su póliza, documentan y estiman el daño cubierto, presentan el siniestro y negocian con su aseguradora — con un deber que corre a favor suyo, no de la aseguradora. BLACKLINE une ese rol con evidencia disciplinada y los estándares de licencia de Florida.",
+        linkFaq: "Lea las preguntas frecuentes sobre ajustadores públicos de seguros",
         linkInsights: "Vea perspectivas y notas",
     },
     adjusterComparison: {
@@ -94,17 +94,17 @@ export const es = {
             {
                 title: "Ajustador de la aseguradora",
                 subtitle: "Empleado del asegurador",
-                obligation: "Atender el proceso e instrucciones del portador.",
+                obligation: "Atender el proceso e instrucciones de la aseguradora.",
                 goal: "Controlar exposición y costo para la compañía de seguros.",
             },
             {
                 title: "Ajustador independiente",
                 subtitle: "Contratado por el asegurador",
-                obligation: "Prestar servicios de ajuste para el expediente del portador.",
-                goal: "Entregar el alcance y la documentación que el portador espera — del lado del asegurador.",
+                obligation: "Prestar servicios de ajuste para el expediente de la aseguradora.",
+                goal: "Entregar el alcance y la documentación que la aseguradora espera — del lado del asegurador.",
             },
             {
-                title: "Perito público",
+                title: "Ajustador público de seguros",
                 subtitle: "Contratado por usted",
                 obligation: "Representar al asegurado en la preparación y ajuste del siniestro.",
                 goal: "Buscar la cobertura y la documentación que respalda su contrato — con responsabilidad hacia usted.",
@@ -117,11 +117,11 @@ export const es = {
         homeownerTitle: "Propietarios de vivienda",
         homeownerBody:
             "La mayoría no ha leído la póliza entera. Tras una pérdida, plazos, documentación y peticiones del asegurador pueden abrumar al hogar. Tomamos la iniciativa en el expediente para que usted vuelva a la familia y a la recuperación.",
-        homeownerCta: "Siniestros residenciales",
+        homeownerCta: "Reclamaciones residenciales",
         commercialTitle: "Propiedad comercial",
         commercialBody:
             "Clima y siniestros pueden golpear flujo de caja, inquilinos y valor del activo a la vez. Coordinamos con su equipo y documentamos alcances mayores, operaciones sensibles al tiempo y la cobertura que su póliza comercial realmente ofrece.",
-        commercialCta: "Siniestros comerciales",
+        commercialCta: "Reclamaciones comerciales",
     },
     philosophy: {
         eyebrow: "La filosofía Blackline",
@@ -157,7 +157,7 @@ export const es = {
         title: "CATEGORÍAS DE PÉRDIDA QUE",
         titleAccent: "DOMINAMOS.",
         subtitle:
-            "Peritación precisa en los principales tipos de siniestro. Ningún detalle es demasiado pequeño, ninguna reclamación demasiado compleja.",
+            "Ajuste preciso en los principales tipos de siniestro. Ningún detalle es demasiado pequeño, ninguna reclamación demasiado compleja.",
         items: [
             {
                 title: "Daño por viento",
@@ -227,11 +227,11 @@ export const es = {
         title1: "INICIE SU",
         title2: "TOMA DE RECLAMACIÓN.",
         definition:
-            "Los peritos públicos son profesionales de seguros licenciados, capacitados para interpretar su póliza, documentar y estimar pérdidas, presentar el siniestro y negociar con su aseguradora — con obligaciones profesionales reguladas por la ley de Florida y su acuerdo por escrito.",
+            "Los ajustadores públicos de seguros son profesionales de seguros licenciados, capacitados para interpretar su póliza, documentar y estimar pérdidas, presentar el siniestro y negociar con su aseguradora — con obligaciones profesionales reguladas por la ley de Florida y su acuerdo por escrito.",
         body: "Cuéntenos qué ocurrió. Confirmaremos si podemos aceptar representación y qué documentación importa a continuación.",
         note: "Los honorarios suelen ser condicionados a montos recuperados, según su contrato firmado y normas aplicables — pídanos un calendario claro antes de autorizar cualquier cosa.",
         stat1: "Florida",
-        stat1Label: "Peritación pública licenciada",
+        stat1Label: "Ajustador público de seguros con licencia",
         stat2: "Condicional",
         stat2Label: "Honorarios aclarados al inicio",
         formTitle: "Solicitar consulta",
@@ -269,18 +269,18 @@ export const es = {
             "Una firma basada en la póliza que trata los contratos como autoridad absoluta. Sostenemos a la aseguradora en la letra estricta de la póliza hasta el cierre del siniestro.",
         homeAria: "BLACKLINE Adjusting — Inicio",
         platform: "Plataforma",
-        claims: "Siniestros",
+        claims: "Reclamaciones",
         contact: "Contacto",
         links: {
             about: "Nosotros",
-            faq: "Preguntas (peritos públicos)",
+            faq: "Preguntas (ajustadores públicos de seguros)",
             insights: "Perspectivas",
             philosophy: "Filosofía",
             standard: "El estándar Blackline",
             scope: "Alcance forense",
             contact: "Contacto",
-            homeowner: "Siniestros residenciales",
-            commercial: "Siniestros comerciales",
+            homeowner: "Reclamaciones residenciales",
+            commercial: "Reclamaciones comerciales",
             process: "Proceso de reclamación",
             statusByEmail: "Estado del siniestro por correo",
             audit: "Solicitud de auditoría",
@@ -304,8 +304,8 @@ export const es = {
         whoP2:
             "Operamos como una práctica guiada por la póliza: el contrato se lee como contrato, la evidencia se reúne para escrutinio y el cliente recibe expectativas claras en cada fase. Ese estándar existe porque la firma se diseñó desde el origen para combinar fluidez del lado del seguro, disciplina de proceso legal y sistemas modernos — no como eslogan, sino como procedimiento.",
         whoP3:
-            "BLACKLINE atiende a asegurados que esperan precisión sin artificio. A medida que crecemos, ese mismo estándar aplica a cada perito y cada expediente que aceptamos.",
-        adjustersMissionEyebrow: "Peritos BLACKLINE",
+            "BLACKLINE atiende a asegurados que esperan precisión sin artificio. A medida que crecemos, ese mismo estándar aplica a cada ajustador y cada expediente que aceptamos.",
+        adjustersMissionEyebrow: "Ajustadores BLACKLINE",
         adjustersMissionTitleLine1: "DEFENSA DEL",
         adjustersMissionTitleLine2: "SINIESTRO CON DIENTES.",
         adjustersMissionP1:
@@ -346,7 +346,7 @@ export const es = {
         teamHeading: "NUESTRO EQUIPO",
         teamSub:
             "Profesionales licenciados por orden de liderazgo. Datos biográficos y credenciales con transparencia.",
-        founding: "Perito fundador · Principal",
+        founding: "Ajustador fundador · Principal",
         miguelLine: "Inglés y español · Servicio en todo el estado con base operativa en Miami-Dade",
         miguelBio:
             "Miguel fundó BLACKLINE para unir documentación digna de litigio con comunicación directa con el cliente. Su trayectoria abarca hospitalidad, apoyo legal, ingeniería de software y experiencia del lado del seguro — una combinación que aplica a inspecciones, revisión de estimados y cada conversación con la aseguradora.",
@@ -393,7 +393,7 @@ export const es = {
         steps: [
             {
                 title: "Póliza y preguntas",
-                body: "Como peritos públicos licenciados, evaluamos su póliza, explicamos la cobertura con claridad y respondemos lo esencial antes de que la aseguradora marque el relato.",
+                body: "Como ajustadores públicos de seguros licenciados, evaluamos su póliza, explicamos la cobertura con claridad y respondemos lo esencial antes de que la aseguradora marque el relato.",
             },
             {
                 title: "Inspección y evidencia",
@@ -415,8 +415,8 @@ export const es = {
                 body: "Confirmamos el daño, sus objetivos y si BLACKLINE es la firma adecuada para su caso.",
             },
             {
-                title: "Perito asignado",
-                body: "Se asigna un perito público licenciado para liderar estrategia, documentación y comunicación con la aseguradora.",
+                title: "Ajustador asignado",
+                body: "Se asigna un ajustador público de seguros licenciado para liderar estrategia, documentación y comunicación con la aseguradora.",
             },
             {
                 title: "Carta de representación",
@@ -482,13 +482,13 @@ export const es = {
         ctaButton: "Iniciar toma de reclamación",
     },
     homeownerClaimsPage: {
-        metaTitle: "Siniestros residenciales",
+        metaTitle: "Reclamaciones residenciales",
         metaDescription:
             "Por qué los propietarios en Florida eligen BLACKLINE — revisión de póliza, documentación forense y negociación en reclamaciones de vivienda.",
-        heroEyebrow: "Siniestros residenciales",
+        heroEyebrow: "Reclamaciones residenciales",
         heroTitle: "Por qué necesita un aliado a su lado",
         heroBody:
-            "Un daño en el hogar puede llegar sin aviso. Cuando ocurre, merece un perito público licenciado que trate su póliza como contrato — no como sugerencia. BLACKLINE defiende su expediente con documentación, disciplina y constancia.",
+            "Un daño en el hogar puede llegar sin aviso. Cuando ocurre, merece un ajustador público de seguros licenciado que trate su póliza como contrato — no como sugerencia. BLACKLINE defiende su expediente con documentación, disciplina y constancia.",
         highlights: [
             {
                 title: "Su póliza cambia cada año",
@@ -507,9 +507,9 @@ export const es = {
             "Avanzamos el trabajo del siniestro sin honorarios por adelantado al inicio; la compensación está ligada a la vía de liquidación que emprendamos juntos.",
         stat: "Cada año, alrededor de 1 de cada 20 viviendas aseguradas presenta un siniestro — la mayoría implica daño a la propiedad. (Insurance Information Institute, 2021; los promedios regionales varían.)",
         licensedEyebrow: "Profesionales licenciados",
-        licensedTitle: "Qué hace un perito público por usted",
+        licensedTitle: "Qué hace un ajustador público de seguros por usted",
         licensedBody:
-            "Los peritos públicos son profesionales licenciados capacitados para interpretar su póliza, cuantificar el daño cubierto, reunir la prueba de pérdida y negociar con su aseguradora. En BLACKLINE añadimos rigor forense: documentación ordenada, estimados defendibles y correspondencia con la aseguradora en la que puede confiar cuando el expediente se pone duro.",
+            "Los ajustadores públicos de seguros son profesionales licenciados capacitados para interpretar su póliza, cuantificar el daño cubierto, reunir la prueba de pérdida y negociar con su aseguradora. En BLACKLINE añadimos rigor forense: documentación ordenada, estimados defendibles y correspondencia con la aseguradora en la que puede confiar cuando el expediente se pone duro.",
         servicesEyebrow: "Cómo ayudamos",
         servicesTitle: "Experiencia y servicios",
         servicesIntro:
@@ -525,7 +525,7 @@ export const es = {
             },
             {
                 title: "Impulso hacia la resolución",
-                body: "Sabemos dónde se frenan los siniestros: vacíos de documentación, respuestas lentas y trampas de procedimiento. Empujamos plazas y damos seguimiento para que el retraso no sea denegación por inercia.",
+                body: "Sabemos dónde se frenan los siniestros: vacíos de documentación, respuestas lentas y trampas de procedimiento. Empujamos plazos y damos seguimiento para que el retraso no sea denegación por inercia.",
             },
             {
                 title: "Presentación y papeleo",
@@ -579,20 +579,20 @@ export const es = {
             },
             {
                 title: "Presentación y negociación",
-                body: "Presentamos un expediente completo y empujamos el siniestro en los plazas de la aseguradora — negociando hacia la máxima liquidación que su contrato permita.",
+                body: "Presentamos un expediente completo y empujamos el siniestro en los plazos de la aseguradora — negociando hacia la máxima liquidación que su contrato permita.",
             },
         ],
         ctaTitle: "Inicie su reclamación residencial",
         ctaButton: "Iniciar contacto",
     },
     commercialClaimsPage: {
-        metaTitle: "Siniestros comerciales",
+        metaTitle: "Reclamaciones comerciales",
         metaDescription:
             "Por qué los propietarios comerciales en Florida eligen BLACKLINE — documentación forense, coordinación con partes y negociación en pérdidas empresariales e industriales.",
-        heroEyebrow: "Siniestros comerciales",
+        heroEyebrow: "Reclamaciones comerciales",
         heroTitle: "Por qué necesita un aliado a su lado",
         heroBody:
-            "Un siniestro comercial puede interrumpir ingresos, inquilinos y operaciones de la noche a la mañana. Necesita un perito público licenciado que trate su póliza como contrato y su cartera como balance. BLACKLINE lidera expedientes complejos con documentación, coordinación y constancia.",
+            "Un siniestro comercial puede interrumpir ingresos, inquilinos y operaciones de la noche a la mañana. Necesita un ajustador público de seguros licenciado que trate su póliza como contrato y su cartera como balance. BLACKLINE lidera expedientes complejos con documentación, coordinación y constancia.",
         highlights: [
             {
                 title: "Su póliza es un objetivo móvil",
@@ -611,9 +611,9 @@ export const es = {
             "Avanzamos el trabajo del siniestro sin honorarios por adelantado al inicio; la compensación está ligada a la vía de liquidación que emprendamos con usted.",
         stat: "Los siniestros comerciales suelen implicar varias partes, líneas de cobertura superpuestas y plazos ajustados — donde la documentación disciplinada y el seguimiento con la aseguradora marcan el resultado.",
         licensedEyebrow: "Profesionales licenciados",
-        licensedTitle: "Qué hace un perito público por clientes comerciales",
+        licensedTitle: "Qué hace un ajustador público de seguros por clientes comerciales",
         licensedBody:
-            "Los peritos públicos están autorizados a interpretar su póliza, cuantificar el daño cubierto, reunir la prueba de pérdida y negociar con su aseguradora. En siniestros comerciales, BLACKLINE añade visión de cartera: coordinación con su equipo, narrativas de lucro cesante donde la cobertura lo permita y un expediente que aguante ingeniería y tasación.",
+            "Los ajustadores públicos de seguros están autorizados a interpretar su póliza, cuantificar el daño cubierto, reunir la prueba de pérdida y negociar con su aseguradora. En siniestros comerciales, BLACKLINE añade visión de cartera: coordinación con su equipo, narrativas de lucro cesante donde la cobertura lo permita y un expediente que aguante ingeniería y tasación.",
         servicesEyebrow: "Cómo ayudamos",
         servicesTitle: "Experiencia y servicios",
         servicesIntro:
@@ -695,21 +695,21 @@ export const es = {
         ctaButton: "Iniciar contacto",
     },
     faqPage: {
-        metaTitle: "Preguntas sobre peritos públicos",
+        metaTitle: "Preguntas sobre ajustadores públicos de seguros",
         metaDescription:
-            "Respuestas frecuentes sobre la peritación pública en Florida: licencias, honorarios, inspecciones, carta de representación y cuándo contratar a BLACKLINE.",
+            "Respuestas frecuentes sobre el ajuste de reclamaciones y los ajustadores públicos de seguros en Florida: licencias, honorarios, inspecciones, carta de representación y cuándo contratar a BLACKLINE.",
         heroEyebrow: "Recursos",
         heroTitle: "Respuestas a preguntas frecuentes",
         heroBody:
             "El proceso de seguros está lleno de plazos y términos confusos. Aquí tiene respuestas directas a lo que más preguntan los asegurados — enmarcadas para Florida y cómo trabaja BLACKLINE.",
         floridaEyebrow: "Licencia en Florida",
-        floridaTitle: "¿Quién regula a los peritos públicos aquí?",
+        floridaTitle: "¿Quién regula a los ajustadores públicos de seguros aquí?",
         floridaBody:
-            "En Florida, los peritos públicos deben tener licencia vigente del Departamento de Servicios Financieros de Florida (DFS, por sus siglas en inglés). Las reglas estatales rigen contratos, honorarios, publicidad y conducta profesional. Los requisitos pueden cambiar; verifique siempre el estado de la licencia en DFS y lea con atención su contrato de representación antes de firmar.",
+            "En Florida, los ajustadores públicos de seguros deben tener licencia vigente del Departamento de Servicios Financieros de Florida (DFS, por sus siglas en inglés). Las reglas estatales rigen contratos, honorarios, publicidad y conducta profesional. Los requisitos pueden cambiar; verifique siempre el estado de la licencia en DFS y lea con atención su contrato de representación antes de firmar.",
         floridaHint: "Verifique una licencia a través del Departamento de Servicios Financieros de Florida.",
         floridaLinkLabel: "Abrir búsqueda de licencias DFS",
         floridaLinkUrl: "https://licensecheck.fldfs.com/",
-        topicInspectionTitle: "¿Cómo inspecciona un perito público un inmueble?",
+        topicInspectionTitle: "¿Cómo inspecciona un ajustador público de seguros un inmueble?",
         topicInspectionLead:
             "Documentamos qué falló, cómo se relaciona con la causa del siniestro y qué hace falta para restaurar el bien — con evidencia que aguante escrutinio.",
         topicInspectionBody:
@@ -718,7 +718,7 @@ export const es = {
         topicLorLead:
             "Indica a su aseguradora quién está autorizado a hablar y negociar en su nombre — para que el expediente no se moldee sin su defensor.",
         topicLorBody:
-            "Una carta de representación (u autoridad escrita comparable) autoriza a su perito público a comunicarse con su aseguradora respecto al siniestro. Aclara la relación, ayuda a encaminar la correspondencia y respalda una negociación ordenada. BLACKLINE prepara la representación de forma coherente con la ley de Florida y su contrato firmado.",
+            "Una carta de representación (u autoridad escrita comparable) autoriza a su ajustador público de seguros a comunicarse con su aseguradora respecto al siniestro. Aclara la relación, ayuda a encaminar la correspondencia y respalda una negociación ordenada. BLACKLINE prepara la representación de forma coherente con la ley de Florida y su contrato firmado.",
         topicMaterialsTitle: "¿Por qué pruebas de materiales y dictámenes de expertos?",
         topicMaterialsLead:
             "Cuando la aseguradora discute causa, alcance o método de reparación, los hechos pesan más que el discurso.",
@@ -727,31 +727,31 @@ export const es = {
         faqSectionTitle: "Preguntas que escuchamos a diario",
         faqItems: [
             {
-                q: "¿Cuándo debo contratar a un perito público?",
-                a: "Los temas menores de mantenimiento pueden no requerir perito. Para daños importantes — techo, agua, incendio, tormenta mayor o lucro cesante — o si cree que la aseguradora acota mal, demora o malinterpreta su póliza, conviene hablar pronto con un perito licenciado. A menudo puede contratarse antes de presentar el siniestro, con el siniestro abierto o al buscar un suplemento o reapertura; plazos y derechos dependen de su póliza y la ley de Florida.",
+                q: "¿Cuándo debo contratar a un ajustador público de seguros?",
+                a: "Los temas menores de mantenimiento pueden no requerir ajustador. Para daños importantes — techo, agua, incendio, tormenta mayor o lucro cesante — o si cree que la aseguradora acota mal, demora o malinterpreta su póliza, conviene hablar pronto con un ajustador público de seguros licenciado. A menudo puede contratarse antes de presentar el siniestro, con el siniestro abierto o al buscar un suplemento o reapertura; plazos y derechos dependen de su póliza y la ley de Florida.",
             },
             {
-                q: "¿Cuáles son los beneficios de contratar a un perito público?",
-                a: "Obtiene un profesional licenciado cuyo deber es con usted — no con la aseguradora. Un perito ayuda a interpretar cobertura, organizar documentación, preparar estimados al estándar de la póliza y negociar desde una posición respaldada por evidencia. En BLACKLINE añadimos rigor forense: un expediente ordenado para el escrutinio, no una negociación vaga por teléfono.",
+                q: "¿Cuáles son los beneficios de contratar a un ajustador público de seguros?",
+                a: "Obtiene un profesional licenciado cuyo deber es con usted — no con la aseguradora. Un ajustador público de seguros ayuda a interpretar cobertura, organizar documentación, preparar estimados al estándar de la póliza y negociar desde una posición respaldada por evidencia. En BLACKLINE añadimos rigor forense: un expediente ordenado para el escrutinio, no una negociación vaga por teléfono.",
             },
             {
-                q: "¿Los peritos públicos trabajan para las aseguradoras?",
-                a: "No. Los ajustadores de la compañía y los independientes contratados por la aseguradora sirven al proceso de la aseguradora. El perito público lo contrata el asegurado para representar los intereses del asegurado al preparar y ajustar el siniestro.",
+                q: "¿Los ajustadores públicos de seguros trabajan para las aseguradoras?",
+                a: "No. Los ajustadores de la compañía y los independientes contratados por la aseguradora sirven al proceso de la aseguradora. El ajustador público de seguros lo contrata el asegurado para representar los intereses del asegurado al preparar y ajustar el siniestro.",
             },
             {
-                q: "¿Cuánto debo pagar a un perito público?",
-                a: "Gran parte de la peritación residencial y comercial se lleva a éxito ligado a lo recuperado, sujeto al marco regulatorio de Florida y al contrato escrito que firme. Los porcentajes y topes varían según el caso y las reglas — pida un calendario de honorarios claro y por escrito, y cualquier límite, antes de autorizar representación.",
+                q: "¿Cuánto debo pagar a un ajustador público de seguros?",
+                a: "Gran parte del ajuste de reclamaciones residencial y comercial se lleva a éxito ligado a lo recuperado, sujeto al marco regulatorio de Florida y al contrato escrito que firme. Los porcentajes y topes varían según el caso y las reglas — pida un calendario de honorarios claro y por escrito, y cualquier límite, antes de autorizar representación.",
             },
             {
-                q: "¿Subirán mis primas si contrato a un perito público?",
-                a: "Contratar un perito no cambia por sí solo la fórmula de su prima. Sin embargo, presentar un siniestro y otros factores de riesgo pueden afectar primas futuras según aseguradora y póliza. Su perito puede explicar el proceso; las primas confírmelas con su agente o aseguradora para su póliza concreta.",
+                q: "¿Subirán mis primas si contrato a un ajustador público de seguros?",
+                a: "Contratar un ajustador público de seguros no cambia por sí solo la fórmula de su prima. Sin embargo, presentar un siniestro y otros factores de riesgo pueden afectar primas futuras según aseguradora y póliza. Su ajustador puede explicar el proceso; las primas confírmelas con su agente o aseguradora para su póliza concreta.",
             },
             {
-                q: "¿Puedo contratar a un perito después de liquidar con el seguro?",
-                a: "A veces. Los siniestros pueden suplementarse o revisarse cuando hay nueva información, daño oculto o interpretación de póliza que respalda pago adicional — pero plazos y procedimientos varían. Si cree que le pagaron de menos, consulte pronto a un perito licenciado para saber qué permite la ley de Florida y su póliza.",
+                q: "¿Puedo contratar a un ajustador público de seguros después de liquidar con el seguro?",
+                a: "A veces. Los siniestros pueden suplementarse o revisarse cuando hay nueva información, daño oculto o interpretación de póliza que respalda pago adicional — pero plazos y procedimientos varían. Si cree que le pagaron de menos, consulte pronto a un ajustador público de seguros licenciado para saber qué permite la ley de Florida y su póliza.",
             },
             {
-                q: "¿Qué debo buscar en un buen perito público?",
+                q: "¿Qué debo buscar en un buen ajustador público de seguros?",
                 a: "Licencia vigente en Florida, experiencia relevante con su tipo de pérdida, honorarios transparentes por escrito, comunicación clara y un enfoque primero en documentación. Credenciales y referencias importan — contrata juicio e integridad, no un eslogan.",
             },
         ],
@@ -764,11 +764,11 @@ export const es = {
             },
             {
                 title: "Licencia",
-                body: "DFS emite y supervisa las licencias de peritos públicos en Florida. Verifique el estado de la licencia de cualquier representante antes de otorgar autoridad o pagar honorarios.",
+                body: "DFS emite y supervisa las licencias de ajustadores públicos de seguros en Florida. Verifique el estado de la licencia de cualquier representante antes de otorgar autoridad o pagar honorarios.",
             },
             {
                 title: "Ética",
-                body: "Los peritos públicos deben cumplir estándares legales y profesionales. Honorarios, conflictos y alcance de la autoridad deben quedar claros por escrito — si algo parece opaco, deténgase y pregunte.",
+                body: "Los ajustadores públicos de seguros deben cumplir estándares legales y profesionales. Honorarios, conflictos y alcance de la autoridad deben quedar claros por escrito — si algo parece opaco, deténgase y pregunte.",
             },
         ],
         ctaTitle: "¿Sigue con dudas?",
@@ -778,7 +778,7 @@ export const es = {
     insightsPage: {
         metaTitle: "Perspectivas",
         metaDescription:
-            "Artículos y notas de BLACKLINE sobre huracanes, siniestros de propiedad, peritación pública y documentación en Florida.",
+            "Artículos y notas de BLACKLINE sobre huracanes, siniestros de propiedad, ajustadores públicos de seguros y documentación en Florida.",
         heroEyebrow: "BLACKLINE",
         heroTitle: "Perspectivas",
         heroBody:
@@ -795,13 +795,13 @@ export const es = {
             },
             {
                 category: "Gestión de reclamaciones",
-                title: "Seis razones por las que los asegurados contratan un perito público",
+                title: "Seis razones por las que los asegurados contratan un ajustador público de seguros",
                 excerpt:
                     "Representación licenciada, documentación ordenada, estimados al estándar de la póliza y negociación respaldada por evidencia — no un eslogan, un flujo de trabajo.",
             },
             {
                 category: "Gestión de reclamaciones",
-                title: "¿Se pueden negociar los honorarios del perito público?",
+                title: "¿Se pueden negociar los honorarios del ajustador público de seguros?",
                 excerpt:
                     "Sí — la compensación debe estar clara por escrito antes de firmar. Entienda qué dispara el pago, qué exige Florida y qué autoriza.",
             },
@@ -824,14 +824,14 @@ export const es = {
                     "Preparación, fotos, mediciones y un alcance ligado a la economía de reparación — no una lista pensada para minimizar la exposición de la aseguradora.",
             },
             {
-                category: "Peritación pública",
+                category: "Ajuste público de seguros",
                 title: "Daño por agua repentino frente a gradual",
                 excerpt:
                     "Las vías de cobertura pueden diferir. La misma mancha en el techo puede ser dos historias distintas — mandan el lenguaje de la póliza y el tiempo.",
             },
             {
                 category: "Gestión de reclamaciones",
-                title: "Siniestros por incendio: documentar estructura y contenidos",
+                title: "Reclamaciones por incendio: documentar estructura y contenidos",
                 excerpt:
                     "El incendio es traumático. Un expediente sólido une alcance estructural con inventario de contenidos y respaldo de lo perdido — no suposiciones.",
             },
@@ -842,8 +842,8 @@ export const es = {
                     "El granizo puede dañar sistemas que la aseguradora discute. Historiales de mantenimiento y documentación profesional protegen el valor asegurado.",
             },
             {
-                category: "Peritación pública",
-                title: "Cómo un perito público fortalece su expediente",
+                category: "Ajuste público de seguros",
+                title: "Cómo un ajustador público de seguros fortalece su expediente",
                 excerpt:
                     "Alineamos lenguaje de póliza, evidencia de campo y estimación para que la negociación se base en hechos — no en impresiones.",
             },
