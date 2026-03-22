@@ -70,6 +70,14 @@ export default function Hero() {
 
                     {/* Main Balanced Heading */}
                     <div className="relative w-full max-w-5xl">
+                        <motion.p
+                            initial={{ opacity: 0, y: 12 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
+                            className="mb-4 font-sans text-[10px] font-bold uppercase tracking-[0.45em] text-brand-gold md:text-xs md:tracking-[0.5em]"
+                        >
+                            {t("hero.accentLine")}
+                        </motion.p>
                         <motion.h1
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -86,17 +94,17 @@ export default function Hero() {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 1, delay: 0.6 }}
                             viewport={{ once: true }}
-                            className="mt-8 md:mt-12 mx-auto flex max-w-xl flex-col gap-4 px-6 py-4 md:flex-row md:items-center md:gap-0 md:px-10 md:py-6 glass rounded-[24px] md:rounded-[30px] border-brand-gold/20 shadow-[0_0_40px_rgba(198,168,91,0.1)]"
+                            className="mt-8 md:mt-12 mx-auto grid w-full max-w-3xl grid-cols-1 divide-y divide-brand-white/10 rounded-[24px] border border-brand-gold/20 glass shadow-[0_0_40px_rgba(198,168,91,0.1)] md:grid-cols-2 md:divide-x md:divide-y-0 md:rounded-[30px]"
                         >
-                            <div className="flex flex-col items-center gap-1 border-b border-brand-white/10 px-2 pb-4 md:border-b-0 md:border-r md:px-6 md:pb-0 md:pr-10">
+                            <div className="flex min-h-[9.5rem] flex-col items-center justify-center gap-3 px-6 py-8 text-center sm:min-h-[10rem] md:min-h-[11rem] md:px-8 md:py-10">
                                 <span className="font-serif text-2xl font-black gold-gradient md:text-4xl">{t("hero.sameDay")}</span>
-                                <span className="max-w-[240px] text-center font-sans text-[7px] uppercase tracking-[0.22em] text-brand-white/70 md:text-[9px] md:tracking-[0.25em]">
+                                <span className="w-full max-w-[280px] whitespace-pre-line font-sans text-[8px] uppercase leading-relaxed tracking-[0.22em] text-brand-white/70 md:text-[9px] md:tracking-[0.25em]">
                                     {t("hero.sameDaySub")}
                                 </span>
                             </div>
-                            <div className="flex flex-col items-center gap-1 px-2 pt-2 md:px-6 md:pt-0 md:pl-10">
-                                <span className="font-serif text-2xl font-black text-brand-white/95 md:text-4xl">{t("hero.weekly")}</span>
-                                <span className="max-w-[240px] text-center font-sans text-[7px] uppercase tracking-[0.22em] text-brand-white/70 md:text-[9px] md:tracking-[0.25em]">
+                            <div className="flex min-h-[9.5rem] flex-col items-center justify-center gap-3 px-6 py-8 text-center sm:min-h-[10rem] md:min-h-[11rem] md:px-8 md:py-10">
+                                <span className="font-serif text-2xl font-black gold-gradient md:text-4xl">{t("hero.weekly")}</span>
+                                <span className="w-full max-w-[280px] whitespace-pre-line font-sans text-[8px] uppercase leading-relaxed tracking-[0.22em] text-brand-white/70 md:text-[9px] md:tracking-[0.25em]">
                                     {t("hero.weeklySub")}
                                 </span>
                             </div>

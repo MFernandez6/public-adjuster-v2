@@ -1,17 +1,18 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Wind, Flame, CloudLightning, Waves, Ghost, CloudFog } from "lucide-react";
+import { Wind, Flame, CloudLightning, Waves, Ghost, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { useLanguage } from "@/contexts/language-context";
 
+/** Order: wind, fire, storm, hail, water, vandalism — aligned with `claims.items` indices */
 const claimMeta = [
+    { icon: <Wind className="w-8 h-8" />, image: "/images/properties/wind.png" },
     { icon: <Flame className="w-8 h-8" />, image: "/images/properties/residential.png" },
-    { icon: <Waves className="w-8 h-8" />, image: "/images/properties/industrial.png" },
     { icon: <CloudLightning className="w-8 h-8" />, image: "/images/properties/commercial.png" },
-    { icon: <CloudFog className="w-8 h-8" />, image: "/images/properties/wind.png" },
+    { icon: <Sparkles className="w-8 h-8" />, image: "/images/properties/forensic.png" },
+    { icon: <Waves className="w-8 h-8" />, image: "/images/properties/industrial.png" },
     { icon: <Ghost className="w-8 h-8" />, image: "/images/properties/vandalism.png" },
-    { icon: <Wind className="w-8 h-8" />, image: "/images/properties/forensic.png" },
 ] as const;
 
 export default function ClaimTypes() {

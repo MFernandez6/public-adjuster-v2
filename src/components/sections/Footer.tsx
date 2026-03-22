@@ -15,6 +15,8 @@ export default function Footer() {
                 title: t("footer.platform"),
                 links: [
                     { name: t("footer.links.about"), href: "/about" },
+                    { name: t("footer.links.faq"), href: "/about/faq" },
+                    { name: t("footer.links.insights"), href: "/insights" },
                     { name: t("footer.links.philosophy"), href: "/#philosophy" },
                     { name: t("footer.links.standard"), href: "/#process" },
                     { name: t("footer.links.scope"), href: "/#claims" },
@@ -24,17 +26,16 @@ export default function Footer() {
             {
                 title: t("footer.claims"),
                 links: [
-                    { name: t("footer.links.homeowner"), href: "/#claims" },
-                    { name: t("footer.links.commercial"), href: "/#claims" },
-                    { name: t("footer.links.process"), href: "/#process" },
-                    { name: t("footer.links.clientLogin"), href: "/login" },
+                    { name: t("footer.links.homeowner"), href: "/claims/homeowners" },
+                    { name: t("footer.links.commercial"), href: "/claims/commercial" },
+                    { name: t("footer.links.process"), href: "/claims/process" },
+                    { name: t("footer.links.statusByEmail"), href: "/#contact" },
                 ],
             },
             {
                 title: t("footer.contact"),
                 links: [
                     { name: t("footer.links.audit"), href: "/#contact" },
-                    { name: t("footer.links.portal"), href: "#" },
                     { name: t("footer.links.email"), href: "mailto:contact@blacklineadjusting.com" },
                 ],
             },

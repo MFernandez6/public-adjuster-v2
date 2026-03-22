@@ -1,23 +1,23 @@
 import type { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Navbar from "@/components/sections/Navbar";
-import FoundingAdjusterPage from "@/components/about/FoundingAdjusterPage";
+import ClaimsProcessPage from "@/components/claims/ClaimsProcessPage";
+import { en } from "@/i18n/en";
 
 const Footer = dynamic(() => import("@/components/sections/Footer"), {
     loading: () => null,
 });
 
 export const metadata: Metadata = {
-    title: "About",
-    description:
-        "How BLACKLINE ADJUSTING LLC was created, and our adjusters — led by founding adjuster Miguel A. Fernandez, MSc. Law, insurance, technology, and professional credentials.",
+    title: en.claimsProcessPage.metaTitle,
+    description: en.claimsProcessPage.metaDescription,
 };
 
-export default function AboutRoute() {
+export default function ClaimsProcessRoute() {
     return (
         <main className="min-h-screen bg-brand-navy text-brand-white font-sans">
             <Navbar />
-            <FoundingAdjusterPage />
+            <ClaimsProcessPage />
             <Footer />
         </main>
     );

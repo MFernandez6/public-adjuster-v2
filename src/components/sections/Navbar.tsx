@@ -5,7 +5,7 @@ import Link from "next/link";
 import Logo from "@/components/brand/Logo";
 import { Button } from "@/components/ui/button";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown, Home, Building2, Workflow, Users, Landmark, Menu, X, Plus } from "lucide-react";
+import { ChevronDown, Home, Building2, Users, Landmark, Menu, X, Plus, ListChecks, CircleHelp } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 import LanguageSwitcher from "@/components/i18n/LanguageSwitcher";
 
@@ -30,6 +30,12 @@ export default function Navbar() {
                 icon: <Users className="w-4 h-4" />,
                 description: t("navAbout.adjusters.description"),
             },
+            {
+                title: t("navAbout.faq.title"),
+                href: "/about/faq",
+                icon: <CircleHelp className="w-4 h-4" />,
+                description: t("navAbout.faq.description"),
+            },
         ],
         [t]
     );
@@ -37,20 +43,20 @@ export default function Navbar() {
     const claimsMenu = useMemo(
         () => [
             {
-                title: t("navClaims.standard.title"),
-                href: "/#process",
-                icon: <Workflow className="w-4 h-4" />,
-                description: t("navClaims.standard.description"),
+                title: t("navClaims.processPage.title"),
+                href: "/claims/process",
+                icon: <ListChecks className="w-4 h-4" />,
+                description: t("navClaims.processPage.description"),
             },
             {
                 title: t("navClaims.homeowner.title"),
-                href: "/#claims",
+                href: "/claims/homeowners",
                 icon: <Home className="w-4 h-4" />,
                 description: t("navClaims.homeowner.description"),
             },
             {
                 title: t("navClaims.commercial.title"),
-                href: "/#claims",
+                href: "/claims/commercial",
                 icon: <Building2 className="w-4 h-4" />,
                 description: t("navClaims.commercial.description"),
             },
@@ -134,7 +140,7 @@ export default function Navbar() {
                                     animate={{ opacity: 1, y: 0, scale: 1 }}
                                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                                     transition={{ duration: 0.2, ease: "easeOut" }}
-                                    className="absolute top-full -left-4 mt-2 w-72 glass rounded-2xl p-4 border-brand-gold/10 shadow-2xl"
+                                    className="absolute top-full -left-4 mt-2 w-80 glass rounded-2xl p-4 border-brand-gold/10 shadow-2xl"
                                 >
                                     <div className="space-y-2">
                                         {claimsMenu.map((item, i) => (
@@ -162,7 +168,10 @@ export default function Navbar() {
                         </AnimatePresence>
                     </div>
 
-                    <Link href="/#philosophy" className="hover:text-brand-gold transition-colors">{t("nav.philosophy")}</Link>
+                    <Link href="/insights" className="hover:text-brand-gold transition-colors">
+                        {t("nav.insights")}
+                    </Link>
+
                     <Link href="/#contact" className="hover:text-brand-gold transition-colors">{t("nav.contact")}</Link>
                     <LanguageSwitcher />
                 </div>
@@ -171,23 +180,12 @@ export default function Navbar() {
                     <div className="md:hidden">
                         <LanguageSwitcher />
                     </div>
-                    <div className="hidden sm:flex items-stretch overflow-hidden rounded-md border border-brand-gold/20 bg-brand-navy/90 shadow-[0_0_24px_rgba(198,168,91,0.08)]">
-                        <Link
-                            href="/#contact"
-                            className="flex items-center px-4 py-2.5 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold transition-colors hover:bg-brand-gold/10 hover:text-brand-white"
-                        >
-                            {t("nav.signup")}
-                        </Link>
-                        <span className="select-none px-1 font-sans text-[10px] text-brand-slate/50" aria-hidden>
-                            /
-                        </span>
-                        <Link
-                            href="/login"
-                            className="flex items-center px-4 py-2.5 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold transition-colors hover:bg-brand-gold hover:text-brand-navy"
-                        >
-                            {t("nav.login")}
-                        </Link>
-                    </div>
+                    <Link
+                        href="/#contact"
+                        className="hidden sm:flex items-center rounded-md border border-brand-gold/25 bg-brand-navy/90 px-5 py-2.5 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold shadow-[0_0_24px_rgba(198,168,91,0.08)] transition-colors hover:bg-brand-gold hover:text-brand-navy"
+                    >
+                        {t("nav.ctaContact")}
+                    </Link>
 
                     {/* Mobile Menu Button */}
                     <button
@@ -276,22 +274,24 @@ export default function Navbar() {
                                     </AnimatePresence>
                                 </div>
 
-                                <Link href="/#philosophy" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs font-sans uppercase tracking-[0.2em] text-brand-white/90">{t("nav.philosophy")}</Link>
+                                <Link
+                                    href="/insights"
+                                    onClick={() => setIsMobileMenuOpen(false)}
+                                    className="block text-xs font-sans uppercase tracking-[0.2em] text-brand-white/90"
+                                >
+                                    {t("nav.insights")}
+                                </Link>
+
                                 <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs font-sans uppercase tracking-[0.2em] text-brand-white/90">{t("nav.contact")}</Link>
                             </div>
 
-                            <div className="pt-8 border-t border-brand-white/10 flex flex-col gap-3">
-                                <p className="text-center font-sans text-[10px] font-bold uppercase tracking-[0.35em] text-brand-slate/80">
-                                    {t("nav.mobileSignupLogin")}
+                            <div className="pt-8 border-t border-brand-white/10 flex flex-col gap-4">
+                                <p className="text-center font-sans text-[11px] leading-relaxed text-brand-slate/90 px-1">
+                                    {t("nav.emailUpdatesPitch")}
                                 </p>
-                                <div className="flex gap-3">
-                                    <Button size="lg" className="flex-1 bg-brand-gold text-brand-navy font-bold uppercase tracking-widest text-[10px]" asChild>
-                                        <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.signup")}</Link>
-                                    </Button>
-                                    <Button size="lg" variant="outline" className="flex-1 border-brand-gold/20 text-brand-gold font-bold uppercase tracking-widest text-[10px]" asChild>
-                                        <Link href="/login" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.login")}</Link>
-                                    </Button>
-                                </div>
+                                <Button size="lg" className="w-full bg-brand-gold text-brand-navy font-bold uppercase tracking-widest text-[10px]" asChild>
+                                    <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)}>{t("nav.ctaContact")}</Link>
+                                </Button>
                             </div>
                         </div>
                     </motion.div>
