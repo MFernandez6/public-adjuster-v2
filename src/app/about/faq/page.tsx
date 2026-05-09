@@ -10,7 +10,7 @@ const Footer = dynamic(() => import("@/components/sections/Footer"), {
 export const metadata: Metadata = {
     title: "Public Adjuster FAQ",
     description:
-        "Answers to common questions about public adjusting in Florida — licensing, fees, inspections, letters of representation, and when to hire BLACKLINE.",
+        "Answers to common questions about public adjusting in Florida — licensing, fees, inspections, letters of representation, and when to hire Blackline PA.",
 };
 
 export default function AboutFaqRoute() {

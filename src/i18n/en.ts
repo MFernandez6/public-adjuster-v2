@@ -12,13 +12,17 @@ export const en = {
         emailUpdatesPitch:
             "Active clients receive prioritized weekly claim updates by email — documented, dated, and yours to keep. No portal passwords. No account to maintain.",
     },
+    mobileCall: {
+        barAria: "Call Blackline Public Adjusters LLC",
+        cta: "Call now",
+    },
     navAbout: {
         whoWeAre: {
             title: "Who we are",
-            description: "How BLACKLINE was formed and the standards we operate under.",
+            description: "How Blackline Public Adjusters was formed and the standards we operate under.",
         },
         adjusters: {
-            title: "BLACKLINE Adjusters",
+            title: "Blackline Public Adjusters",
             description: "Our licensed professionals — starting with the founding adjuster.",
         },
         faq: {
@@ -66,7 +70,7 @@ export const en = {
         weekly: "Weekly",
         weeklySub:
             "Prioritized weekly updates by email.\nClear milestones, carrier correspondence, and next steps.",
-        body: "When the carrier’s scope or payment will not fund real repairs, you need a file built for scrutiny — not a slogan. BLACKLINE represents Florida policyholders with forensic documentation and negotiation grounded in your contract.",
+        body: "When the carrier’s scope or payment will not fund real repairs, you need a file built for scrutiny — not a slogan. Blackline Public Adjusters represents Florida policyholders with forensic documentation and negotiation grounded in your contract.",
         ctaPrimary: "Consult a Specialist",
         ctaSecondary: "Review Our Ethos",
         side1: "Binding Force",
@@ -77,7 +81,7 @@ export const en = {
     homeIntro: {
         eyebrow: "Public adjusting",
         title: "Licensed professionals on your side of the desk",
-        body: "Public adjusters interpret your policy, document and estimate covered damage, submit the claim, and negotiate with your insurer — with a duty that runs to you, not the carrier. BLACKLINE brings that role together with disciplined evidence and Florida licensing standards.",
+        body: "Public adjusters interpret your policy, document and estimate covered damage, submit the claim, and negotiate with your insurer — with a duty that runs to you, not the carrier. Blackline PA brings that role together with disciplined evidence and Florida licensing standards.",
         linkFaq: "Read the Public Adjuster FAQ",
         linkInsights: "Browse insights & briefings",
     },
@@ -232,10 +236,11 @@ export const en = {
         stat2: "Contingency",
         stat2Label: "Fee structure discussed upfront",
         formTitle: "Request a consultation",
-        formSub: "We respond to new inquiries with same-business-day priority. Fields marked optional may still help us route your file.",
+        formSub:
+            "We respond to new inquiries with same-business-day priority. Completing each field—including your email—helps us confirm delivery and route your loss.",
         labelFirstName: "First name",
         labelLastName: "Last name",
-        labelEmail: "Email (optional)",
+        labelEmail: "Email",
         labelPhone: "Mobile phone",
         labelAddress: "Property address",
         labelZip: "ZIP code",
@@ -256,15 +261,26 @@ export const en = {
             "Other / not sure",
             "Commercial — describe in follow-up",
         ],
-        smsConsent:
-            "Optional: I consent to receive text messages from BLACKLINE ADJUSTING LLC at the number provided regarding my inquiry. Consent is not a condition of service. Message frequency varies. Message and data rates may apply. Reply STOP to opt out; reply HELP for help. View terms and privacy on our site.",
+        smsConsentIntro:
+            "Optional: I consent to receive text messages from BLACKLINE PUBLIC ADJUSTERS LLC at the number provided regarding my inquiry. Consent is not a condition of service. Message frequency varies. Message and data rates may apply. Reply STOP to opt out; reply HELP for help.",
+        smsConsentRead: "Read our",
+        smsConsentPrivacyLink: "Privacy Policy",
+        smsConsentMiddle: "and",
+        smsConsentTermsLink: "Terms of Service",
+        smsConsentEnding: "(including SMS practices).",
+        formErrorValidation: "Check that all fields are filled correctly—including a valid email and phone.",
+        formErrorRate: "Too many submissions from this network. Wait an hour or call us.",
+        formErrorDelivery: "We could not send your message right now. Please try again or email us.",
+        formErrorConfig: "The site cannot deliver email yet. Your message was not queued—please call or email.",
+        formSuccess: "Thank you—we received your request and will follow up promptly.",
         submit: "Request contact",
+        submitting: "Sending…",
         secure: "Secure Data Encryption Active",
     },
     footer: {
         blurb:
             "A policy-driven powerhouse treating insurance contracts as absolute authority. We hold the carrier to the strict letter of the policy until the claim is settled in full.",
-        homeAria: "BLACKLINE Adjusting — Home",
+        homeAria: "Blackline Public Adjusters — Home",
         platform: "Platform",
         claims: "Claims",
         contact: "Contact",
@@ -285,24 +301,27 @@ export const en = {
         },
         hq: "HQ Protocol",
         copyright:
-            "© 2026 BLACKLINE ADJUSTING LLC. ALL PROPERTY DATA PROTECTED BY SECURE FORENSIC PROTOCOL.",
+            "© 2026 BLACKLINE PUBLIC ADJUSTERS LLC. ALL PROPERTY DATA PROTECTED BY SECURE FORENSIC PROTOCOL.",
         privacy: "Privacy Protocol",
         terms: "Terms of Authority",
+        addressFallback:
+            "Serving Florida policyholders statewide. Request office details when scheduling a consultation.",
+        licenseLead: "Florida public adjuster license:",
     },
     aboutPage: {
-        brand: "BLACKLINE ADJUSTING LLC",
+        brand: "BLACKLINE PUBLIC ADJUSTERS LLC",
         heroTitle: "ABOUT",
         heroTitleAccent: "BLACKLINE",
         heroSub: "Who we are as a firm, and the professionals who represent you.",
         whoEyebrow: "Who we are",
-        whoHeading: "HOW BLACKLINE WAS CREATED",
+        whoHeading: "HOW BLACKLINE PUBLIC ADJUSTERS BEGAN",
         whoP1:
-            "BLACKLINE ADJUSTING LLC was built for a straightforward purpose: to represent Florida policyholders with claim documentation and communication that meet the moment — thorough, timely, and defensible. The firm was founded on a single standard: professional rigor in the file, respect for the client experience, and technology that reduces friction while preserving accountability.",
+            "BLACKLINE PUBLIC ADJUSTERS LLC was built for a straightforward purpose: to represent Florida policyholders with claim documentation and communication that meet the moment — thorough, timely, and defensible. The firm was founded on a single standard: professional rigor in the file, respect for the client experience, and technology that reduces friction while preserving accountability.",
         whoP2:
             "We operate as a policy-driven practice: contracts are read as contracts, evidence is assembled for scrutiny, and clients receive clear expectations at every phase. That standard exists because the firm was designed from the outset to combine insurance-side fluency with legal-process discipline and modern systems — not as marketing language, but as operating procedure.",
         whoP3:
-            "BLACKLINE serves policyholders who expect precision without pretense. As the firm grows, that same standard applies to every adjuster and every file we accept.",
-        adjustersMissionEyebrow: "BLACKLINE adjusters",
+            "Blackline PA serves policyholders who expect precision without pretense. As the firm grows, that same standard applies to every adjuster and every file we accept.",
+        adjustersMissionEyebrow: "Blackline PA · Public adjusters",
         adjustersMissionTitleLine1: "CLAIM ADVOCACY",
         adjustersMissionTitleLine2: "WITH TEETH.",
         adjustersMissionP1:
@@ -342,47 +361,58 @@ export const en = {
         teamEyebrow: "Leadership",
         teamHeading: "OUR TEAM",
         teamSub:
-            "Licensed professionals listed in order of leadership. Full biographical and credential detail is provided for transparency.",
+            "Leadership and credentials — summarized for transparency.",
+        paLicenseBadge: "Florida public adjuster license (DFS advertising disclosure)",
         founding: "Founding adjuster · Principal",
-        miguelLine: "English & Spanish · Service statewide with Miami-Dade operational base",
+        headshotPlaceholderAria: "Headshot placeholder",
+        miguelLine: "English & Spanish · Florida statewide · Miami–Dade base",
         miguelBio:
-            "Miguel founded BLACKLINE to pair litigation-grade documentation with direct client communication. His background spans hospitality, legal support, software engineering, and insurance-side work — a combination he applies to inspections, estimate review, and every carrier conversation.",
-        chip1: "Hospitality-grade service",
-        chip2: "Insurance-side fluency",
-        chip3: "Tech-forward operations",
+            "Miguel founded Blackline Public Adjusters to combine claim documentation that survives scrutiny with direct client communication. Hospitality, paralegal/legal support, software engineering, and insurance-side experience inform how he inspects losses, reviews estimates, and negotiates with carriers.",
+        chip1: "Client-first field presence",
+        chip2: "Carrier-side literacy",
+        chip3: "Documentation & systems",
         eduEyebrow: "Education",
-        eduHeading: "Academic credentials",
-        educationLead: [
-            "A.S. Cybersecurity, Miami Dade College",
-            "Certificate, Full-Stack Web Development, University of Miami",
-            "M.S. Law & Policy, Nova Southeastern University",
-            "Certificate, Paralegal Studies, University of Miami",
-            "B.S. Political Science, Florida State University",
-            "A.A. Political Science, Miami Dade College",
-        ],
-        educationYear: ["2026", "2020", "2017", "2013", "2011", "2008"],
-        educationCourses: [
-            "digital forensics, incident response, ethical hacking",
-            "JavaScript, Node, SQL, Docker, Spring",
-            "magna cum laude; administrative, immigration, federal privacy law",
-            "legal research, civil procedure, document preparation, paralegal ethics",
-            "American government, international relations, political theory, research methods",
-            "general education, political science core, research and writing fundamentals",
+        eduHeading: "Degrees & certificates",
+        educationCredentials: [
+            {
+                title: "2026 — A.S., Cybersecurity — Miami Dade College",
+                detail: "Coursework in digital forensics and secure systems — relevant to evidence handling, records integrity, and disciplined file hygiene.",
+            },
+            {
+                title: "2020 — Certificate, full‑stack web development — University of Miami",
+                detail: "Practical engineering stack for tooling, dashboards, and keeping loss documentation structured instead of improvised.",
+            },
+            {
+                title: "2017 — M.S., Law & Policy — Nova Southeastern University",
+                detail: "Graduate study in law and policy — useful backdrop for endorsements, regulatory context, and how contracts read in real disputes.",
+            },
+            {
+                title: "2013 — Paralegal certificate — University of Miami",
+                detail: "Civil procedure, legal research, and professional drafting — habits that translate to orderly submissions and carrier correspondence.",
+            },
+            {
+                title: "2011 — B.S., Political Science — Florida State University",
+                detail: "Research‑forward undergraduate work — emphasis on clear writing, sourcing, and narrative discipline under deadlines.",
+            },
+            {
+                title: "2008 — A.A., Political Science — Miami Dade College",
+                detail: "Associate foundation completed while working — core academics before finishing the bachelor’s at FSU.",
+            },
         ],
         cta: "Ready to discuss your loss?",
         ctaBtn: "Initiate contact",
-        ctaBack: "← Back to Blackline home",
+        ctaBack: "← Back to Blackline PA home",
     },
     claimsProcessPage: {
         metaTitle: "Claims protocol",
         metaDescription:
-            "How BLACKLINE handles your claim — intake, policy review, inspection, documentation, and negotiation for Florida policyholders.",
+            "How Blackline PA handles your claim — intake, policy review, inspection, documentation, and negotiation for Florida policyholders.",
         heroEyebrow: "The Blackline standard",
         heroTitleLine1: "INTAKE.",
         heroTitleLine2: "EVIDENCE.",
         heroTitleLine3: "ENFORCEMENT.",
         heroBody:
-            "When property damage or loss occurs, BLACKLINE carries the administrative weight of your insurance claim. We coordinate documentation, carrier communication, and negotiation with forensic discipline — so you can focus on recovery, not red tape.",
+            "When property damage or loss occurs, Blackline PA carries the administrative weight of your insurance claim. We coordinate documentation, carrier communication, and negotiation with forensic discipline — so you can focus on recovery, not red tape.",
         stepsEyebrow: "Three steps",
         stepsTitle: "Toward resolution",
         stepsIntro:
@@ -410,7 +440,7 @@ export const en = {
         operations: [
             {
                 title: "Intake & alignment",
-                body: "We confirm the loss, your objectives, and whether BLACKLINE is the right firm for your situation.",
+                body: "We confirm the loss, your objectives, and whether Blackline PA is the right firm for your situation.",
             },
             {
                 title: "Adjuster assigned",
@@ -418,7 +448,7 @@ export const en = {
             },
             {
                 title: "Letter of representation",
-                body: "When you sign a letter of representation, BLACKLINE is authorized to act on your behalf with your insurer.",
+                body: "When you sign a letter of representation, Blackline PA is authorized to act on your behalf with your insurer.",
             },
             {
                 title: "Policy review",
@@ -483,11 +513,11 @@ export const en = {
     homeownerClaimsPage: {
         metaTitle: "Homeowner Claims",
         metaDescription:
-            "Why Florida homeowners choose BLACKLINE — policy review, forensic documentation, and negotiation for residential property claims.",
+            "Why Florida homeowners choose Blackline PA — policy review, forensic documentation, and negotiation for residential property claims.",
         heroEyebrow: "Homeowner claims",
         heroTitle: "Why you need a champion on your side",
         heroBody:
-            "Home loss can happen without warning. When it does, you deserve a licensed public adjuster who treats your policy as a contract — not a suggestion. BLACKLINE champions your file with documentation, discipline, and persistence.",
+            "Home loss can happen without warning. When it does, you deserve a licensed public adjuster who treats your policy as a contract — not a suggestion. Blackline PA champions your file with documentation, discipline, and persistence.",
         highlights: [
             {
                 title: "Your policy is a moving target",
@@ -508,7 +538,7 @@ export const en = {
         licensedEyebrow: "Licensed professionals",
         licensedTitle: "What a public adjuster does for you",
         licensedBody:
-            "Public adjusters are licensed insurance professionals trained to interpret your policy, scope and estimate covered damage, assemble proof of loss, and negotiate with your insurer. At BLACKLINE, we add forensic rigor: organized documentation, defensible estimating, and carrier correspondence you can rely on when the file gets contentious.",
+            "Public adjusters are licensed insurance professionals trained to interpret your policy, scope and estimate covered damage, assemble proof of loss, and negotiate with your insurer. At Blackline PA, we add forensic rigor: organized documentation, defensible estimating, and carrier correspondence you can rely on when the file gets contentious.",
         servicesEyebrow: "How we help",
         servicesTitle: "Expertise & services",
         servicesIntro:
@@ -542,7 +572,7 @@ export const en = {
         advocateEyebrow: "Residential clients",
         advocateTitle: "Advocating for homeowners",
         advocateBody:
-            "Most homeowners have never read their policy cover to cover. After a loss, trying to interpret coverage alone — while managing contractors, family stress, and deadlines — can be overwhelming. BLACKLINE exists so your carrier does not set the rules unchallenged. We fight for the protection you paid for, so your energy goes back to home and family — not voicemail loops with an adjuster who does not represent you.",
+            "Most homeowners have never read their policy cover to cover. After a loss, trying to interpret coverage alone — while managing contractors, family stress, and deadlines — can be overwhelming. Blackline PA exists so your carrier does not set the rules unchallenged. We fight for the protection you paid for, so your energy goes back to home and family — not voicemail loops with an adjuster who does not represent you.",
         typesEyebrow: "Types of claims",
         typesTitle: "Weather and property damage we handle",
         lossTypes: [
@@ -587,11 +617,11 @@ export const en = {
     commercialClaimsPage: {
         metaTitle: "Commercial Claims",
         metaDescription:
-            "Why Florida commercial property owners choose BLACKLINE — forensic documentation, stakeholder coordination, and negotiation for business and industrial losses.",
+            "Why Florida commercial property owners choose Blackline PA — forensic documentation, stakeholder coordination, and negotiation for business and industrial losses.",
         heroEyebrow: "Commercial claims",
         heroTitle: "Why you need a champion on your side",
         heroBody:
-            "Commercial loss can interrupt revenue, tenants, and operations overnight. You need a licensed public adjuster who treats your policy as a contract and your portfolio as a balance sheet. BLACKLINE champions complex files with documentation, coordination, and persistence.",
+            "Commercial loss can interrupt revenue, tenants, and operations overnight. You need a licensed public adjuster who treats your policy as a contract and your portfolio as a balance sheet. Blackline PA champions complex files with documentation, coordination, and persistence.",
         highlights: [
             {
                 title: "Your policy is a moving target",
@@ -612,7 +642,7 @@ export const en = {
         licensedEyebrow: "Licensed professionals",
         licensedTitle: "What a public adjuster does for commercial clients",
         licensedBody:
-            "Public adjusters are licensed to interpret your policy, scope and estimate covered damage, assemble proof of loss, and negotiate with your insurer. For commercial losses, BLACKLINE adds portfolio awareness: coordinating with your team, preserving business-income narratives where coverage allows, and building a file that can survive engineering review and appraisal.",
+            "Public adjusters are licensed to interpret your policy, scope and estimate covered damage, assemble proof of loss, and negotiate with your insurer. For commercial losses, Blackline PA adds portfolio awareness: coordinating with your team, preserving business-income narratives where coverage allows, and building a file that can survive engineering review and appraisal.",
         servicesEyebrow: "How we help",
         servicesTitle: "Expertise & services",
         servicesIntro:
@@ -696,11 +726,11 @@ export const en = {
     faqPage: {
         metaTitle: "Public Adjuster FAQ",
         metaDescription:
-            "Answers to common questions about public adjusting in Florida — licensing, fees, inspections, letters of representation, and when to hire BLACKLINE.",
+            "Answers to common questions about public adjusting in Florida — licensing, fees, inspections, letters of representation, and when to hire Blackline PA.",
         heroEyebrow: "Resources",
         heroTitle: "Answers to common public adjuster questions",
         heroBody:
-            "The insurance process is full of jargon, deadlines, and competing interests. These are plain-English answers policyholders ask most often — framed for Florida and the way BLACKLINE works.",
+            "The insurance process is full of jargon, deadlines, and competing interests. These are plain-English answers policyholders ask most often — framed for Florida and the way Blackline PA works.",
         floridaEyebrow: "Florida licensing",
         floridaTitle: "Who regulates public adjusters here?",
         floridaBody:
@@ -717,7 +747,7 @@ export const en = {
         topicLorLead:
             "It tells your insurer who is authorized to speak and negotiate on your behalf — so your file does not get shaped without your advocate in the room.",
         topicLorBody:
-            "A letter of representation (or comparable written authority) is the document that authorizes your public adjuster to communicate with your carrier regarding your claim. It clarifies the relationship, helps route correspondence correctly, and supports orderly negotiation. BLACKLINE prepares representation consistent with Florida law and your signed agreement.",
+            "A letter of representation (or comparable written authority) is the document that authorizes your public adjuster to communicate with your carrier regarding your claim. It clarifies the relationship, helps route correspondence correctly, and supports orderly negotiation. Blackline PA prepares representation consistent with Florida law and your signed agreement.",
         topicMaterialsTitle: "Why material tests and expert opinions?",
         topicMaterialsLead:
             "When carriers dispute cause, extent, or repair method, facts beat rhetoric — tests and experts can lock down what actually happened.",
@@ -731,7 +761,7 @@ export const en = {
             },
             {
                 q: "What are the benefits of hiring a public adjuster?",
-                a: "You gain a licensed professional whose duty runs to you — not the insurer. A PA helps interpret coverage, organize documentation, prepare estimates aligned with policy standards, and negotiate from a position supported by evidence. At BLACKLINE, we add forensic discipline: a file organized for scrutiny, not a vague phone negotiation.",
+                a: "You gain a licensed professional whose duty runs to you — not the insurer. A PA helps interpret coverage, organize documentation, prepare estimates aligned with policy standards, and negotiate from a position supported by evidence. At Blackline PA, we add forensic discipline: a file organized for scrutiny, not a vague phone negotiation.",
             },
             {
                 q: "Do public adjusters work for insurance companies?",
@@ -740,6 +770,10 @@ export const en = {
             {
                 q: "How much can I expect to pay a public adjuster?",
                 a: "Most residential and commercial public adjusting is performed on a contingency basis tied to amounts recovered, subject to Florida’s regulatory framework and the written contract you sign. Percentages and caps vary by situation and rule set — ask for a clear, written fee schedule and any limitations before you authorize representation.",
+            },
+            {
+                q: "Are contingency fees capped in Florida?",
+                a: "Yes. Florida law distinguishes catastrophe-related claims from other contexts, with different statutory ceilings that can limit contingency fees charged by public adjusters. The exact percentages and classifications depend on your facts and current DFS rules—your compensation must remain conspicuous in a written agreement. Ask Blackline PA for a written fee schedule and how your loss is classified before you authorize representation.",
             },
             {
                 q: "Will my insurance rates go up if I hire a public adjuster?",
@@ -771,14 +805,14 @@ export const en = {
             },
         ],
         ctaTitle: "Still have questions?",
-        ctaButton: "Talk with BLACKLINE",
+        ctaButton: "Talk with Blackline PA",
         backLink: "← Back to About",
     },
     insightsPage: {
         metaTitle: "Insights",
         metaDescription:
-            "Articles and briefings from BLACKLINE on hurricanes, property claims, public adjusting, and insurance documentation in Florida.",
-        heroEyebrow: "BLACKLINE",
+            "Articles and briefings from Blackline PA on hurricanes, property claims, public adjusting, and insurance documentation in Florida.",
+        heroEyebrow: "Blackline PA",
         heroTitle: "Insights",
         heroBody:
             "Practical notes on property damage, policy discipline, and the claim process — written for Florida policyholders and property professionals. This is guidance, not legal advice; your facts and policy control.",

@@ -10,7 +10,7 @@ const Footer = dynamic(() => import("@/components/sections/Footer"), {
 export const metadata: Metadata = {
     title: "About",
     description:
-        "How BLACKLINE ADJUSTING LLC was created, and our adjusters — led by founding adjuster Miguel A. Fernandez, MSc. Law, insurance, technology, and professional credentials.",
+        "How Blackline Public Adjusters LLC was created, and our adjusters — led by founding adjuster Miguel A. Fernandez, MSc. Law, insurance, technology, and professional credentials.",
 };
 
 export default function AboutRoute() {

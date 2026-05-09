@@ -12,14 +12,18 @@ export const es = {
         emailUpdatesPitch:
             "Los clientes activos reciben actualizaciones semanales priorizadas del siniestro por correo — documentadas, fechadas y archivables. Sin contraseñas de portal. Sin cuenta que mantener.",
     },
+    mobileCall: {
+        barAria: "Llamar a Blackline Public Adjusters LLC",
+        cta: "Llamar",
+    },
     navAbout: {
         whoWeAre: {
             title: "Quiénes somos",
             description:
-                "Cómo se formó BLACKLINE y los estándares bajo los cuales operamos.",
+                "Cómo se fundó Blackline Public Adjusters y los estándares bajo los cuales operamos.",
         },
         adjusters: {
-            title: "Ajustadores BLACKLINE",
+            title: "Blackline Public Adjusters",
             description:
                 "Nuestros profesionales licenciados — a partir del ajustador fundador.",
         },
@@ -69,7 +73,7 @@ export const es = {
         weekly: "Semanal",
         weeklySub:
             "Actualizaciones semanales priorizadas por correo.\nHitos claros, correspondencia con la aseguradora y próximos pasos.",
-        body: "Cuando el alcance o el pago de la aseguradora no financian reparaciones reales, necesita un expediente hecho para escrutinio — no un eslogan. BLACKLINE representa a asegurados en Florida con documentación forense y negociación basada en su contrato.",
+        body: "Cuando el alcance o el pago de la aseguradora no financian reparaciones reales, necesita un expediente hecho para escrutinio — no un eslogan. Blackline Public Adjusters representa a asegurados en Florida con documentación forense y negociación basada en su contrato.",
         ctaPrimary: "Hable con un especialista",
         ctaSecondary: "Nuestra filosofía",
         side1: "Fuerza vinculante",
@@ -80,7 +84,7 @@ export const es = {
     homeIntro: {
         eyebrow: "Ajustador público de seguros",
         title: "Profesionales licenciados de su lado de la mesa",
-        body: "Los ajustadores públicos de seguros interpretan su póliza, documentan y estiman el daño cubierto, presentan el siniestro y negocian con su aseguradora — con un deber que corre a favor suyo, no de la aseguradora. BLACKLINE une ese rol con evidencia disciplinada y los estándares de licencia de Florida.",
+        body: "Los ajustadores públicos de seguros interpretan su póliza, documentan y estiman el daño cubierto, presentan el siniestro y negocian con su aseguradora — con un deber que corre a favor suyo, no de la aseguradora. Blackline PA une ese rol con evidencia disciplinada y los estándares de licencia de Florida.",
         linkFaq: "Lea las preguntas frecuentes sobre ajustadores públicos de seguros",
         linkInsights: "Vea perspectivas y notas",
     },
@@ -235,10 +239,11 @@ export const es = {
         stat2: "Condicional",
         stat2Label: "Honorarios aclarados al inicio",
         formTitle: "Solicitar consulta",
-        formSub: "Respondemos a nuevas consultas con prioridad el mismo día hábil. Los campos opcionales aun así ayudan a enrutar su expediente.",
+        formSub:
+            "Respondemos a nuevas consultas con prioridad el mismo día hábil. Completar cada campo —incluido el correo— nos ayuda a confirmar la entrega y enrutar su siniestro.",
         labelFirstName: "Nombre",
         labelLastName: "Apellido",
-        labelEmail: "Correo (opcional)",
+        labelEmail: "Correo electrónico",
         labelPhone: "Teléfono móvil",
         labelAddress: "Dirección de la propiedad",
         labelZip: "Código postal",
@@ -259,15 +264,26 @@ export const es = {
             "Otro / no está seguro",
             "Comercial — detallar en seguimiento",
         ],
-        smsConsent:
-            "Opcional: autorizo recibir mensajes de texto de BLACKLINE ADJUSTING LLC al número indicado sobre mi consulta. El consentimiento no es condición del servicio. La frecuencia varía. Pueden aplicarse tarifas de mensaje y datos. Responda STOP para cancelar; HELP para ayuda. Vea términos y privacidad en nuestro sitio.",
+        smsConsentIntro:
+            "Opcional: autorizo recibir mensajes de texto de BLACKLINE PUBLIC ADJUSTERS LLC al número indicado sobre mi consulta. El consentimiento no es condición del servicio. La frecuencia varía. Pueden aplicarse tarifas de mensaje y datos. Responda STOP para cancelar; HELP para ayuda.",
+        smsConsentRead: "Lea la",
+        smsConsentPrivacyLink: "Política de privacidad",
+        smsConsentMiddle: "y los",
+        smsConsentTermsLink: "Términos del servicio",
+        smsConsentEnding: "(incluye prácticas de SMS).",
+        formErrorValidation: "Revise que todos los campos estén bien —incluido un correo y teléfono válidos.",
+        formErrorRate: "Demasiados envíos desde esta red. Espere una hora o llámenos.",
+        formErrorDelivery: "No pudimos enviar su mensaje. Inténtelo de nuevo o escriba por correo.",
+        formErrorConfig: "El sitio aún no puede entregar correo electrónico. Su mensaje no quedó en cola —llame o envíe correo.",
+        formSuccess: "Gracias: recibimos su solicitud y nos pondremos en contacto pronto.",
         submit: "Solicitar contacto",
+        submitting: "Enviando…",
         secure: "Cifrado de datos activo",
     },
     footer: {
         blurb:
             "Una firma basada en la póliza que trata los contratos como autoridad absoluta. Sostenemos a la aseguradora en la letra estricta de la póliza hasta el cierre del siniestro.",
-        homeAria: "BLACKLINE Adjusting — Inicio",
+        homeAria: "Blackline Public Adjusters — Inicio",
         platform: "Plataforma",
         claims: "Reclamaciones",
         contact: "Contacto",
@@ -288,24 +304,27 @@ export const es = {
         },
         hq: "Sede",
         copyright:
-            "© 2026 BLACKLINE ADJUSTING LLC. DATOS DE PROPIEDAD PROTEGIDOS CON PROTOCOLO FORENSE SEGURO.",
+            "© 2026 BLACKLINE PUBLIC ADJUSTERS LLC. DATOS DE PROPIEDAD PROTEGIDOS CON PROTOCOLO FORENSE SEGURO.",
         privacy: "Privacidad",
         terms: "Términos",
+        addressFallback:
+            "Representación a asegurados en Florida. Solicite la dirección de oficina al programar una consulta.",
+        licenseLead: "Licencia de ajustador público de seguros en Florida:",
     },
     aboutPage: {
-        brand: "BLACKLINE ADJUSTING LLC",
+        brand: "BLACKLINE PUBLIC ADJUSTERS LLC",
         heroTitle: "SOBRE",
         heroTitleAccent: "BLACKLINE",
         heroSub: "Quiénes somos como firma y los profesionales que le representan.",
         whoEyebrow: "Quiénes somos",
-        whoHeading: "CÓMO SE CREÓ BLACKLINE",
+        whoHeading: "CÓMO NACIÓ BLACKLINE PUBLIC ADJUSTERS",
         whoP1:
-            "BLACKLINE ADJUSTING LLC se creó con un propósito claro: representar a los asegurados en Florida con documentación y comunicación del siniestro a la altura del momento: exhaustivas, oportunas y defendibles. La firma se fundó con un solo estándar: rigor profesional en el expediente, respeto por la experiencia del cliente y tecnología que reduce fricción sin sacrificar responsabilidad.",
+            "BLACKLINE PUBLIC ADJUSTERS LLC se creó con un propósito claro: representar a los asegurados en Florida con documentación y comunicación del siniestro a la altura del momento: exhaustivas, oportunas y defendibles. La firma se fundó con un solo estándar: rigor profesional en el expediente, respeto por la experiencia del cliente y tecnología que reduce fricción sin sacrificar responsabilidad.",
         whoP2:
             "Operamos como una práctica guiada por la póliza: el contrato se lee como contrato, la evidencia se reúne para escrutinio y el cliente recibe expectativas claras en cada fase. Ese estándar existe porque la firma se diseñó desde el origen para combinar fluidez del lado del seguro, disciplina de proceso legal y sistemas modernos — no como eslogan, sino como procedimiento.",
         whoP3:
-            "BLACKLINE atiende a asegurados que esperan precisión sin artificio. A medida que crecemos, ese mismo estándar aplica a cada ajustador y cada expediente que aceptamos.",
-        adjustersMissionEyebrow: "Ajustadores BLACKLINE",
+            "Blackline PA atiende a asegurados que esperan precisión sin artificio. A medida que crecemos, ese mismo estándar aplica a cada ajustador y cada expediente que aceptamos.",
+        adjustersMissionEyebrow: "Blackline PA · Ajustadores públicos",
         adjustersMissionTitleLine1: "DEFENSA DEL",
         adjustersMissionTitleLine2: "SINIESTRO CON DIENTES.",
         adjustersMissionP1:
@@ -345,47 +364,58 @@ export const es = {
         teamEyebrow: "Liderazgo",
         teamHeading: "NUESTRO EQUIPO",
         teamSub:
-            "Profesionales licenciados por orden de liderazgo. Datos biográficos y credenciales con transparencia.",
+            "Liderazgo y credenciales — en formato breve.",
+        paLicenseBadge: "Licencia de ajustador público de seguros — divulgación de publicidad DFS",
         founding: "Ajustador fundador · Principal",
-        miguelLine: "Inglés y español · Servicio en todo el estado con base operativa en Miami-Dade",
+        headshotPlaceholderAria: "Espacio para fotografía profesional",
+        miguelLine: "Inglés y español · Florida estatal · base Miami–Dade",
         miguelBio:
-            "Miguel fundó BLACKLINE para unir documentación digna de litigio con comunicación directa con el cliente. Su trayectoria abarca hospitalidad, apoyo legal, ingeniería de software y experiencia del lado del seguro — una combinación que aplica a inspecciones, revisión de estimados y cada conversación con la aseguradora.",
-        chip1: "Servicio nivel hospitalidad",
-        chip2: "Fluidez del lado del seguro",
-        chip3: "Operaciones tecnológicas",
+            "Miguel fundó Blackline Public Adjusters para unir documentación de siniestro que aguante escrutinio con comunicación directa al cliente. Hospitalidad, apoyo paralegal/legal, ingeniería de software y experiencia del lado del seguro orientan cómo inspecciona, revisa estimados y negocia con aseguradoras.",
+        chip1: "Presencia con el cliente",
+        chip2: "Lectura del lado asegurador",
+        chip3: "Documentación y sistemas",
         eduEyebrow: "Formación",
-        eduHeading: "Credenciales académicas",
-        educationLead: [
-            "A.S. en Ciberseguridad, Miami Dade College",
-            "Certificado en desarrollo web full-stack, Universidad de Miami",
-            "M.S. en Derecho y Políticas, Nova Southeastern University",
-            "Certificado en estudios paralegales, Universidad de Miami",
-            "B.S. en Ciencias Políticas, Universidad Estatal de Florida",
-            "A.A. en Ciencias Políticas, Miami Dade College",
-        ],
-        educationYear: ["2026", "2020", "2017", "2013", "2011", "2008"],
-        educationCourses: [
-            "forense digital, respuesta a incidentes, hacking ético",
-            "JavaScript, Node, SQL, Docker, Spring",
-            "magna cum laude; derecho administrativo, inmigración, privacidad federal",
-            "investigación legal, procedimiento civil, documentación, ética paralegal",
-            "gobierno americano, relaciones internacionales, teoría política, métodos de investigación",
-            "educación general, núcleo de ciencias políticas, fundamentos de investigación y redacción",
+        eduHeading: "Títulos y certificados",
+        educationCredentials: [
+            {
+                title: "2026 — A.S., Ciberseguridad — Miami Dade College",
+                detail: "Formación en forense digital y sistemas seguros — alineada con manejo de evidencia, integridad de registros y disciplina documental.",
+            },
+            {
+                title: "2020 — Certificado, desarrollo web full‑stack — Universidad de Miami",
+                detail: "Base de ingeniería aplicada a herramientas internas y a mantener documentación de siniestros estructurada, no improvisada.",
+            },
+            {
+                title: "2017 — M.S., Derecho y Políticas — Nova Southeastern University",
+                detail: "Estudios de posgrado en derecho y política pública — contexto útil para endosos, marco regulatorio y lectura contractual en disputas.",
+            },
+            {
+                title: "2013 — Certificado de estudios paralegales — Universidad de Miami",
+                detail: "Procedimiento civil, investigación legal y redacción profesional — hábitos que se trasladan a presentaciones ordenadas y correspondencia con aseguradoras.",
+            },
+            {
+                title: "2011 — B.S., Ciencias Políticas — Universidad Estatal de Florida",
+                detail: "Pregrado con énfasis en investigación y redacción clara — argumentación con fuentes bajo plazos.",
+            },
+            {
+                title: "2008 — A.A., Ciencias Políticas — Miami Dade College",
+                detail: "Primer título universitario mientras trabajaba — base académica antes de completar la licenciatura en FSU.",
+            },
         ],
         cta: "¿Listo para hablar de su siniestro?",
         ctaBtn: "Iniciar contacto",
-        ctaBack: "← Volver al inicio de Blackline",
+        ctaBack: "← Volver al inicio de Blackline PA",
     },
     claimsProcessPage: {
         metaTitle: "Protocolo de reclamación",
         metaDescription:
-            "Cómo BLACKLINE gestiona su reclamación: ingreso, revisión de póliza, inspección, documentación y negociación para asegurados en Florida.",
+            "Cómo Blackline PA gestiona su reclamación: ingreso, revisión de póliza, inspección, documentación y negociación para asegurados en Florida.",
         heroEyebrow: "El estándar Blackline",
         heroTitleLine1: "INGRESO.",
         heroTitleLine2: "EVIDENCIA.",
         heroTitleLine3: "EJECUCIÓN.",
         heroBody:
-            "Cuando ocurre un daño a la propiedad, BLACKLINE asume la carga administrativa de su reclamación. Coordinamos documentación, comunicación con la aseguradora y negociación con rigor forense — para que usted pueda centrarse en recuperarse, no en el papeleo.",
+            "Cuando ocurre un daño a la propiedad, Blackline PA asume la carga administrativa de su reclamación. Coordinamos documentación, comunicación con la aseguradora y negociación con rigor forense — para que usted pueda centrarse en recuperarse, no en el papeleo.",
         stepsEyebrow: "Tres pasos",
         stepsTitle: "Hacia la resolución",
         stepsIntro:
@@ -412,7 +442,7 @@ export const es = {
         operations: [
             {
                 title: "Ingreso y encaje",
-                body: "Confirmamos el daño, sus objetivos y si BLACKLINE es la firma adecuada para su caso.",
+                body: "Confirmamos el daño, sus objetivos y si Blackline PA es la firma adecuada para su caso.",
             },
             {
                 title: "Ajustador asignado",
@@ -420,7 +450,7 @@ export const es = {
             },
             {
                 title: "Carta de representación",
-                body: "Al firmar la carta de representación, BLACKLINE queda autorizada a actuar ante su aseguradora en su nombre.",
+                body: "Al firmar la carta de representación, Blackline PA queda autorizada a actuar ante su aseguradora en su nombre.",
             },
             {
                 title: "Revisión de póliza",
@@ -484,11 +514,11 @@ export const es = {
     homeownerClaimsPage: {
         metaTitle: "Reclamaciones residenciales",
         metaDescription:
-            "Por qué los propietarios en Florida eligen BLACKLINE — revisión de póliza, documentación forense y negociación en reclamaciones de vivienda.",
+            "Por qué los propietarios en Florida eligen Blackline PA — revisión de póliza, documentación forense y negociación en reclamaciones de vivienda.",
         heroEyebrow: "Reclamaciones residenciales",
         heroTitle: "Por qué necesita un aliado a su lado",
         heroBody:
-            "Un daño en el hogar puede llegar sin aviso. Cuando ocurre, merece un ajustador público de seguros licenciado que trate su póliza como contrato — no como sugerencia. BLACKLINE defiende su expediente con documentación, disciplina y constancia.",
+            "Un daño en el hogar puede llegar sin aviso. Cuando ocurre, merece un ajustador público de seguros licenciado que trate su póliza como contrato — no como sugerencia. Blackline PA defiende su expediente con documentación, disciplina y constancia.",
         highlights: [
             {
                 title: "Su póliza cambia cada año",
@@ -509,7 +539,7 @@ export const es = {
         licensedEyebrow: "Profesionales licenciados",
         licensedTitle: "Qué hace un ajustador público de seguros por usted",
         licensedBody:
-            "Los ajustadores públicos de seguros son profesionales licenciados capacitados para interpretar su póliza, cuantificar el daño cubierto, reunir la prueba de pérdida y negociar con su aseguradora. En BLACKLINE añadimos rigor forense: documentación ordenada, estimados defendibles y correspondencia con la aseguradora en la que puede confiar cuando el expediente se pone duro.",
+            "Los ajustadores públicos de seguros son profesionales licenciados capacitados para interpretar su póliza, cuantificar el daño cubierto, reunir la prueba de pérdida y negociar con su aseguradora. En Blackline PA añadimos rigor forense: documentación ordenada, estimados defendibles y correspondencia con la aseguradora en la que puede confiar cuando el expediente se pone duro.",
         servicesEyebrow: "Cómo ayudamos",
         servicesTitle: "Experiencia y servicios",
         servicesIntro:
@@ -543,7 +573,7 @@ export const es = {
         advocateEyebrow: "Clientes residenciales",
         advocateTitle: "Defensa del propietario de vivienda",
         advocateBody:
-            "La mayoría nunca ha leído la póliza completa. Tras una pérdida, interpretar cobertura solo — mientras coordina contratistas, estrés familiar y plazos — puede abrumar. BLACKLINE existe para que la aseguradora no marque las reglas sin contrapeso. Luchamos por la protección que pagó, para que su energía vuelva al hogar y la familia — no a buzones de voz con un interlocutor que no le representa.",
+            "La mayoría nunca ha leído la póliza completa. Tras una pérdida, interpretar cobertura solo — mientras coordina contratistas, estrés familiar y plazos — puede abrumar. Blackline PA existe para que la aseguradora no marque las reglas sin contrapeso. Luchamos por la protección que pagó, para que su energía vuelva al hogar y la familia — no a buzones de voz con un interlocutor que no le representa.",
         typesEyebrow: "Tipos de reclamación",
         typesTitle: "Clima y daños que gestionamos",
         lossTypes: [
@@ -588,11 +618,11 @@ export const es = {
     commercialClaimsPage: {
         metaTitle: "Reclamaciones comerciales",
         metaDescription:
-            "Por qué los propietarios comerciales en Florida eligen BLACKLINE — documentación forense, coordinación con partes y negociación en pérdidas empresariales e industriales.",
+            "Por qué los propietarios comerciales en Florida eligen Blackline PA — documentación forense, coordinación con partes y negociación en pérdidas empresariales e industriales.",
         heroEyebrow: "Reclamaciones comerciales",
         heroTitle: "Por qué necesita un aliado a su lado",
         heroBody:
-            "Un siniestro comercial puede interrumpir ingresos, inquilinos y operaciones de la noche a la mañana. Necesita un ajustador público de seguros licenciado que trate su póliza como contrato y su cartera como balance. BLACKLINE lidera expedientes complejos con documentación, coordinación y constancia.",
+            "Un siniestro comercial puede interrumpir ingresos, inquilinos y operaciones de la noche a la mañana. Necesita un ajustador público de seguros licenciado que trate su póliza como contrato y su cartera como balance. Blackline PA lidera expedientes complejos con documentación, coordinación y constancia.",
         highlights: [
             {
                 title: "Su póliza es un objetivo móvil",
@@ -613,7 +643,7 @@ export const es = {
         licensedEyebrow: "Profesionales licenciados",
         licensedTitle: "Qué hace un ajustador público de seguros por clientes comerciales",
         licensedBody:
-            "Los ajustadores públicos de seguros están autorizados a interpretar su póliza, cuantificar el daño cubierto, reunir la prueba de pérdida y negociar con su aseguradora. En siniestros comerciales, BLACKLINE añade visión de cartera: coordinación con su equipo, narrativas de lucro cesante donde la cobertura lo permita y un expediente que aguante ingeniería y tasación.",
+            "Los ajustadores públicos de seguros están autorizados a interpretar su póliza, cuantificar el daño cubierto, reunir la prueba de pérdida y negociar con su aseguradora. En siniestros comerciales, Blackline PA añade visión de cartera: coordinación con su equipo, narrativas de lucro cesante donde la cobertura lo permita y un expediente que aguante ingeniería y tasación.",
         servicesEyebrow: "Cómo ayudamos",
         servicesTitle: "Experiencia y servicios",
         servicesIntro:
@@ -697,11 +727,11 @@ export const es = {
     faqPage: {
         metaTitle: "Preguntas sobre ajustadores públicos de seguros",
         metaDescription:
-            "Respuestas frecuentes sobre el ajuste de reclamaciones y los ajustadores públicos de seguros en Florida: licencias, honorarios, inspecciones, carta de representación y cuándo contratar a BLACKLINE.",
+            "Respuestas frecuentes sobre el ajuste de reclamaciones y los ajustadores públicos de seguros en Florida: licencias, honorarios, inspecciones, carta de representación y cuándo contratar a Blackline PA.",
         heroEyebrow: "Recursos",
         heroTitle: "Respuestas a preguntas frecuentes",
         heroBody:
-            "El proceso de seguros está lleno de plazos y términos confusos. Aquí tiene respuestas directas a lo que más preguntan los asegurados — enmarcadas para Florida y cómo trabaja BLACKLINE.",
+            "El proceso de seguros está lleno de plazos y términos confusos. Aquí tiene respuestas directas a lo que más preguntan los asegurados — enmarcadas para Florida y cómo trabaja Blackline PA.",
         floridaEyebrow: "Licencia en Florida",
         floridaTitle: "¿Quién regula a los ajustadores públicos de seguros aquí?",
         floridaBody:
@@ -718,7 +748,7 @@ export const es = {
         topicLorLead:
             "Indica a su aseguradora quién está autorizado a hablar y negociar en su nombre — para que el expediente no se moldee sin su defensor.",
         topicLorBody:
-            "Una carta de representación (u autoridad escrita comparable) autoriza a su ajustador público de seguros a comunicarse con su aseguradora respecto al siniestro. Aclara la relación, ayuda a encaminar la correspondencia y respalda una negociación ordenada. BLACKLINE prepara la representación de forma coherente con la ley de Florida y su contrato firmado.",
+            "Una carta de representación (u autoridad escrita comparable) autoriza a su ajustador público de seguros a comunicarse con su aseguradora respecto al siniestro. Aclara la relación, ayuda a encaminar la correspondencia y respalda una negociación ordenada. Blackline PA prepara la representación de forma coherente con la ley de Florida y su contrato firmado.",
         topicMaterialsTitle: "¿Por qué pruebas de materiales y dictámenes de expertos?",
         topicMaterialsLead:
             "Cuando la aseguradora discute causa, alcance o método de reparación, los hechos pesan más que el discurso.",
@@ -732,7 +762,7 @@ export const es = {
             },
             {
                 q: "¿Cuáles son los beneficios de contratar a un ajustador público de seguros?",
-                a: "Obtiene un profesional licenciado cuyo deber es con usted — no con la aseguradora. Un ajustador público de seguros ayuda a interpretar cobertura, organizar documentación, preparar estimados al estándar de la póliza y negociar desde una posición respaldada por evidencia. En BLACKLINE añadimos rigor forense: un expediente ordenado para el escrutinio, no una negociación vaga por teléfono.",
+                a: "Obtiene un profesional licenciado cuyo deber es con usted — no con la aseguradora. Un ajustador público de seguros ayuda a interpretar cobertura, organizar documentación, preparar estimados al estándar de la póliza y negociar desde una posición respaldada por evidencia. En Blackline PA añadimos rigor forense: un expediente ordenado para el escrutinio, no una negociación vaga por teléfono.",
             },
             {
                 q: "¿Los ajustadores públicos de seguros trabajan para las aseguradoras?",
@@ -741,6 +771,10 @@ export const es = {
             {
                 q: "¿Cuánto debo pagar a un ajustador público de seguros?",
                 a: "Gran parte del ajuste de reclamaciones residencial y comercial se lleva a éxito ligado a lo recuperado, sujeto al marco regulatorio de Florida y al contrato escrito que firme. Los porcentajes y topes varían según el caso y las reglas — pida un calendario de honorarios claro y por escrito, y cualquier límite, antes de autorizar representación.",
+            },
+            {
+                q: "¿Hay topes a los honorarios contingentes en Florida?",
+                a: "Sí. La ley distingue siniestros vinculados a catástrofe declarada frente a otros escenarios y puede haber límites legales distintos. Los porcentajes y clasificaciones exactas dependen de sus hechos y de las normas DFS vigentes; la compensación debe verse clara en un contrato escrito. Pida un calendario por escrito a Blackline PA y cómo se clasifica su pérdida antes de autorizar representación.",
             },
             {
                 q: "¿Subirán mis primas si contrato a un ajustador público de seguros?",
@@ -772,14 +806,14 @@ export const es = {
             },
         ],
         ctaTitle: "¿Sigue con dudas?",
-        ctaButton: "Hable con BLACKLINE",
+        ctaButton: "Hable con Blackline PA",
         backLink: "← Volver a Nosotros",
     },
     insightsPage: {
         metaTitle: "Perspectivas",
         metaDescription:
-            "Artículos y notas de BLACKLINE sobre huracanes, siniestros de propiedad, ajustadores públicos de seguros y documentación en Florida.",
-        heroEyebrow: "BLACKLINE",
+            "Artículos y notas de Blackline PA sobre huracanes, siniestros de propiedad, ajustadores públicos de seguros y documentación en Florida.",
+        heroEyebrow: "Blackline PA",
         heroTitle: "Perspectivas",
         heroBody:
             "Notas prácticas sobre daños a la propiedad, disciplina de póliza y el proceso de reclamación — para asegurados y profesionales en Florida. Es orientación, no asesoría legal; mandan sus hechos y su contrato.",

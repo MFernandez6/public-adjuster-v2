@@ -15,8 +15,10 @@ import {
     Heart,
     Mountain,
     Microscope,
+    User,
 } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
+import { publicAdjusterLicenseNumber } from "@/config/site";
 
 const EDU_COUNT = 6;
 const VALUES_COUNT = 5;
@@ -178,27 +180,51 @@ export default function FoundingAdjusterPage() {
                         <h2 className="mt-2 font-serif text-3xl tracking-tighter text-brand-white md:text-5xl">
                             {t("aboutPage.teamHeading")}
                         </h2>
-                        <p className="mx-auto mt-4 max-w-2xl font-sans text-sm leading-relaxed text-brand-slate md:text-base">
+                        <p className="mx-auto mt-3 max-w-xl font-sans text-xs leading-relaxed text-brand-slate md:mt-4 md:text-sm">
                             {t("aboutPage.teamSub")}
                         </p>
                     </div>
 
                     {/* Miguel — founding adjuster */}
-                    <article className="rounded-2xl border border-brand-gold/20 bg-brand-white/2 p-8 md:p-12">
-                        <div className="border-b border-brand-white/10 pb-8 text-center md:pb-10 md:text-left">
-                            <p className="font-sans text-[10px] font-bold uppercase tracking-[0.35em] text-brand-gold md:text-xs">
-                                {t("aboutPage.founding")}
-                            </p>
-                            <h3 className="mt-3 font-serif text-3xl tracking-tighter text-brand-white md:text-5xl lg:text-6xl">
-                                MIGUEL A. <span className="gold-gradient">FERNANDEZ</span>
-                                <span className="text-brand-white/85">, MSc.</span>
-                            </h3>
-                            <p className="mt-4 font-sans text-sm leading-relaxed text-brand-slate/90 md:text-base">
-                                {t("aboutPage.miguelLine")}
-                            </p>
+                    <article className="rounded-2xl border border-brand-gold/20 bg-brand-white/2 p-6 md:p-10">
+                        <div className="border-b border-brand-white/10 pb-6 md:pb-8">
+                            <div className="flex flex-col items-center gap-5 md:flex-row md:items-start md:justify-between md:gap-8">
+                                <div className="min-w-0 flex-1 text-center md:text-left">
+                                    <p className="font-sans text-[10px] font-bold uppercase tracking-[0.35em] text-brand-gold md:text-xs">
+                                        {t("aboutPage.founding")}
+                                    </p>
+                                    <h3 className="mt-2 font-serif text-3xl tracking-tighter text-brand-white sm:text-4xl md:text-5xl lg:text-6xl">
+                                        MIGUEL A. <span className="gold-gradient">FERNANDEZ</span>
+                                        <span className="text-brand-white/85">, MSc.</span>
+                                    </h3>
+                                    <p className="mt-3 font-sans text-xs leading-snug text-brand-slate/90 md:mt-4 md:text-sm">
+                                        {t("aboutPage.miguelLine")}
+                                    </p>
+                                    {publicAdjusterLicenseNumber.trim().length > 0 ? (
+                                        <p className="mt-3 rounded-lg border border-brand-white/10 bg-brand-navy/60 px-3 py-2.5 font-sans text-[10px] uppercase leading-snug tracking-[0.15em] text-brand-gold/90 md:mt-4 md:text-[11px] md:tracking-[0.18em]">
+                                            <span className="mr-2 tracking-[0.25em]">{t("aboutPage.paLicenseBadge")}</span>
+                                            <span className="tracking-normal text-brand-white">
+                                                {publicAdjusterLicenseNumber.trim()}
+                                            </span>
+                                        </p>
+                                    ) : null}
+                                </div>
+
+                                <div
+                                    className="flex aspect-square w-[7.75rem] shrink-0 items-center justify-center rounded-2xl border border-dashed border-brand-white/18 bg-brand-navy/50 sm:w-[8.75rem] md:mt-0.5 md:w-[9.5rem]"
+                                    role="img"
+                                    aria-label={t("aboutPage.headshotPlaceholderAria")}
+                                >
+                                    <User
+                                        strokeWidth={1}
+                                        className="h-14 w-14 text-brand-white/28 sm:h-16 sm:w-16"
+                                        aria-hidden
+                                    />
+                                </div>
+                            </div>
                         </div>
 
-                        <div className="mt-10 grid gap-12 lg:grid-cols-12 lg:gap-14">
+                        <div className="mt-8 grid gap-8 lg:grid-cols-12 lg:gap-10">
                             <motion.div
                                 initial={{ opacity: 0, y: 16 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -206,19 +232,19 @@ export default function FoundingAdjusterPage() {
                                 transition={{ duration: 0.55 }}
                                 className="lg:col-span-5"
                             >
-                                <p className="font-sans text-base leading-relaxed tracking-wide text-brand-slate md:text-[17px]">
+                                <p className="font-sans text-sm leading-relaxed text-brand-slate md:text-[15px] md:leading-relaxed">
                                     {t("aboutPage.miguelBio")}
                                 </p>
-                                <div className="mt-8 flex flex-wrap gap-3 font-sans text-[11px] uppercase tracking-[0.3em] text-brand-white/55 md:text-xs">
-                                    <span className="inline-flex items-center gap-2 rounded-full border border-brand-white/10 bg-brand-white/3 px-4 py-2">
+                                <div className="mt-5 flex flex-wrap gap-2 font-sans text-[10px] uppercase tracking-[0.22em] text-brand-white/55 md:text-[11px] md:tracking-[0.26em]">
+                                    <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-white/10 bg-brand-white/3 px-3 py-1.5 md:gap-2 md:px-3.5 md:py-2">
                                         <Sparkles className="h-3.5 w-3.5 text-brand-gold" aria-hidden />
                                         {t("aboutPage.chip1")}
                                     </span>
-                                    <span className="inline-flex items-center gap-2 rounded-full border border-brand-white/10 bg-brand-white/3 px-4 py-2">
+                                    <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-white/10 bg-brand-white/3 px-3 py-1.5 md:gap-2 md:px-3.5 md:py-2">
                                         <Briefcase className="h-3.5 w-3.5 text-brand-gold" aria-hidden />
                                         {t("aboutPage.chip2")}
                                     </span>
-                                    <span className="inline-flex items-center gap-2 rounded-full border border-brand-white/10 bg-brand-white/3 px-4 py-2">
+                                    <span className="inline-flex items-center gap-1.5 rounded-full border border-brand-white/10 bg-brand-white/3 px-3 py-1.5 md:gap-2 md:px-3.5 md:py-2">
                                         <Code2 className="h-3.5 w-3.5 text-brand-gold" aria-hidden />
                                         {t("aboutPage.chip3")}
                                     </span>
@@ -226,12 +252,12 @@ export default function FoundingAdjusterPage() {
                             </motion.div>
 
                             <div className="lg:col-span-7">
-                                <div className="mb-5 flex items-start justify-between gap-4">
+                                <div className="mb-4 flex items-start justify-between gap-4">
                                     <div>
                                         <span className="font-sans text-[10px] font-bold uppercase tracking-[0.45em] text-brand-gold md:text-xs">
                                             {t("aboutPage.eduEyebrow")}
                                         </span>
-                                        <h4 className="mt-2 font-serif text-xl tracking-tighter text-brand-white md:text-2xl">
+                                        <h4 className="mt-1.5 font-serif text-lg tracking-tighter text-brand-white md:text-xl">
                                             {t("aboutPage.eduHeading")}
                                         </h4>
                                     </div>
@@ -242,24 +268,23 @@ export default function FoundingAdjusterPage() {
                                         <GraduationCap className="h-5 w-5 md:h-6 md:w-6" />
                                     </div>
                                 </div>
-                                <ul className="grid gap-3 font-sans text-sm leading-relaxed text-brand-slate md:grid-cols-2 md:text-[15px]">
+                                <ul className="flex flex-col gap-3 font-sans md:gap-3.5">
                                     {Array.from({ length: EDU_COUNT }, (_, i) => (
                                         <li
                                             key={i}
-                                            className="flex gap-3 rounded-xl border border-brand-white/5 bg-brand-white/2 px-4 py-2.5"
+                                            className="rounded-lg border border-brand-white/5 bg-brand-white/2 px-3 py-2.5 md:px-3.5 md:py-3"
                                         >
-                                            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-gold/70" />
-                                            <span className="min-w-0">
-                                                {t(`aboutPage.educationLead.${i}`)}{" "}
-                                                <time
-                                                    className="font-semibold tabular-nums text-brand-gold"
-                                                    dateTime={t(`aboutPage.educationYear.${i}`)}
-                                                >
-                                                    {t(`aboutPage.educationYear.${i}`)}
-                                                </time>
-                                                <span className="text-brand-slate/90"> — </span>
-                                                {t(`aboutPage.educationCourses.${i}`)}
-                                            </span>
+                                            <div className="flex gap-2.5 md:gap-3">
+                                                <span className="mt-2 h-1 w-1 shrink-0 rounded-full bg-brand-gold/70 md:mt-2.5" />
+                                                <div className="min-w-0 flex-1">
+                                                    <p className="text-[13px] font-semibold leading-snug text-brand-white md:text-sm">
+                                                        {t(`aboutPage.educationCredentials.${i}.title`)}
+                                                    </p>
+                                                    <p className="mt-1.5 text-[12px] leading-relaxed text-brand-white/80 md:mt-2 md:text-[13px] md:leading-relaxed">
+                                                        {t(`aboutPage.educationCredentials.${i}.detail`)}
+                                                    </p>
+                                                </div>
+                                            </div>
                                         </li>
                                     ))}
                                 </ul>

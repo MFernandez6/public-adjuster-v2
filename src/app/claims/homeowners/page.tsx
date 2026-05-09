@@ -10,7 +10,7 @@ const Footer = dynamic(() => import("@/components/sections/Footer"), {
 export const metadata: Metadata = {
     title: "Homeowner Claims",
     description:
-        "Why Florida homeowners choose BLACKLINE — policy review, forensic documentation, and negotiation for residential property claims.",
+        "Why Florida homeowners choose Blackline PA — policy review, forensic documentation, and negotiation for residential property claims.",
 };
 
 export default function HomeownerClaimsRoute() {

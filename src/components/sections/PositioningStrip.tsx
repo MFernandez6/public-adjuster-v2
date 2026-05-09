@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { Clock, Mail } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 
@@ -10,26 +9,14 @@ export default function PositioningStrip() {
     return (
         <section
             aria-label={t("positioning.aria")}
-            className="relative border-y border-brand-white/6 bg-[#020617]/90 backdrop-blur-sm"
+            className="relative border-y border-brand-white/6 bg-[#020617]"
         >
             <div className="absolute inset-0 bg-linear-to-r from-brand-gold/3 via-transparent to-brand-gold/3 pointer-events-none" />
             <div className="container relative z-10 mx-auto max-w-5xl px-4 py-8 md:py-10">
-                <motion.p
-                    initial={{ opacity: 0, y: 6 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
-                    className="text-center font-sans text-[11px] font-bold uppercase tracking-[0.32em] text-brand-gold md:text-xs md:tracking-[0.38em]"
-                >
+                <p className="text-center font-sans text-[11px] font-bold uppercase tracking-[0.32em] text-brand-gold md:text-xs md:tracking-[0.38em]">
                     {t("hero.kicker")}
-                </motion.p>
-                <motion.p
-                    initial={{ opacity: 0, y: 8 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.05 }}
-                    className="mt-4 text-center font-serif text-lg md:text-xl lg:text-[1.35rem] leading-snug tracking-tight text-brand-white/95"
-                >
+                </p>
+                <p className="mt-4 text-center font-serif text-lg md:text-xl lg:text-[1.35rem] leading-snug tracking-tight text-brand-white/95">
                     {locale === "en" ? (
                         <>
                             Defining a higher standard for{" "}
@@ -40,14 +27,8 @@ export default function PositioningStrip() {
                     ) : (
                         t("positioning.line")
                     )}
-                </motion.p>
-                <motion.div
-                    initial={{ opacity: 0, y: 8 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 0.08 }}
-                    className="mt-6 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:justify-center sm:gap-0"
-                >
+                </p>
+                <div className="mt-6 flex flex-col items-stretch gap-4 sm:flex-row sm:items-center sm:justify-center sm:gap-0">
                     <div className="flex items-center justify-center gap-2.5 text-[11px] font-sans uppercase tracking-[0.22em] text-brand-slate md:text-xs">
                         <Clock className="h-3.5 w-3.5 shrink-0 text-brand-gold/80" aria-hidden />
                         <span>{t("positioning.sameDay")}</span>
@@ -57,7 +38,7 @@ export default function PositioningStrip() {
                         <Mail className="h-3.5 w-3.5 shrink-0 text-brand-gold/80" aria-hidden />
                         <span>{t("positioning.weekly")}</span>
                     </div>
-                </motion.div>
+                </div>
             </div>
         </section>
     );

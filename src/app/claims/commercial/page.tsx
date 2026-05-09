@@ -10,7 +10,7 @@ const Footer = dynamic(() => import("@/components/sections/Footer"), {
 export const metadata: Metadata = {
     title: "Commercial Claims",
     description:
-        "Why Florida commercial property owners choose BLACKLINE — forensic documentation, stakeholder coordination, and negotiation for business and industrial losses.",
+        "Why Florida commercial property owners choose Blackline PA — forensic documentation, stakeholder coordination, and negotiation for business and industrial losses.",
 };
 
 export default function CommercialClaimsRoute() {

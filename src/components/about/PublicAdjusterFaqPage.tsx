@@ -6,7 +6,7 @@ import { ChevronDown, ClipboardList, FileSignature, Microscope } from "lucide-re
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/language-context";
 
-const FAQ_COUNT = 7;
+const FAQ_COUNT = 8;
 const KNOWHOW_COUNT = 3;
 
 const topicCards = [
