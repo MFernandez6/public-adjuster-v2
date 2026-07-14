@@ -1,0 +1,74 @@
+{
+  "brand": "Blackline Public Adjusters LLC",
+  "palette": {
+    "navy": "#0F1C2E",
+    "gold": "#C6A85B",
+    "white": "#F4F4F4",
+    "slate": "#94A3B8"
+  },
+  "assets": [
+    {
+      "file": "profile-avatar-1080.png",
+      "width": 1080,
+      "height": 1080,
+      "bytes": 21027,
+      "note": "IG / FB / LinkedIn / X profile (1080²)"
+    },
+    {
+      "file": "profile-avatar-400.png",
+      "width": 400,
+      "height": 400,
+      "bytes": 6185,
+      "note": "Small profile (400²)"
+    },
+    {
+      "file": "profile-stacked-1080.png",
+      "width": 1080,
+      "height": 1080,
+      "bytes": 28845,
+      "note": "Square post / alternate avatar"
+    },
+    {
+      "file": "og-share-1200x630.png",
+      "width": 1200,
+      "height": 630,
+      "bytes": 23913,
+      "note": "Open Graph / link preview"
+    },
+    {
+      "file": "twitter-header-1500x500.png",
+      "width": 1500,
+      "height": 500,
+      "bytes": 19597,
+      "note": "X / Twitter header"
+    },
+    {
+      "file": "linkedin-cover-1128x191.png",
+      "width": 1128,
+      "height": 191,
+      "bytes": 10785,
+      "note": "LinkedIn company cover"
+    },
+    {
+      "file": "linkedin-banner-1584x396.png",
+      "width": 1584,
+      "height": 396,
+      "bytes": 19994,
+      "note": "LinkedIn personal/company banner"
+    },
+    {
+      "file": "facebook-cover-1640x624.png",
+      "width": 1640,
+      "height": 624,
+      "bytes": 22635,
+      "note": "Facebook page cover"
+    },
+    {
+      "file": "instagram-story-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "bytes": 32996,
+      "note": "Instagram / FB story"
+    }
+  ]
+}
