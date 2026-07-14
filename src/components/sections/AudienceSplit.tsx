@@ -13,7 +13,7 @@ const blurDataURL =
 const cards = [
     {
         href: "/claims/homeowners",
-        image: "/images/properties/residential.png",
+        image: "/images/properties/residential.jpg",
         ctaKey: "audienceSplit.homeownerCta" as const,
         titleKey: "audienceSplit.homeownerTitle" as const,
         bodyKey: "audienceSplit.homeownerBody" as const,
@@ -21,7 +21,7 @@ const cards = [
     },
     {
         href: "/claims/commercial",
-        image: "/images/properties/commercial.png",
+        image: "/images/properties/commercial.jpg",
         ctaKey: "audienceSplit.commercialCta" as const,
         titleKey: "audienceSplit.commercialTitle" as const,
         bodyKey: "audienceSplit.commercialBody" as const,

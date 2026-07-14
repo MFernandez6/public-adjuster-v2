@@ -16,7 +16,7 @@ export default function Hero() {
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0">
                     <Image
-                        src="/images/properties/commercial.png"
+                        src="/images/properties/commercial.jpg"
                         alt={t("hero.imageAlt")}
                         fill
                         priority

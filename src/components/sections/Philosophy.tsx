@@ -66,7 +66,7 @@ export default function Philosophy() {
                             className="relative rounded-2xl overflow-hidden border border-brand-gold/20 aspect-video group"
                         >
                             <Image
-                                src="/images/properties/forensic.png"
+                                src="/images/properties/forensic.jpg"
                                 alt={t("philosophy.imageAlt")}
                                 fill
                                 className="object-cover opacity-60 group-hover:opacity-100 transition-opacity duration-700"
