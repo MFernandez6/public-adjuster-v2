@@ -1,0 +1,206 @@
+{
+  "style": "ghibli-hand-drawn (option #1)",
+  "brand": "Blackline Public Adjusters LLC",
+  "platforms": {
+    "instagram": [
+      "profile-1080.png",
+      "profile-320.png",
+      "profile-alt-1080.png",
+      "post-square-1080.png",
+      "post-portrait-1080x1350.png",
+      "post-landscape-1080x566.png",
+      "story-1080x1920.png",
+      "reels-cover-1080x1920.png",
+      "highlight-cover-1080.png"
+    ],
+    "tiktok": [
+      "profile-1080.png",
+      "profile-200.png",
+      "profile-alt-1080.png",
+      "video-cover-1080x1920.png",
+      "endcard-1080x1920.png",
+      "feed-square-1080.png"
+    ],
+    "linkedin": [
+      "profile-400.png",
+      "profile-800.png",
+      "profile-alt-800.png",
+      "company-cover-1128x191.png",
+      "banner-1584x396.png",
+      "banner-alt-1584x396.png",
+      "post-1200x627.png",
+      "post-square-1080.png",
+      "post-portrait-1080x1350.png"
+    ]
+  },
+  "assets": [
+    {
+      "file": "instagram/profile-1080.png",
+      "width": 1080,
+      "height": 1080,
+      "source": "ig-profile.png",
+      "bytes": 2338296
+    },
+    {
+      "file": "instagram/profile-320.png",
+      "width": 320,
+      "height": 320,
+      "source": "ig-profile.png",
+      "bytes": 197328
+    },
+    {
+      "file": "instagram/profile-alt-1080.png",
+      "width": 1080,
+      "height": 1080,
+      "source": "tiktok-profile.png",
+      "bytes": 2001281
+    },
+    {
+      "file": "instagram/post-square-1080.png",
+      "width": 1080,
+      "height": 1080,
+      "source": "ig-post-square.png",
+      "bytes": 2167242
+    },
+    {
+      "file": "instagram/post-portrait-1080x1350.png",
+      "width": 1080,
+      "height": 1350,
+      "source": "ig-post-portrait.png",
+      "bytes": 3152369
+    },
+    {
+      "file": "instagram/story-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "source": "story-vertical.png",
+      "bytes": 3948896
+    },
+    {
+      "file": "instagram/reels-cover-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "source": "story-vertical.png",
+      "bytes": 3948896
+    },
+    {
+      "file": "instagram/highlight-cover-1080.png",
+      "width": 1080,
+      "height": 1080,
+      "source": "ig-highlight.png",
+      "bytes": 1890406
+    },
+    {
+      "file": "instagram/post-landscape-1080x566.png",
+      "width": 1080,
+      "height": 566,
+      "source": "linkedin-post.png",
+      "bytes": 1314913
+    },
+    {
+      "file": "tiktok/profile-1080.png",
+      "width": 1080,
+      "height": 1080,
+      "source": "tiktok-profile.png",
+      "bytes": 2001281
+    },
+    {
+      "file": "tiktok/profile-200.png",
+      "width": 200,
+      "height": 200,
+      "source": "tiktok-profile.png",
+      "bytes": 71902
+    },
+    {
+      "file": "tiktok/profile-alt-1080.png",
+      "width": 1080,
+      "height": 1080,
+      "source": "ig-profile.png",
+      "bytes": 2338296
+    },
+    {
+      "file": "tiktok/video-cover-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "source": "story-vertical.png",
+      "bytes": 3948896
+    },
+    {
+      "file": "tiktok/endcard-1080x1920.png",
+      "width": 1080,
+      "height": 1920,
+      "source": "tiktok-endcard.png",
+      "bytes": 4884754
+    },
+    {
+      "file": "tiktok/feed-square-1080.png",
+      "width": 1080,
+      "height": 1080,
+      "source": "ig-post-square.png",
+      "bytes": 2167242
+    },
+    {
+      "file": "linkedin/profile-400.png",
+      "width": 400,
+      "height": 400,
+      "source": "ig-profile.png",
+      "bytes": 310922
+    },
+    {
+      "file": "linkedin/profile-800.png",
+      "width": 800,
+      "height": 800,
+      "source": "ig-profile.png",
+      "bytes": 1301942
+    },
+    {
+      "file": "linkedin/profile-alt-800.png",
+      "width": 800,
+      "height": 800,
+      "source": "tiktok-profile.png",
+      "bytes": 1129116
+    },
+    {
+      "file": "linkedin/company-cover-1128x191.png",
+      "width": 1128,
+      "height": 191,
+      "source": "linkedin-cover.png",
+      "bytes": 104994
+    },
+    {
+      "file": "linkedin/banner-1584x396.png",
+      "width": 1584,
+      "height": 396,
+      "source": "linkedin-cover.png",
+      "bytes": 1280140
+    },
+    {
+      "file": "linkedin/banner-alt-1584x396.png",
+      "width": 1584,
+      "height": 396,
+      "source": "linkedin-banner-v2.png",
+      "bytes": 1381843
+    },
+    {
+      "file": "linkedin/post-1200x627.png",
+      "width": 1200,
+      "height": 627,
+      "source": "linkedin-post.png",
+      "bytes": 1627235
+    },
+    {
+      "file": "linkedin/post-square-1080.png",
+      "width": 1080,
+      "height": 1080,
+      "source": "ig-post-square.png",
+      "bytes": 2167242
+    },
+    {
+      "file": "linkedin/post-portrait-1080x1350.png",
+      "width": 1080,
+      "height": 1350,
+      "source": "ig-post-portrait.png",
+      "bytes": 3152369
+    }
+  ]
+}

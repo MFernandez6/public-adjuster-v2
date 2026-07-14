@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "brand:social": "node scripts/generate-social-assets.mjs",
+    "brand:social:ghibli": "node scripts/resize-ghibli-social.mjs",
     "analyze": "ANALYZE=true next build"
   },
   "dependencies": {
