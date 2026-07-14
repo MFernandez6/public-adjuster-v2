@@ -109,7 +109,7 @@ export default function Footer() {
                             className="inline-block outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 rounded-sm"
                             aria-label={t("footer.homeAria")}
                         >
-                            <Logo className="scale-100 md:scale-125 origin-left" />
+                            <Logo className="origin-left scale-100 md:scale-110" />
                         </Link>
                         <p className="text-brand-slate text-sm leading-relaxed max-w-sm font-sans">{t("footer.blurb")}</p>
                         {hasAnySocialUrl() ? (
