@@ -7,12 +7,12 @@ import { useLanguage } from "@/contexts/language-context";
 
 /** Order: wind, fire, storm, hail, water, vandalism — aligned with `claims.items` indices */
 const claimMeta = [
-    { icon: <Wind className="w-8 h-8" />, image: "/images/properties/wind.png" },
-    { icon: <Flame className="w-8 h-8" />, image: "/images/properties/residential.png" },
-    { icon: <CloudLightning className="w-8 h-8" />, image: "/images/properties/commercial.png" },
-    { icon: <Sparkles className="w-8 h-8" />, image: "/images/properties/forensic.png" },
-    { icon: <Waves className="w-8 h-8" />, image: "/images/properties/industrial.png" },
-    { icon: <Ghost className="w-8 h-8" />, image: "/images/properties/vandalism.png" },
+    { icon: <Wind className="w-8 h-8" />, image: "/images/properties/wind.jpg" },
+    { icon: <Flame className="w-8 h-8" />, image: "/images/properties/fire.jpg" },
+    { icon: <CloudLightning className="w-8 h-8" />, image: "/images/properties/storm.jpg" },
+    { icon: <Sparkles className="w-8 h-8" />, image: "/images/properties/hail.jpg" },
+    { icon: <Waves className="w-8 h-8" />, image: "/images/properties/water.jpg" },
+    { icon: <Ghost className="w-8 h-8" />, image: "/images/properties/vandalism.jpg" },
 ] as const;
 
 export default function ClaimTypes() {

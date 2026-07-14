@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     siteName: tradeName,
     images: [
       {
-        url: "/images/properties/commercial.png",
+        url: "/images/properties/og-share.jpg",
         width: 1200,
         height: 630,
         alt: `${tradeName} — Commercial Property Analysis`,
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${tradeName} LLC | We Hold the Policy Accountable`,
     description: "Professional, authority-based public adjusting firm enforcing insurance contracts with precision.",
-    images: ["/images/properties/commercial.png"],
+    images: ["/images/properties/og-share.jpg"],
   },
   robots: {
     index: true,
