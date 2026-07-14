@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 300" fill="none" role="img" aria-labelledby="blStackTitle">
+  <title id="blStackTitle">Blackline Public Adjusters LLC</title>
+  <g transform="translate(140, 4)">
+    <path
+      d="M12 16 V56 C12 71 27 83.5 40 90 C53 83.5 68 71 68 56 V16"
+      stroke="#C6A85B"
+      stroke-width="2.4"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+    <path
+      fill="#C6A85B"
+      d="M24.5 22h18.2c6.55 0 10.9 3.85 10.9 9.35 0 3.7-2.05 6.4-5.35 7.55 4.15 1.05 6.85 4.35 6.85 9.05 0 6.35-4.9 10.55-12.45 10.55H24.5V22Zm7.6 6.55v8.7h9.55c3.05 0 4.85-1.7 4.85-4.35s-1.8-4.35-4.85-4.35H32.1Zm0 15.2v8.95h10.1c3.35 0 5.25-1.95 5.25-4.55 0-2.55-1.9-4.4-5.25-4.4H32.1Z"
+    />
+    <path fill="#C6A85B" d="M37.5 48h7.4v20.2H62v7.1H37.5V48Z"/>
+  </g>
+  <text x="180" y="140" text-anchor="middle" fill="#C6A85B" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="700" letter-spacing="0.2em">BLACKLINE</text>
+  <line x1="52" y1="166" x2="92" y2="166" stroke="#C6A85B" stroke-width="1"/>
+  <text x="180" y="170" text-anchor="middle" fill="#F4F4F4" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="600" letter-spacing="0.26em">PUBLIC ADJUSTERS LLC</text>
+  <line x1="268" y1="166" x2="308" y2="166" stroke="#C6A85B" stroke-width="1"/>
+  <line x1="74" y1="218" x2="112" y2="218" stroke="#C6A85B" stroke-width="0.9" opacity="0.8"/>
+  <text x="180" y="222" text-anchor="middle" fill="#C6A85B" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="600" letter-spacing="0.3em">POLICY. DEFINED. APPLIED.</text>
+  <line x1="248" y1="218" x2="286" y2="218" stroke="#C6A85B" stroke-width="0.9" opacity="0.8"/>
+</svg>

@@ -1,36 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 7 7" role="img" aria-label="Blackline Public Adjusters">
-  <!-- Block “B” (openings on the right). Rows 0,3,6 end before col 5 so it isn’t read as “E”. -->
-  <rect width="7" height="7" rx="1.5" fill="#0F1C2E"/>
-  <g fill="#C6A85B">
-    <!-- row 0: 1111100 — top bar + stem, gap before right edge -->
-    <rect x="0" y="0" width="1" height="1"/>
-    <rect x="1" y="0" width="1" height="1"/>
-    <rect x="2" y="0" width="1" height="1"/>
-    <rect x="3" y="0" width="1" height="1"/>
-    <rect x="4" y="0" width="1" height="1"/>
-    <!-- row 1: 1000010 -->
-    <rect x="0" y="1" width="1" height="1"/>
-    <rect x="5" y="1" width="1" height="1"/>
-    <!-- row 2: 1000010 -->
-    <rect x="0" y="2" width="1" height="1"/>
-    <rect x="5" y="2" width="1" height="1"/>
-    <!-- row 3: 1111100 — middle bar -->
-    <rect x="0" y="3" width="1" height="1"/>
-    <rect x="1" y="3" width="1" height="1"/>
-    <rect x="2" y="3" width="1" height="1"/>
-    <rect x="3" y="3" width="1" height="1"/>
-    <rect x="4" y="3" width="1" height="1"/>
-    <!-- row 4: 1000010 -->
-    <rect x="0" y="4" width="1" height="1"/>
-    <rect x="5" y="4" width="1" height="1"/>
-    <!-- row 5: 1000010 -->
-    <rect x="0" y="5" width="1" height="1"/>
-    <rect x="5" y="5" width="1" height="1"/>
-    <!-- row 6: 1111100 — bottom bar -->
-    <rect x="0" y="6" width="1" height="1"/>
-    <rect x="1" y="6" width="1" height="1"/>
-    <rect x="2" y="6" width="1" height="1"/>
-    <rect x="3" y="6" width="1" height="1"/>
-    <rect x="4" y="6" width="1" height="1"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Blackline Public Adjusters">
+  <rect width="32" height="32" rx="6" fill="#0F1C2E"/>
+  <g transform="translate(7.5, 2.5) scale(0.21)">
+    <path
+      d="M12 16 V56 C12 71 27 83.5 40 90 C53 83.5 68 71 68 56 V16"
+      stroke="#C6A85B"
+      stroke-width="5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      fill="none"
+    />
+    <path
+      fill="#C6A85B"
+      d="M24.5 22h18.2c6.55 0 10.9 3.85 10.9 9.35 0 3.7-2.05 6.4-5.35 7.55 4.15 1.05 6.85 4.35 6.85 9.05 0 6.35-4.9 10.55-12.45 10.55H24.5V22Zm7.6 6.55v8.7h9.55c3.05 0 4.85-1.7 4.85-4.35s-1.8-4.35-4.85-4.35H32.1Zm0 15.2v8.95h10.1c3.35 0 5.25-1.95 5.25-4.55 0-2.55-1.9-4.4-5.25-4.4H32.1Z"
+    />
+    <path fill="#C6A85B" d="M37.5 48h7.4v20.2H62v7.1H37.5V48Z"/>
   </g>
 </svg>
