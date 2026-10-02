@@ -106,7 +106,7 @@ export default function Contact() {
                     : null;
 
     return (
-        <section id="contact" className="scroll-mt-24 py-32 bg-[#020617] overflow-hidden">
+        <section id="contact" className="scroll-mt-24 py-32 bg-brand-deep overflow-hidden">
             <div className="container mx-auto px-4">
                 <div className="relative glass rounded-2xl p-5 md:p-20 overflow-hidden">
                     <div className="grid lg:grid-cols-2 gap-20 items-start relative z-10">
@@ -153,7 +153,7 @@ export default function Contact() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true, amount: 0.2 }}
                             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-                            className="bg-white/[0.03] rounded-3xl p-5 md:p-10 border border-brand-gold/15 space-y-8"
+                            className="bg-brand-white/[0.03] rounded-3xl p-5 md:p-10 border border-brand-gold/15 space-y-8"
                         >
                             <div className="space-y-2">
                                 <h3 className="font-serif text-3xl font-bold tracking-tight">{t("contact.formTitle")}</h3>

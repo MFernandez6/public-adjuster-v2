@@ -16,7 +16,7 @@ export default function AdjusterComparison() {
     const { t } = useLanguage();
 
     return (
-        <section className="border-b border-brand-white/10 bg-[#020617] py-24 md:py-32">
+        <section className="border-b border-brand-white/10 bg-brand-deep py-24 md:py-32">
             <div className="container mx-auto max-w-7xl px-4">
                 <div className="mx-auto max-w-3xl text-center">
                     <span className="font-sans text-[10px] font-bold uppercase tracking-[0.45em] text-brand-gold md:text-xs">
@@ -50,7 +50,7 @@ export default function AdjusterComparison() {
                                     quality={75}
                                 />
                             </div>
-                            <div className="absolute inset-0 z-0 bg-gradient-to-t from-[#020617] from-35% via-[#020617]/75 to-[#020617]/20" />
+                            <div className="absolute inset-0 z-0 bg-gradient-to-t from-brand-deep from-35% via-brand-deep/75 to-brand-deep/20" />
 
                             <div className="relative z-10 flex h-12 w-12 items-center justify-center rounded-xl border border-brand-gold/25 bg-brand-navy text-brand-gold">
                                 <Icon className="h-6 w-6" aria-hidden />

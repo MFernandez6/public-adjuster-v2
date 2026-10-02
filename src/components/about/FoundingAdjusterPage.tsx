@@ -31,7 +31,7 @@ export default function FoundingAdjusterPage() {
     return (
         <>
             {/* Page intro */}
-            <section className="relative overflow-hidden border-b border-brand-white/10 bg-[#020617] pb-16 pt-28 md:pb-20 md:pt-32">
+            <section className="relative overflow-hidden border-b border-brand-white/10 bg-brand-deep pb-16 pt-28 md:pb-20 md:pt-32">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(198,168,91,0.08),transparent_55%)]" />
                 <div className="container relative z-10 mx-auto max-w-3xl px-4 text-center">
                     <motion.span
@@ -64,7 +64,7 @@ export default function FoundingAdjusterPage() {
             {/* Who we are */}
             <section
                 id="who-we-are"
-                className="scroll-mt-28 border-b border-brand-white/10 bg-[#020617] py-20 md:py-28"
+                className="scroll-mt-28 border-b border-brand-white/10 bg-brand-deep py-20 md:py-28"
             >
                 <div className="container mx-auto max-w-3xl px-4">
                     <div className="mb-10 text-center">
@@ -90,7 +90,7 @@ export default function FoundingAdjusterPage() {
             </section>
 
             {/* Adjusters */}
-            <section id="adjusters" className="scroll-mt-28 bg-[#020617] pb-8 pt-20 md:pt-28">
+            <section id="adjusters" className="scroll-mt-28 bg-brand-deep pb-8 pt-20 md:pt-28">
                 <div className="container mx-auto max-w-5xl px-4">
                     {/* Mission */}
                     <div className="mb-20 text-center md:mb-24">
@@ -294,7 +294,7 @@ export default function FoundingAdjusterPage() {
                 </div>
             </section>
 
-            <section className="border-t border-brand-white/10 bg-[#020617] py-20">
+            <section className="border-t border-brand-white/10 bg-brand-deep py-20">
                 <div className="container mx-auto max-w-2xl px-4 text-center">
                     <p className="font-serif text-xl text-brand-white/90 md:text-2xl">{t("aboutPage.cta")}</p>
                     <Button

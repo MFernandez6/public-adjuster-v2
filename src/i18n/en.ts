@@ -9,6 +9,11 @@ export const en = {
         aboutSection: "About",
         claimsSection: "Claims",
         ctaContact: "Consult a specialist",
+        appearance: "Appearance",
+        themeDark: "Dark",
+        themeLight: "Light",
+        themeToggleToLight: "Switch to light mode",
+        themeToggleToDark: "Switch to dark mode",
         emailUpdatesPitch:
             "Active clients receive prioritized weekly claim updates by email — documented, dated, and yours to keep. No portal passwords. No account to maintain.",
     },

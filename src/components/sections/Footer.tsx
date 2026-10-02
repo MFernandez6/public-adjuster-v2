@@ -93,7 +93,7 @@ export default function Footer() {
     ).filter((s) => s.url.trim().length > 0);
 
     return (
-        <footer className="relative bg-[#020617] pt-32 pb-12 overflow-hidden border-t border-brand-white/5">
+        <footer className="relative bg-brand-deep pt-32 pb-12 overflow-hidden border-t border-brand-white/5">
             <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-[22%] pointer-events-none select-none text-center leading-none opacity-[0.02] text-brand-white">
                 <div className="font-serif text-[18vw] whitespace-nowrap tracking-tight md:text-[16vw]">BLACKLINE</div>
                 <div className="mx-auto mt-1 max-w-[95vw] font-sans text-[3.25vw] font-semibold uppercase tracking-[0.28em] md:text-[2.85vw] md:tracking-[0.32em]">

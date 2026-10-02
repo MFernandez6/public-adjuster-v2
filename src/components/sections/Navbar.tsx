@@ -8,6 +8,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown, Home, Building2, Users, Landmark, Menu, X, Plus, ListChecks, CircleHelp } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 import LanguageSwitcher from "@/components/i18n/LanguageSwitcher";
+import { ThemeIconToggle, ThemeSegmentedToggle } from "@/components/i18n/ThemeToggle";
 
 export default function Navbar() {
     const { t } = useLanguage();
@@ -72,7 +73,7 @@ export default function Navbar() {
         <nav className="fixed top-0 left-0 right-0 z-50">
             <div
                 aria-hidden
-                className="pointer-events-none absolute inset-x-0 top-0 -bottom-10 -z-10 bg-[linear-gradient(to_bottom,#0F1C2E_0%,rgba(2,6,23,0.92)_66%,transparent_100%)] backdrop-blur-md [mask-image:linear-gradient(to_bottom,black_66%,transparent_100%)]"
+                className="pointer-events-none absolute inset-x-0 top-0 -bottom-10 -z-10 bg-[linear-gradient(to_bottom,var(--brand-navy)_0%,color-mix(in_oklab,var(--brand-deep)_92%,transparent)_66%,transparent_100%)] backdrop-blur-md [mask-image:linear-gradient(to_bottom,black_66%,transparent_100%)] light:bottom-0 light:border-b light:border-brand-gold/15 light:bg-brand-deep/95 light:[mask-image:none]"
             />
             <div className="container mx-auto px-4 h-20 flex items-center justify-between">
                 <Link href="/" className="shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 rounded-sm" aria-label={t("footer.homeAria")}>
@@ -177,7 +178,10 @@ export default function Navbar() {
                     </Link>
 
                     <Link href="/#contact" className="hover:text-brand-gold transition-colors">{t("nav.contact")}</Link>
-                    <LanguageSwitcher />
+                    <div className="flex items-center gap-2">
+                        <LanguageSwitcher />
+                        <ThemeIconToggle />
+                    </div>
                 </div>
 
                 <div className="flex items-center gap-3 md:gap-4">
@@ -208,7 +212,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="lg:hidden bg-gradient-to-b from-[#020617]/85 to-[#020617]/95 backdrop-blur-xl overflow-hidden"
+                        className="lg:hidden bg-gradient-to-b from-brand-deep/85 to-brand-deep/95 backdrop-blur-xl overflow-hidden"
                     >
                         <div className="container mx-auto px-6 py-10 space-y-8">
                             <div className="space-y-6">
@@ -287,6 +291,11 @@ export default function Navbar() {
                                 </Link>
 
                                 <Link href="/#contact" onClick={() => setIsMobileMenuOpen(false)} className="block text-xs font-sans uppercase tracking-[0.2em] text-brand-white/90">{t("nav.contact")}</Link>
+
+                                <div className="flex items-center justify-between gap-4">
+                                    <span className="text-xs font-sans uppercase tracking-[0.2em] text-brand-white/90">{t("nav.appearance")}</span>
+                                    <ThemeSegmentedToggle />
+                                </div>
                             </div>
 
                             <div className="pt-8 border-t border-brand-white/10 flex flex-col gap-4">

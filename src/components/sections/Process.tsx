@@ -9,7 +9,7 @@ export default function Process() {
     const { t } = useLanguage();
 
     return (
-        <section id="process" className="scroll-mt-24 py-32 bg-[#020617] text-brand-white relative overflow-hidden">
+        <section id="process" className="scroll-mt-24 py-32 bg-brand-deep text-brand-white relative overflow-hidden">
             {/* Background Graphic */}
             <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full h-[1px] bg-gradient-to-r from-transparent via-brand-gold/20 to-transparent opacity-30" />
 

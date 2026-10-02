@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Cinzel } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/providers";
+import { themeInitScript } from "@/lib/theme-script";
 import { siteUrl } from "@/config/site";
 import { legalEntityName, tradeName } from "@/config/branding";
 import { professionalServiceStructuredData } from "@/lib/structured-data";
@@ -68,6 +69,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
+      </head>
       <body
         className={`${inter.variable} ${cinzel.variable} font-sans antialiased`}
         suppressHydrationWarning

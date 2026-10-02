@@ -2,6 +2,7 @@
 @import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
+@custom-variant light (&:where([data-theme="light"], [data-theme="light"] *));
 
 @theme inline {
   --color-background: var(--background);
@@ -10,10 +11,11 @@
   --font-serif: var(--font-cinzel);
   --font-mono: var(--font-geist-mono);
 
-  --color-brand-navy: #0F1C2E;
-  --color-brand-slate: #94A3B8;
-  --color-brand-gold: #C6A85B;
-  --color-brand-white: #F4F4F4;
+  --color-brand-navy: var(--brand-navy);
+  --color-brand-deep: var(--brand-deep);
+  --color-brand-slate: var(--brand-slate);
+  --color-brand-gold: var(--brand-gold);
+  --color-brand-white: var(--brand-white);
 
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
@@ -121,6 +123,13 @@
 
 :root {
   --radius: 0.25rem;
+  color-scheme: dark;
+  --brand-navy: #0F1C2E;
+  --brand-deep: #020617;
+  --brand-slate: #94A3B8;
+  --brand-gold: #C6A85B;
+  --brand-gold-soft: #E2C98B;
+  --brand-white: #F4F4F4;
   /* Dark default theme palette for BLACKLINE PUBLIC ADJUSTERS — OKLCH depth */
   --background: #020617;
   /* Deeper Black-Navy */
@@ -143,6 +152,51 @@
   --ring: #C6A85B;
 }
 
+/* Light theme: off-white page, bone surfaces; gold deepens to stay legible on cream. */
+[data-theme="light"] {
+  color-scheme: light;
+  --brand-navy: #F1EDE4;
+  --brand-deep: #FAF9F6;
+  --brand-slate: #4B5768;
+  --brand-gold: #8A6A22;
+  --brand-gold-soft: #B08A3A;
+  --brand-white: #0F1C2E;
+
+  --background: #FAF9F6;
+  --foreground: #0F1C2E;
+  --card: #F5F2EC;
+  --card-foreground: #0F1C2E;
+  --popover: #FAF9F6;
+  --popover-foreground: #0F1C2E;
+  --primary: #8A6A22;
+  --primary-foreground: #FAF9F6;
+  --secondary: #F1EDE4;
+  --secondary-foreground: #0F1C2E;
+  --muted: #EEEAE1;
+  --muted-foreground: #4B5768;
+  --accent: #8A6A22;
+  --accent-foreground: #FAF9F6;
+  --border: rgba(15, 28, 46, 0.15);
+  --input: rgba(15, 28, 46, 0.18);
+  --ring: #8A6A22;
+}
+
+/* Sections that stay dark in light mode (the hero video). */
+[data-theme="light"] .theme-dark {
+  color-scheme: dark;
+  --brand-navy: #0F1C2E;
+  --brand-deep: #020617;
+  --brand-slate: #94A3B8;
+  --brand-gold: #C6A85B;
+  --brand-gold-soft: #E2C98B;
+  --brand-white: #F4F4F4;
+}
+
+/* Gold logo artwork reads too bright on cream; deepen it slightly. */
+[data-theme="light"] img[src*="blackline-"] {
+  filter: brightness(0.85) saturate(1.3);
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -150,7 +204,7 @@
 
   body {
     @apply bg-background text-foreground antialiased selection:bg-brand-gold selection:text-brand-navy;
-    background-image: radial-gradient(circle at 50% -20%, #0F1C2E 0%, #020617 100%);
+    background-image: radial-gradient(circle at 50% -20%, var(--brand-navy) 0%, var(--brand-deep) 100%);
   }
 }
 
@@ -180,12 +234,12 @@
   }
 
   .glass {
-    background: rgba(15, 28, 46, 0.6);
-    border: 1px solid rgba(198, 168, 91, 0.15);
+    background: color-mix(in oklab, var(--brand-navy) 60%, transparent);
+    border: 1px solid color-mix(in oklab, var(--brand-gold) 15%, transparent);
   }
 
   .gold-gradient {
-    background: linear-gradient(135deg, #C6A85B 0%, #E2C98B 50%, #C6A85B 100%);
+    background: linear-gradient(135deg, var(--brand-gold) 0%, var(--brand-gold-soft) 50%, var(--brand-gold) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

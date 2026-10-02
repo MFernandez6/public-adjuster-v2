@@ -20,7 +20,7 @@ export default function PublicAdjusterFaqPage() {
 
     return (
         <>
-            <section className="relative overflow-hidden border-b border-brand-white/10 bg-[#020617] pb-16 pt-28 md:pb-24 md:pt-32">
+            <section className="relative overflow-hidden border-b border-brand-white/10 bg-brand-deep pb-16 pt-28 md:pb-24 md:pt-32">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(198,168,91,0.08),transparent_55%)]" />
                 <div className="container relative z-10 mx-auto max-w-4xl px-4 text-center">
                     <motion.span
@@ -49,7 +49,7 @@ export default function PublicAdjusterFaqPage() {
                 </div>
             </section>
 
-            <section className="border-b border-brand-white/10 bg-[#020617] py-14 md:py-18">
+            <section className="border-b border-brand-white/10 bg-brand-deep py-14 md:py-18">
                 <div className="container mx-auto max-w-3xl px-4">
                     <span className="font-sans text-[10px] font-bold uppercase tracking-[0.45em] text-brand-gold md:text-xs">
                         {t("faqPage.floridaEyebrow")}
@@ -74,7 +74,7 @@ export default function PublicAdjusterFaqPage() {
                 </div>
             </section>
 
-            <section className="border-b border-brand-white/10 bg-[#020617] py-12 md:py-16">
+            <section className="border-b border-brand-white/10 bg-brand-deep py-12 md:py-16">
                 <div className="container mx-auto max-w-5xl px-4">
                     <div className="grid gap-4 md:grid-cols-3">
                         {topicCards.map(({ id, icon: Icon }, i) => (
@@ -109,7 +109,7 @@ export default function PublicAdjusterFaqPage() {
                 </div>
             </section>
 
-            <section id="inspection" className="scroll-mt-28 border-b border-brand-white/10 bg-[#020617] py-16 md:py-22">
+            <section id="inspection" className="scroll-mt-28 border-b border-brand-white/10 bg-brand-deep py-16 md:py-22">
                 <div className="container mx-auto max-w-3xl px-4">
                     <h2 className="font-serif text-2xl tracking-tighter text-brand-white md:text-3xl">
                         {t("faqPage.topicInspectionTitle")}
@@ -120,7 +120,7 @@ export default function PublicAdjusterFaqPage() {
                 </div>
             </section>
 
-            <section id="lor" className="scroll-mt-28 border-b border-brand-white/10 bg-[#020617] py-16 md:py-22">
+            <section id="lor" className="scroll-mt-28 border-b border-brand-white/10 bg-brand-deep py-16 md:py-22">
                 <div className="container mx-auto max-w-3xl px-4">
                     <h2 className="font-serif text-2xl tracking-tighter text-brand-white md:text-3xl">
                         {t("faqPage.topicLorTitle")}
@@ -131,7 +131,7 @@ export default function PublicAdjusterFaqPage() {
                 </div>
             </section>
 
-            <section id="materials" className="scroll-mt-28 border-b border-brand-white/10 bg-[#020617] py-16 md:py-22">
+            <section id="materials" className="scroll-mt-28 border-b border-brand-white/10 bg-brand-deep py-16 md:py-22">
                 <div className="container mx-auto max-w-3xl px-4">
                     <h2 className="font-serif text-2xl tracking-tighter text-brand-white md:text-3xl">
                         {t("faqPage.topicMaterialsTitle")}
@@ -142,7 +142,7 @@ export default function PublicAdjusterFaqPage() {
                 </div>
             </section>
 
-            <section className="border-b border-brand-white/10 bg-[#020617] py-16 md:py-24">
+            <section className="border-b border-brand-white/10 bg-brand-deep py-16 md:py-24">
                 <div className="container mx-auto max-w-3xl px-4">
                     <h2 className="text-center font-serif text-3xl tracking-tighter text-brand-white md:text-4xl">
                         {t("faqPage.faqSectionTitle")}
@@ -168,7 +168,7 @@ export default function PublicAdjusterFaqPage() {
                 </div>
             </section>
 
-            <section className="border-b border-brand-white/10 bg-[#020617] py-16 md:py-22">
+            <section className="border-b border-brand-white/10 bg-brand-deep py-16 md:py-22">
                 <div className="container mx-auto max-w-6xl px-4">
                     <div className="mb-10 text-center">
                         <span className="font-sans text-[10px] font-bold uppercase tracking-[0.45em] text-brand-gold md:text-xs">
@@ -200,7 +200,7 @@ export default function PublicAdjusterFaqPage() {
                 </div>
             </section>
 
-            <section className="bg-[#020617] py-20">
+            <section className="bg-brand-deep py-20">
                 <div className="container mx-auto max-w-2xl px-4 text-center">
                     <p className="font-serif text-xl text-brand-white/90 md:text-2xl">{t("faqPage.ctaTitle")}</p>
                     <Button

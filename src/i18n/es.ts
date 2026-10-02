@@ -9,6 +9,11 @@ export const es = {
         aboutSection: "Nosotros",
         claimsSection: "Reclamaciones",
         ctaContact: "Hable con un especialista",
+        appearance: "Apariencia",
+        themeDark: "Oscuro",
+        themeLight: "Claro",
+        themeToggleToLight: "Cambiar a modo claro",
+        themeToggleToDark: "Cambiar a modo oscuro",
         emailUpdatesPitch:
             "Los clientes activos reciben actualizaciones semanales priorizadas del siniestro por correo — documentadas, fechadas y archivables. Sin contraseñas de portal. Sin cuenta que mantener.",
     },

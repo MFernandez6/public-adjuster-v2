@@ -16,7 +16,7 @@ export default function Philosophy() {
     const { t } = useLanguage();
 
     return (
-        <section id="philosophy" className="scroll-mt-24 py-32 bg-[#020617] text-brand-white relative overflow-hidden">
+        <section id="philosophy" className="scroll-mt-24 py-32 bg-brand-deep text-brand-white relative overflow-hidden">
             <div className="container mx-auto px-4 relative z-10 max-w-7xl">
                 <div className="flex flex-col lg:flex-row gap-24 items-start py-12">
 
@@ -94,7 +94,7 @@ export default function Philosophy() {
                                 <div className={`absolute inset-0 bg-gradient-to-br ${p.color} opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
 
                                 <div className="relative z-10 flex flex-col md:flex-row gap-8 items-start md:items-center">
-                                    <div className="p-4 rounded-xl bg-brand-navy border border-brand-gold/15 text-brand-gold group-hover:text-white transition-all duration-500">
+                                    <div className="p-4 rounded-xl bg-brand-navy border border-brand-gold/15 text-brand-gold group-hover:text-brand-white transition-all duration-500">
                                         {p.icon}
                                     </div>
                                     <div className="space-y-3 flex-1">

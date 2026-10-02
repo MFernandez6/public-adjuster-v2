@@ -13,7 +13,7 @@ export default function InsightsPage() {
 
     return (
         <>
-            <section className="relative overflow-hidden border-b border-brand-white/10 bg-[#020617] pb-16 pt-28 md:pb-24 md:pt-32">
+            <section className="relative overflow-hidden border-b border-brand-white/10 bg-brand-deep pb-16 pt-28 md:pb-24 md:pt-32">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(198,168,91,0.08),transparent_55%)]" />
                 <div className="container relative z-10 mx-auto max-w-4xl px-4 text-center">
                     <motion.span
@@ -74,7 +74,7 @@ export default function InsightsPage() {
                 </div>
             </section>
 
-            <section className="border-b border-brand-white/10 bg-[#020617] py-16 md:py-20">
+            <section className="border-b border-brand-white/10 bg-brand-deep py-16 md:py-20">
                 <div className="container mx-auto max-w-3xl px-4 text-center">
                     <p className="font-sans text-sm leading-relaxed text-brand-slate md:text-base">{t("insightsPage.footnote")}</p>
                     <Button size="lg" className="mt-8 bg-brand-gold font-bold uppercase tracking-widest text-brand-navy" asChild>

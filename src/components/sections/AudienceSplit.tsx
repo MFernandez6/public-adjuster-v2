@@ -33,7 +33,7 @@ export default function AudienceSplit() {
     const { t } = useLanguage();
 
     return (
-        <section className="relative border-b border-brand-white/10 bg-[#020617] py-24 md:py-32 overflow-hidden">
+        <section className="relative border-b border-brand-white/10 bg-brand-deep py-24 md:py-32 overflow-hidden">
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(198,168,91,0.07),transparent_55%)]" />
 
             <div className="container relative z-10 mx-auto max-w-7xl px-4">
@@ -70,7 +70,7 @@ export default function AudienceSplit() {
                                         blurDataURL={blurDataURL}
                                     />
                                 </div>
-                                <div className="absolute inset-0 z-[1] bg-gradient-to-t from-[#020617] via-[#020617]/88 to-[#020617]/40" />
+                                <div className="absolute inset-0 z-[1] bg-gradient-to-t from-brand-deep via-brand-deep/88 to-brand-deep/40" />
                                 <div className="absolute inset-0 z-[1] bg-gradient-to-br from-brand-navy/40 via-transparent to-brand-gold/[0.06] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
 
                                 <div className="relative z-10 flex h-full flex-col p-10 md:p-12">

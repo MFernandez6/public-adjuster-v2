@@ -12,7 +12,7 @@ export default function Hero() {
     const { t } = useLanguage();
 
     return (
-        <section className="relative flex min-h-screen items-center justify-center overflow-hidden noise-bg py-20">
+        <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-brand-deep text-brand-white noise-bg py-20">
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0">
                     <Image
@@ -20,14 +20,14 @@ export default function Hero() {
                         alt={t("hero.imageAlt")}
                         fill
                         priority
-                        className="object-cover"
+                        className="object-cover light:brightness-[1.18] light:contrast-[0.88] light:saturate-[0.75] light:sepia-[0.12]"
                         sizes="100vw"
                         quality={70}
                         placeholder="blur"
                         blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA3gAA//9k="
                     />
                     <video
-                        className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
+                        className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden light:brightness-[1.18] light:contrast-[0.88] light:saturate-[0.75] light:sepia-[0.12]"
                         autoPlay
                         muted
                         loop
@@ -39,9 +39,9 @@ export default function Hero() {
                         <source src="/videos/hurricane-aerial-540.mp4" type="video/mp4" media="(max-width: 767px)" />
                         <source src="/videos/hurricane-aerial-1080.mp4" type="video/mp4" />
                     </video>
-                    <div className="absolute inset-0 bg-[#020617]/70" />
+                    <div className="absolute inset-0 bg-brand-deep/70 light:bg-transparent light:bg-[radial-gradient(ellipse_70%_60%_at_50%_45%,color-mix(in_oklab,var(--brand-deep)_86%,transparent)_0%,color-mix(in_oklab,var(--brand-deep)_66%,transparent)_55%,color-mix(in_oklab,var(--brand-deep)_42%,transparent)_100%)]" />
                 </div>
-                <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/20 via-transparent to-brand-navy" />
+                <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/20 via-transparent to-brand-navy light:from-transparent light:to-brand-deep" />
             </div>
 
             <div className="container relative z-10 mx-auto max-w-7xl px-4">
@@ -50,7 +50,7 @@ export default function Hero() {
                         initial={{ opacity: 0, scale: 0.96 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.45, ease: "easeOut" }}
-                        className="mt-2 inline-flex items-center gap-3 rounded-full border border-brand-gold/20 bg-white/[0.03] px-5 py-2.5 md:mt-4"
+                        className="mt-2 inline-flex items-center gap-3 rounded-full border border-brand-gold/20 bg-brand-white/[0.03] px-5 py-2.5 md:mt-4"
                     >
                         <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-brand-gold" />
                         <span className="mr-[-0.4em] font-sans text-[10px] font-bold uppercase tracking-[0.4em] text-brand-gold md:text-xs">
@@ -83,7 +83,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 12 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.45, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                            className="mx-auto mt-8 grid w-full max-w-3xl grid-cols-1 divide-y divide-brand-white/10 rounded-2xl border border-brand-gold/20 bg-white/[0.03] md:mt-12 md:grid-cols-2 md:divide-x md:divide-y-0"
+                            className="mx-auto mt-8 grid w-full max-w-3xl grid-cols-1 divide-y divide-brand-white/10 rounded-2xl border border-brand-gold/20 bg-brand-white/[0.03] md:mt-12 md:grid-cols-2 md:divide-x md:divide-y-0 light:bg-brand-deep/75 light:backdrop-blur-sm"
                         >
                             <div className="flex min-h-[9.5rem] flex-col items-center justify-center gap-3 px-6 py-8 text-center sm:min-h-[10rem] md:min-h-[11rem] md:px-8 md:py-10">
                                 <span className="font-serif text-2xl font-black gold-gradient md:text-4xl">{t("hero.sameDay")}</span>

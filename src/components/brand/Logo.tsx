@@ -9,7 +9,7 @@ interface LogoProps {
 /** Gold B mark beside the BLACKLINE wordmark, both cut from the master logo artwork. */
 const Logo = React.memo(function Logo({ className }: LogoProps) {
     return (
-        <div className={cn("flex items-center gap-2.5 brightness-[1.2] sm:gap-3.5", className)}>
+        <div className={cn("flex items-center gap-2.5 brightness-[1.2] light:brightness-100 sm:gap-3.5", className)}>
             <Image
                 src="/brand/blackline-mark.png"
                 alt=""

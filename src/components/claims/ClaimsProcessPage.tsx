@@ -32,7 +32,7 @@ export default function ClaimsProcessPage() {
 
     return (
         <>
-            <section className="relative overflow-hidden border-b border-brand-white/10 bg-[#020617] pb-16 pt-28 md:pb-24 md:pt-32">
+            <section className="relative overflow-hidden border-b border-brand-white/10 bg-brand-deep pb-16 pt-28 md:pb-24 md:pt-32">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(198,168,91,0.08),transparent_55%)]" />
                 <div className="container relative z-10 mx-auto max-w-4xl px-4 text-center">
                     <motion.span
@@ -64,7 +64,7 @@ export default function ClaimsProcessPage() {
             </section>
 
             {/* Three steps */}
-            <section className="border-b border-brand-white/10 bg-[#020617] py-20 md:py-28">
+            <section className="border-b border-brand-white/10 bg-brand-deep py-20 md:py-28">
                 <div className="container mx-auto max-w-6xl px-4">
                     <div className="mb-14 text-center md:mb-20">
                         <span className="font-sans text-[10px] font-bold uppercase tracking-[0.45em] text-brand-gold md:text-xs">
@@ -112,7 +112,7 @@ export default function ClaimsProcessPage() {
             </section>
 
             {/* Order of operations */}
-            <section className="border-b border-brand-white/10 bg-[#020617] py-20 md:py-28">
+            <section className="border-b border-brand-white/10 bg-brand-deep py-20 md:py-28">
                 <div className="container mx-auto max-w-3xl px-4">
                     <div className="mb-12 text-center md:mb-16">
                         <span className="font-sans text-[10px] font-bold uppercase tracking-[0.45em] text-brand-gold md:text-xs">
@@ -154,7 +154,7 @@ export default function ClaimsProcessPage() {
             </section>
 
             {/* Homeowners & Commercial */}
-            <section className="border-b border-brand-white/10 bg-[#020617] py-20 md:py-28">
+            <section className="border-b border-brand-white/10 bg-brand-deep py-20 md:py-28">
                 <div className="container mx-auto max-w-6xl px-4">
                     <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
                         <motion.div
@@ -212,7 +212,7 @@ export default function ClaimsProcessPage() {
             </section>
 
             {/* Loss types */}
-            <section className="border-b border-brand-white/10 bg-[#020617] py-20 md:py-28">
+            <section className="border-b border-brand-white/10 bg-brand-deep py-20 md:py-28">
                 <div className="container mx-auto max-w-6xl px-4">
                     <div className="mb-12 text-center">
                         <span className="font-sans text-[10px] font-bold uppercase tracking-[0.45em] text-brand-gold md:text-xs">
@@ -255,7 +255,7 @@ export default function ClaimsProcessPage() {
                 </div>
             </section>
 
-            <section className="bg-[#020617] py-20">
+            <section className="bg-brand-deep py-20">
                 <div className="container mx-auto max-w-2xl px-4 text-center">
                     <p className="font-serif text-xl text-brand-white/90 md:text-2xl">{t("claimsProcessPage.ctaTitle")}</p>
                     <Button

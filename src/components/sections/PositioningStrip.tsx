@@ -9,7 +9,7 @@ export default function PositioningStrip() {
     return (
         <section
             aria-label={t("positioning.aria")}
-            className="relative border-y border-brand-white/6 bg-[#020617]"
+            className="relative border-y border-brand-white/6 bg-brand-deep"
         >
             <div className="absolute inset-0 bg-linear-to-r from-brand-gold/3 via-transparent to-brand-gold/3 pointer-events-none" />
             <div className="container relative z-10 mx-auto max-w-5xl px-4 py-8 md:py-10">

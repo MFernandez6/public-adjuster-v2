@@ -45,7 +45,7 @@ export default async function InsightDetailPage({
     return (
         <main className="min-h-screen bg-brand-navy text-brand-white font-sans">
             <Navbar />
-            <section className="relative overflow-hidden border-b border-brand-white/10 bg-[#020617] pb-20 pt-28 md:pb-28 md:pt-32">
+            <section className="relative overflow-hidden border-b border-brand-white/10 bg-brand-deep pb-20 pt-28 md:pb-28 md:pt-32">
                 <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_50%_0%,rgba(198,168,91,0.07),transparent_55%)]" />
                 <div className="container relative z-10 mx-auto px-4">
                     <InsightArticle slug={slug as InsightSlug} />
