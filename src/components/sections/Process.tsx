@@ -35,14 +35,14 @@ export default function Process() {
                     {stepMeta.map((step, i) => (
                         <motion.div
                             key={i}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: i * 0.05 }}
-                            className="group relative p-8 md:p-10 min-h-[400px] md:h-[480px] flex flex-col justify-between items-center text-center border border-brand-white/10 hover:border-brand-gold/40 transition-all rounded-[30px] md:rounded-[40px] overflow-hidden glass shadow-2xl"
+                            initial={{ opacity: 0, y: 16 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.06 }}
+                            className="group relative p-8 md:p-10 flex flex-col items-center text-center border border-brand-gold/15 hover:border-brand-gold/40 transition-all rounded-2xl overflow-hidden glass"
                         >
                             {/* Background Number */}
-                            <div className="absolute top-0 right-0 font-serif text-[10rem] font-black opacity-[0.02] translate-x-1/4 -translate-y-1/4 group-hover:opacity-[0.05] group-hover:scale-110 transition-all duration-1000 select-none">
+                            <div className="absolute top-0 right-0 font-serif text-[10rem] font-black opacity-[0.02] translate-x-1/4 -translate-y-1/4 group-hover:opacity-[0.05] transition-all duration-1000 select-none">
                                 {step.number}
                             </div>
 
@@ -51,20 +51,18 @@ export default function Process() {
                                 <span className="block font-sans text-[9px] uppercase tracking-[0.5em] text-brand-gold font-bold">
                                     {t(`process.steps.${i}.tagline`)}
                                 </span>
-                                <h3 className="font-serif text-3xl font-bold tracking-tight">
+                                <h3 className="font-serif text-3xl font-bold leading-tight tracking-tight lg:min-h-[2.5em]">
                                     {t(`process.steps.${i}.title`)}
                                 </h3>
                             </div>
 
-                            <div className="relative z-10 space-y-6">
-                                <p className="text-brand-slate text-sm leading-relaxed transition-opacity duration-500">
-                                    {t(`process.steps.${i}.description`)}
-                                </p>
-                                <div className="flex items-center gap-4 text-brand-gold/40 group-hover:text-brand-gold transition-colors duration-500">
-                                    <div className="h-[1px] flex-1 bg-current" />
-                                    <span className="font-serif text-xl font-bold">{step.number}</span>
-                                    <div className="h-[1px] flex-1 bg-current" />
-                                </div>
+                            <p className="relative z-10 mt-5 text-brand-slate text-sm leading-relaxed transition-opacity duration-500">
+                                {t(`process.steps.${i}.description`)}
+                            </p>
+                            <div className="relative z-10 mt-auto flex w-full items-center gap-4 pt-8 text-brand-gold/40 group-hover:text-brand-gold transition-colors duration-500">
+                                <div className="h-[1px] flex-1 bg-current" />
+                                <span className="font-serif text-xl font-bold">{step.number}</span>
+                                <div className="h-[1px] flex-1 bg-current" />
                             </div>
                         </motion.div>
                     ))}

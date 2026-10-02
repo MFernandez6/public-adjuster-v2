@@ -108,9 +108,7 @@ export default function Contact() {
     return (
         <section id="contact" className="scroll-mt-24 py-32 bg-[#020617] overflow-hidden">
             <div className="container mx-auto px-4">
-                <div className="relative glass rounded-[40px] p-5 md:p-20 overflow-hidden border-brand-white/5">
-                    <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_100%_0%,_rgba(198,168,91,0.1),_transparent_50%)]" />
-
+                <div className="relative glass rounded-2xl p-5 md:p-20 overflow-hidden">
                     <div className="grid lg:grid-cols-2 gap-20 items-start relative z-10">
                         <div className="space-y-10">
                             <div className="space-y-4">
@@ -151,10 +149,11 @@ export default function Contact() {
                         </div>
 
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            className="bg-white/[0.03] backdrop-blur-3xl rounded-3xl p-5 md:p-10 border border-brand-white/10 shadow-2xl space-y-8"
+                            initial={{ opacity: 0, y: 16 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                            className="bg-white/[0.03] rounded-3xl p-5 md:p-10 border border-brand-gold/15 space-y-8"
                         >
                             <div className="space-y-2">
                                 <h3 className="font-serif text-3xl font-bold tracking-tight">{t("contact.formTitle")}</h3>
@@ -299,7 +298,7 @@ export default function Contact() {
                                             required
                                             value={damageIdx}
                                             onChange={(e) => setDamageIdx(e.target.value)}
-                                            className="flex h-14 w-full rounded-xl border border-brand-white/10 bg-brand-navy/50 px-4 text-sm text-brand-white focus:border-brand-gold focus:outline-none focus:ring-1 focus:ring-brand-gold/40"
+                                            className="flex h-14 w-full rounded-xl border border-brand-gold/15 bg-brand-navy/50 px-4 text-sm text-brand-white focus:border-brand-gold focus:outline-none focus:ring-1 focus:ring-brand-gold/40"
                                         >
                                             <option value="" disabled>
                                                 {t("contact.damagePlaceholder")}
@@ -337,7 +336,7 @@ export default function Contact() {
                                 <Button
                                     type="submit"
                                     disabled={submitting}
-                                    className="w-full h-16 bg-brand-gold text-brand-navy hover:scale-[1.02] transition-all font-sans uppercase tracking-[0.1em] sm:tracking-[0.3em] font-black text-[10px] sm:text-xs shadow-[0_10px_40px_rgba(198,168,91,0.2)] group disabled:opacity-60"
+                                    className="w-full h-16 bg-brand-gold text-brand-navy transition-[filter] hover:brightness-110 font-sans uppercase tracking-[0.1em] sm:tracking-[0.3em] font-black text-[10px] sm:text-xs group disabled:opacity-60"
                                 >
                                     {submitting ? t("contact.submitting") : t("contact.submit")}
                                     <ArrowRight className="ml-3 w-4 h-4 transition-transform group-hover:translate-x-1" />

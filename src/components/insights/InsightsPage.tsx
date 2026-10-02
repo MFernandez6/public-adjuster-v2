@@ -48,11 +48,11 @@ export default function InsightsPage() {
                         {Array.from({ length: POST_COUNT }, (_, i) => (
                             <motion.article
                                 key={i}
-                                initial={{ opacity: 0, y: 12 }}
+                                initial={{ opacity: 0, y: 16 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: Math.min(i * 0.03, 0.35) }}
-                                className="flex flex-col rounded-2xl border border-brand-white/10 bg-brand-white/[0.02] transition-colors hover:border-brand-gold/25 hover:bg-brand-white/[0.04] focus-within:border-brand-gold/30"
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: Math.min(i * 0.03, 0.25) }}
+                                className="flex flex-col rounded-2xl border border-brand-gold/15 bg-brand-white/[0.02] transition-colors hover:border-brand-gold/40 hover:bg-brand-white/[0.04] focus-within:border-brand-gold/30"
                             >
                                 <Link
                                     href={`/insights/${INSIGHT_SLUGS[i]}`}

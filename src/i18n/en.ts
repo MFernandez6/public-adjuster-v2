@@ -305,7 +305,7 @@ export const en = {
         privacy: "Privacy Protocol",
         terms: "Terms of Authority",
         addressFallback:
-            "Serving Florida policyholders statewide. Request office details when scheduling a consultation.",
+            "Serving Florida policyholders statewide, with offices in South Florida.",
         licenseLead: "Florida public adjuster license:",
     },
     aboutPage: {
@@ -393,10 +393,6 @@ export const en = {
             {
                 title: "2011 — B.S., Political Science — Florida State University",
                 detail: "Research‑forward undergraduate work — emphasis on clear writing, sourcing, and narrative discipline under deadlines.",
-            },
-            {
-                title: "2008 — A.A., Political Science — Miami Dade College",
-                detail: "Associate foundation completed while working — core academics before finishing the bachelor’s at FSU.",
             },
         ],
         cta: "Ready to discuss your loss?",

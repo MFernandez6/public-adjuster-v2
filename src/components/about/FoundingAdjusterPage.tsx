@@ -20,7 +20,7 @@ import {
 import { useLanguage } from "@/contexts/language-context";
 import { publicAdjusterLicenseNumber } from "@/config/site";
 
-const EDU_COUNT = 6;
+const EDU_COUNT = 5;
 const VALUES_COUNT = 5;
 
 const valueIcons = [Shield, Lightbulb, Compass, Heart, Mountain] as const;
@@ -76,10 +76,10 @@ export default function FoundingAdjusterPage() {
                         </h2>
                     </div>
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 16 }}
                         whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                         className="space-y-6 font-sans text-base leading-relaxed tracking-wide text-brand-slate md:text-lg"
                     >
                         <p>{t("aboutPage.whoP1")}</p>
@@ -104,8 +104,8 @@ export default function FoundingAdjusterPage() {
                         <motion.div
                             initial={{ opacity: 0, y: 16 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.55 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                             className="mx-auto mt-10 max-w-3xl space-y-6 text-left font-sans text-base leading-relaxed text-brand-slate md:text-center md:text-lg"
                         >
                             <p>{t("aboutPage.adjustersMissionP1")}</p>
@@ -132,11 +132,11 @@ export default function FoundingAdjusterPage() {
                                 return (
                                     <motion.article
                                         key={i}
-                                        initial={{ opacity: 0, y: 14 }}
+                                        initial={{ opacity: 0, y: 16 }}
                                         whileInView={{ opacity: 1, y: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ delay: Math.min(i * 0.05, 0.25) }}
-                                        className="flex flex-col rounded-2xl border border-brand-white/10 bg-brand-white/2 p-6 text-left transition-colors hover:border-brand-gold/25"
+                                        viewport={{ once: true, amount: 0.2 }}
+                                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: Math.min(i * 0.05, 0.25) }}
+                                        className="flex flex-col rounded-2xl border border-brand-gold/15 bg-brand-white/2 p-6 text-left transition-colors hover:border-brand-gold/40"
                                     >
                                         <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-brand-gold/20 bg-brand-navy text-brand-gold">
                                             <Icon className="h-5 w-5" aria-hidden />
@@ -228,8 +228,8 @@ export default function FoundingAdjusterPage() {
                             <motion.div
                                 initial={{ opacity: 0, y: 16 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.55 }}
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                                 className="lg:col-span-5"
                             >
                                 <p className="font-sans text-sm leading-relaxed text-brand-slate md:text-[15px] md:leading-relaxed">
@@ -262,7 +262,7 @@ export default function FoundingAdjusterPage() {
                                         </h4>
                                     </div>
                                     <div
-                                        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-brand-white/10 bg-brand-navy text-brand-gold md:h-12 md:w-12"
+                                        className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-brand-gold/15 bg-brand-navy text-brand-gold md:h-12 md:w-12"
                                         aria-hidden
                                     >
                                         <GraduationCap className="h-5 w-5 md:h-6 md:w-6" />
@@ -300,7 +300,7 @@ export default function FoundingAdjusterPage() {
                     <Button
                         asChild
                         size="lg"
-                        className="mt-8 h-14 bg-brand-gold px-10 font-sans text-sm font-bold uppercase tracking-[0.15em] text-brand-navy hover:scale-[1.02]"
+                        className="mt-8 h-14 bg-brand-gold px-10 font-sans text-sm font-bold uppercase tracking-[0.15em] text-brand-navy"
                     >
                         <Link href="/#contact" className="inline-flex items-center gap-2">
                             {t("aboutPage.ctaBtn")}

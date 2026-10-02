@@ -37,11 +37,11 @@ export default function ClaimTypes() {
                     {claimMeta.map((type, i) => (
                         <motion.div
                             key={i}
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 16 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: i * 0.05 }}
-                            className="group relative p-10 glass rounded-3xl border-brand-white/5 hover:border-brand-gold/30 transition-all duration-500 hover:shadow-[0_0_30px_rgba(198,168,91,0.1)] overflow-hidden"
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.06 }}
+                            className="group relative p-10 glass rounded-3xl hover:border-brand-gold/40 transition-all duration-500 overflow-hidden"
                         >
                             {type.image && (
                                 <div className="absolute inset-0 z-0">
@@ -57,7 +57,7 @@ export default function ClaimTypes() {
                                     />
                                 </div>
                             )}
-                            <div className="mb-8 text-brand-gold group-hover:scale-110 transition-transform duration-500">
+                            <div className="mb-8 text-brand-gold transition-transform duration-500">
                                 {type.icon}
                             </div>
                             <h3 className="font-serif text-2xl font-bold mb-4 tracking-tight group-hover:text-brand-gold transition-colors">

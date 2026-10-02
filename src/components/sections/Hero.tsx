@@ -16,17 +16,30 @@ export default function Hero() {
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0">
                     <Image
-                        src="/images/properties/commercial.jpg"
+                        src="/videos/hurricane-aerial-poster.jpg"
                         alt={t("hero.imageAlt")}
                         fill
                         priority
                         className="object-cover"
                         sizes="100vw"
-                        quality={72}
+                        quality={70}
                         placeholder="blur"
                         blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAIAAoDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwA3gAA//9k="
                     />
-                    <div className="absolute inset-0 bg-[#020617]/75" />
+                    <video
+                        className="absolute inset-0 h-full w-full object-cover motion-reduce:hidden"
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        preload="auto"
+                        poster="/videos/hurricane-aerial-poster.jpg"
+                        aria-hidden
+                    >
+                        <source src="/videos/hurricane-aerial-540.mp4" type="video/mp4" media="(max-width: 767px)" />
+                        <source src="/videos/hurricane-aerial-1080.mp4" type="video/mp4" />
+                    </video>
+                    <div className="absolute inset-0 bg-[#020617]/70" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-b from-brand-navy/20 via-transparent to-brand-navy" />
             </div>
@@ -37,7 +50,7 @@ export default function Hero() {
                         initial={{ opacity: 0, scale: 0.96 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.45, ease: "easeOut" }}
-                        className="mt-2 inline-flex items-center gap-3 rounded-full border border-brand-gold/20 bg-white/[0.03] px-5 py-2.5 shadow-[0_0_20px_rgba(198,168,91,0.1)] md:mt-4"
+                        className="mt-2 inline-flex items-center gap-3 rounded-full border border-brand-gold/20 bg-white/[0.03] px-5 py-2.5 md:mt-4"
                     >
                         <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-brand-gold" />
                         <span className="mr-[-0.4em] font-sans text-[10px] font-bold uppercase tracking-[0.4em] text-brand-gold md:text-xs">
@@ -70,7 +83,7 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 12 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.45, delay: 0.2, ease: [0.16, 1, 0.3, 1] }}
-                            className="mx-auto mt-8 grid w-full max-w-3xl grid-cols-1 divide-y divide-brand-white/10 rounded-[24px] border border-brand-gold/20 bg-white/[0.03] shadow-[0_0_40px_rgba(198,168,91,0.1)] md:mt-12 md:grid-cols-2 md:divide-x md:divide-y-0 md:rounded-[30px]"
+                            className="mx-auto mt-8 grid w-full max-w-3xl grid-cols-1 divide-y divide-brand-white/10 rounded-2xl border border-brand-gold/20 bg-white/[0.03] md:mt-12 md:grid-cols-2 md:divide-x md:divide-y-0"
                         >
                             <div className="flex min-h-[9.5rem] flex-col items-center justify-center gap-3 px-6 py-8 text-center sm:min-h-[10rem] md:min-h-[11rem] md:px-8 md:py-10">
                                 <span className="font-serif text-2xl font-black gold-gradient md:text-4xl">{t("hero.sameDay")}</span>
@@ -104,7 +117,7 @@ export default function Hero() {
                         <div className="flex w-full flex-col items-center gap-4 px-6 sm:w-auto sm:flex-row sm:px-0 md:gap-6">
                             <Button
                                 size="lg"
-                                className="group relative h-14 w-full overflow-hidden bg-brand-gold px-8 font-sans text-sm font-bold uppercase tracking-[0.1em] text-brand-navy shadow-[0_10px_40px_rgba(198,168,91,0.3)] transition-transform duration-300 hover:scale-105 md:h-16 md:w-auto md:px-10 md:text-lg"
+                                className="group relative h-14 w-full overflow-hidden bg-brand-gold px-8 font-sans text-sm font-bold uppercase tracking-[0.1em] text-brand-navy transition-[filter] duration-300 hover:brightness-110 md:h-16 md:w-auto md:px-10 md:text-lg"
                                 asChild
                             >
                                 <Link href="/#contact" className="flex items-center justify-center">
@@ -126,7 +139,7 @@ export default function Hero() {
             </div>
 
             <div className="absolute bottom-10 left-1/2 hidden -translate-x-1/2 opacity-25 motion-reduce:hidden md:block">
-                <div className="h-16 w-px animate-bounce bg-gradient-to-b from-brand-gold to-transparent [animation-duration:2.5s]" />
+                <div className="h-16 w-px animate-scroll-cue bg-gradient-to-b from-brand-gold to-transparent" />
             </div>
 
             <div className="absolute bottom-12 left-12 hidden space-y-4 font-sans text-[10px] uppercase tracking-[0.4em] opacity-30 lg:block">

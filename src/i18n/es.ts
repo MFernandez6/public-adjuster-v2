@@ -308,7 +308,7 @@ export const es = {
         privacy: "Privacidad",
         terms: "Términos",
         addressFallback:
-            "Representación a asegurados en Florida. Solicite la dirección de oficina al programar una consulta.",
+            "Al servicio de asegurados en todo Florida, con oficinas en el sur de Florida.",
         licenseLead: "Licencia de ajustador público de seguros en Florida:",
     },
     aboutPage: {
@@ -396,10 +396,6 @@ export const es = {
             {
                 title: "2011 — B.S., Ciencias Políticas — Universidad Estatal de Florida",
                 detail: "Pregrado con énfasis en investigación y redacción clara — argumentación con fuentes bajo plazos.",
-            },
-            {
-                title: "2008 — A.A., Ciencias Políticas — Miami Dade College",
-                detail: "Primer título universitario mientras trabajaba — base académica antes de completar la licenciatura en FSU.",
             },
         ],
         cta: "¿Listo para hablar de su siniestro?",

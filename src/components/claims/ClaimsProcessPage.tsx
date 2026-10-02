@@ -81,11 +81,11 @@ export default function ClaimsProcessPage() {
                         {Array.from({ length: STEP_COUNT }, (_, i) => (
                             <motion.div
                                 key={i}
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 0, y: 16 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.08 }}
-                                className="relative rounded-2xl border border-brand-white/10 bg-brand-white/2 p-8 glass"
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.06 }}
+                                className="relative rounded-2xl border border-brand-gold/15 bg-brand-white/2 p-8 glass"
                             >
                                 <span className="font-serif text-5xl font-black text-brand-gold/25">
                                     {String(i + 1).padStart(2, "0")}
@@ -100,9 +100,10 @@ export default function ClaimsProcessPage() {
                         ))}
                     </div>
                     <motion.p
-                        initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
-                        viewport={{ once: true }}
+                        initial={{ opacity: 0, y: 16 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                         className="mx-auto mt-12 max-w-3xl rounded-xl border border-brand-gold/15 bg-brand-navy/40 px-6 py-5 text-center font-sans text-sm leading-relaxed text-brand-slate/90"
                     >
                         {t("claimsProcessPage.commCallout")}
@@ -130,10 +131,10 @@ export default function ClaimsProcessPage() {
                             return (
                                 <motion.li
                                     key={i}
-                                    initial={{ opacity: 0, x: -8 }}
-                                    whileInView={{ opacity: 1, x: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: i * 0.05 }}
+                                    initial={{ opacity: 0, y: 16 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true, amount: 0.2 }}
+                                    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.06 }}
                                     className="relative pb-12 last:pb-0"
                                 >
                                     <span className="absolute -left-[33px] top-0 flex h-8 w-8 items-center justify-center rounded-full border border-brand-gold/30 bg-brand-navy text-brand-gold md:-left-[41px] md:h-9 md:w-9">
@@ -159,7 +160,8 @@ export default function ClaimsProcessPage() {
                         <motion.div
                             initial={{ opacity: 0, y: 16 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                             className="rounded-2xl border border-brand-gold/15 bg-brand-white/2 p-8 md:p-10"
                         >
                             <span className="font-sans text-[10px] font-bold uppercase tracking-[0.4em] text-brand-gold">
@@ -183,9 +185,9 @@ export default function ClaimsProcessPage() {
                         <motion.div
                             initial={{ opacity: 0, y: 16 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.08 }}
-                            className="rounded-2xl border border-brand-white/10 bg-brand-navy/40 p-8 md:p-10"
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.08 }}
+                            className="rounded-2xl border border-brand-gold/15 bg-brand-navy/40 p-8 md:p-10"
                         >
                             <span className="font-sans text-[10px] font-bold uppercase tracking-[0.4em] text-brand-gold">
                                 {t("claimsProcessPage.commercialEyebrow")}
@@ -226,10 +228,11 @@ export default function ClaimsProcessPage() {
                             return (
                                 <motion.div
                                     key={i}
-                                    initial={{ opacity: 0, y: 12 }}
+                                    initial={{ opacity: 0, y: 16 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    className="flex gap-5 rounded-2xl border border-brand-white/10 bg-brand-white/2 p-6 md:p-8"
+                                    viewport={{ once: true, amount: 0.2 }}
+                                    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                                    className="flex gap-5 rounded-2xl border border-brand-gold/15 bg-brand-white/2 p-6 md:p-8"
                                 >
                                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-brand-gold/20 bg-brand-navy text-brand-gold">
                                         <Icon className="h-6 w-6" aria-hidden />
@@ -258,7 +261,7 @@ export default function ClaimsProcessPage() {
                     <Button
                         asChild
                         size="lg"
-                        className="mt-8 h-14 bg-brand-gold px-10 font-sans text-sm font-bold uppercase tracking-[0.15em] text-brand-navy hover:scale-[1.02]"
+                        className="mt-8 h-14 bg-brand-gold px-10 font-sans text-sm font-bold uppercase tracking-[0.15em] text-brand-navy"
                     >
                         <Link href="/#contact">{t("claimsProcessPage.ctaButton")}</Link>
                     </Button>

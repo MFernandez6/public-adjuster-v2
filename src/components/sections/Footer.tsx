@@ -127,7 +127,7 @@ export default function Footer() {
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         aria-label={label}
-                                        className="w-10 h-10 rounded-full glass border border-brand-white/10 flex items-center justify-center text-brand-slate hover:text-brand-gold hover:border-brand-gold transition-all duration-300"
+                                        className="w-10 h-10 rounded-full glass border border-brand-gold/15 flex items-center justify-center text-brand-slate hover:text-brand-gold hover:border-brand-gold transition-all duration-300"
                                     >
                                         <Icon className="w-4 h-4" />
                                     </a>

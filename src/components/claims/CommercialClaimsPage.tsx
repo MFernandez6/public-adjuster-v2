@@ -75,9 +75,9 @@ export default function CommercialClaimsPage() {
                                     key={i}
                                     initial={{ opacity: 0, y: 16 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: i * 0.06 }}
-                                    className="rounded-2xl border border-brand-white/10 bg-brand-white/2 p-6 md:p-8"
+                                    viewport={{ once: true, amount: 0.2 }}
+                                    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.06 }}
+                                    className="rounded-2xl border border-brand-gold/15 bg-brand-white/2 p-6 md:p-8"
                                 >
                                     <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-brand-gold/25 bg-brand-navy text-brand-gold">
                                         <Icon className="h-5 w-5" aria-hidden />
@@ -134,10 +134,11 @@ export default function CommercialClaimsPage() {
                             return (
                                 <motion.div
                                     key={i}
-                                    initial={{ opacity: 0, y: 12 }}
+                                    initial={{ opacity: 0, y: 16 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    className="flex gap-4 rounded-2xl border border-brand-white/10 bg-brand-white/2 p-6 md:p-7"
+                                    viewport={{ once: true, amount: 0.2 }}
+                                    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                                    className="flex gap-4 rounded-2xl border border-brand-gold/15 bg-brand-white/2 p-6 md:p-7"
                                 >
                                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-brand-gold/20 bg-brand-navy text-brand-gold">
                                         <Icon className="h-5 w-5" aria-hidden />
@@ -195,10 +196,11 @@ export default function CommercialClaimsPage() {
                             return (
                                 <motion.div
                                     key={i}
-                                    initial={{ opacity: 0, y: 12 }}
+                                    initial={{ opacity: 0, y: 16 }}
                                     whileInView={{ opacity: 1, y: 0 }}
-                                    viewport={{ once: true }}
-                                    className="flex gap-5 rounded-2xl border border-brand-white/10 bg-brand-navy/30 p-6 md:p-8"
+                                    viewport={{ once: true, amount: 0.2 }}
+                                    transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                                    className="flex gap-5 rounded-2xl border border-brand-gold/15 bg-brand-navy/30 p-6 md:p-8"
                                 >
                                     <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-brand-gold/20 bg-brand-navy text-brand-gold">
                                         <Icon className="h-6 w-6" aria-hidden />
@@ -237,7 +239,8 @@ export default function CommercialClaimsPage() {
                                 key={i}
                                 initial={{ opacity: 0, y: 16 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                                 className="relative rounded-2xl border border-brand-gold/15 bg-brand-white/2 p-8 glass"
                             >
                                 <span className="font-serif text-5xl font-black text-brand-gold/25">
@@ -261,7 +264,7 @@ export default function CommercialClaimsPage() {
                     <Button
                         asChild
                         size="lg"
-                        className="mt-8 h-14 bg-brand-gold px-10 font-sans text-sm font-bold uppercase tracking-[0.15em] text-brand-navy hover:scale-[1.02]"
+                        className="mt-8 h-14 bg-brand-gold px-10 font-sans text-sm font-bold uppercase tracking-[0.15em] text-brand-navy"
                     >
                         <Link href="/#contact">{t("commercialClaimsPage.ctaButton")}</Link>
                     </Button>

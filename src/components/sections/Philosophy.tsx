@@ -17,18 +17,15 @@ export default function Philosophy() {
 
     return (
         <section id="philosophy" className="scroll-mt-24 py-32 bg-[#020617] text-brand-white relative overflow-hidden">
-            {/* Decorative Blur */}
-            <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand-gold/5 rounded-full blur-[120px] -mr-64 -mt-32" />
-
             <div className="container mx-auto px-4 relative z-10 max-w-7xl">
                 <div className="flex flex-col lg:flex-row gap-24 items-start py-12">
 
                     {/* Legend / Intro */}
                     <motion.div
-                        initial={{ opacity: 0, x: -30 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1 }}
+                        initial={{ opacity: 0, y: 16 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, amount: 0.2 }}
+                        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                         className="lg:sticky lg:top-32 max-w-lg space-y-12"
                     >
                         <div className="space-y-6">
@@ -60,9 +57,10 @@ export default function Philosophy() {
 
                         {/* Forensic Visual */}
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
+                            initial={{ opacity: 0, y: 16 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.2 }}
+                            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
                             className="relative rounded-2xl overflow-hidden border border-brand-gold/20 aspect-video group"
                         >
                             <Image
@@ -87,17 +85,16 @@ export default function Philosophy() {
                         {principleMeta.map((p, i) => (
                             <motion.div
                                 key={i}
-                                initial={{ opacity: 0, y: 40 }}
+                                initial={{ opacity: 0, y: 16 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.8, delay: i * 0.2 }}
-                                whileHover={{ y: -5 }}
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.06 }}
                                 className={`group relative p-10 rounded-2xl glass overflow-hidden ${i % 2 === 1 ? 'lg:translate-x-8' : ''}`}
                             >
                                 <div className={`absolute inset-0 bg-gradient-to-br ${p.color} opacity-0 group-hover:opacity-100 transition-opacity duration-700`} />
 
                                 <div className="relative z-10 flex flex-col md:flex-row gap-8 items-start md:items-center">
-                                    <div className="p-4 rounded-xl bg-brand-navy border border-brand-white/5 text-brand-gold group-hover:scale-110 group-hover:text-white transition-all duration-500 shadow-xl">
+                                    <div className="p-4 rounded-xl bg-brand-navy border border-brand-gold/15 text-brand-gold group-hover:text-white transition-all duration-500">
                                         {p.icon}
                                     </div>
                                     <div className="space-y-3 flex-1">

@@ -81,11 +81,11 @@ export default function PublicAdjusterFaqPage() {
                             <motion.a
                                 key={id}
                                 href={`#${id}`}
-                                initial={{ opacity: 0, y: 10 }}
+                                initial={{ opacity: 0, y: 16 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: i * 0.05 }}
-                                className="group flex flex-col rounded-2xl border border-brand-white/10 bg-brand-white/2 p-6 transition-colors hover:border-brand-gold/30 hover:bg-brand-white/4"
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: i * 0.06 }}
+                                className="group flex flex-col rounded-2xl border border-brand-gold/15 bg-brand-white/2 p-6 transition-colors hover:border-brand-gold/40 hover:bg-brand-white/4"
                             >
                                 <div className="flex items-center justify-between gap-3">
                                     <div className="flex h-10 w-10 items-center justify-center rounded-lg border border-brand-gold/20 bg-brand-navy text-brand-gold">
@@ -151,7 +151,7 @@ export default function PublicAdjusterFaqPage() {
                         {Array.from({ length: FAQ_COUNT }, (_, i) => (
                             <details
                                 key={i}
-                                className="group rounded-xl border border-brand-white/10 bg-brand-white/2 px-5 py-4 transition-colors open:border-brand-gold/25 open:bg-brand-navy/40"
+                                className="group rounded-xl border border-brand-gold/15 bg-brand-white/2 px-5 py-4 transition-colors open:border-brand-gold/25 open:bg-brand-navy/40"
                             >
                                 <summary className="cursor-pointer list-none font-sans text-sm font-semibold text-brand-white md:text-base [&::-webkit-details-marker]:hidden">
                                     <span className="flex items-start justify-between gap-4">
@@ -182,10 +182,11 @@ export default function PublicAdjusterFaqPage() {
                         {Array.from({ length: KNOWHOW_COUNT }, (_, i) => (
                             <motion.div
                                 key={i}
-                                initial={{ opacity: 0, y: 12 }}
+                                initial={{ opacity: 0, y: 16 }}
                                 whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                className="rounded-2xl border border-brand-white/10 bg-brand-navy/30 p-6 md:p-8"
+                                viewport={{ once: true, amount: 0.2 }}
+                                transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+                                className="rounded-2xl border border-brand-gold/15 bg-brand-navy/30 p-6 md:p-8"
                             >
                                 <h3 className="font-serif text-xl font-bold text-brand-white">
                                     {t(`faqPage.knowHowCards.${i}.title`)}
@@ -205,7 +206,7 @@ export default function PublicAdjusterFaqPage() {
                     <Button
                         asChild
                         size="lg"
-                        className="mt-8 h-14 bg-brand-gold px-10 font-sans text-sm font-bold uppercase tracking-[0.15em] text-brand-navy hover:scale-[1.02]"
+                        className="mt-8 h-14 bg-brand-gold px-10 font-sans text-sm font-bold uppercase tracking-[0.15em] text-brand-navy"
                     >
                         <Link href="/#contact">{t("faqPage.ctaButton")}</Link>
                     </Button>

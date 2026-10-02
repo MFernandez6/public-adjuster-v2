@@ -50,7 +50,7 @@ export default function InsightArticle({ slug }: { slug: InsightSlug }) {
                     </p>
                 ))}
             </div>
-            <p className="mt-12 rounded-xl border border-brand-white/10 bg-brand-white/[0.02] p-6 font-sans text-sm italic leading-relaxed text-brand-slate">
+            <p className="mt-12 rounded-xl border border-brand-gold/15 bg-brand-white/[0.02] p-6 font-sans text-sm italic leading-relaxed text-brand-slate">
                 {locale === "es"
                     ? "Este artículo es orientación general, no asesoría legal; aplican los hechos y la póliza de su caso."
                     : "This article is general guidance—not legal advice. Your facts and policy control outcomes."}{" "}

@@ -69,13 +69,17 @@ export default function Navbar() {
     };
 
     return (
-        <nav className="fixed top-0 left-0 right-0 z-50 border-b border-brand-white/5 bg-brand-navy/80 backdrop-blur-md">
+        <nav className="fixed top-0 left-0 right-0 z-50">
+            <div
+                aria-hidden
+                className="pointer-events-none absolute inset-x-0 top-0 -bottom-10 -z-10 bg-[linear-gradient(to_bottom,#0F1C2E_0%,rgba(2,6,23,0.92)_66%,transparent_100%)] backdrop-blur-md [mask-image:linear-gradient(to_bottom,black_66%,transparent_100%)]"
+            />
             <div className="container mx-auto px-4 h-20 flex items-center justify-between">
                 <Link href="/" className="shrink-0 outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 rounded-sm" aria-label={t("footer.homeAria")}>
                     <Logo />
                 </Link>
 
-                <div className="hidden md:flex items-center space-x-10 text-[10px] font-sans uppercase tracking-[0.2em] text-brand-white/70">
+                <div className="hidden lg:flex items-center space-x-7 xl:space-x-10 text-[10px] font-sans uppercase tracking-[0.2em] text-brand-white/70">
                     {/* About Dropdown */}
                     <div
                         className="relative"
@@ -103,7 +107,7 @@ export default function Navbar() {
                                                 href={item.href}
                                                 className="flex items-start gap-4 p-3 rounded-xl hover:bg-brand-white/5 transition-colors group/item"
                                             >
-                                                <div className="mt-1 text-brand-gold group-hover/item:scale-110 transition-transform">
+                                                <div className="mt-1 text-brand-gold transition-transform">
                                                     {item.icon}
                                                 </div>
                                                 <div className="space-y-1 text-left">
@@ -149,7 +153,7 @@ export default function Navbar() {
                                                 href={item.href}
                                                 className="flex items-start gap-4 p-3 rounded-xl hover:bg-brand-white/5 transition-colors group/item"
                                             >
-                                                <div className="mt-1 text-brand-gold group-hover/item:scale-110 transition-transform">
+                                                <div className="mt-1 text-brand-gold transition-transform">
                                                     {item.icon}
                                                 </div>
                                                 <div className="space-y-1 text-left">
@@ -177,12 +181,12 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex items-center gap-3 md:gap-4">
-                    <div className="md:hidden">
+                    <div className="lg:hidden">
                         <LanguageSwitcher />
                     </div>
                     <Link
                         href="/#contact"
-                        className="hidden sm:flex items-center rounded-md border border-brand-gold/25 bg-brand-navy/90 px-5 py-2.5 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold shadow-[0_0_24px_rgba(198,168,91,0.08)] transition-colors hover:bg-brand-gold hover:text-brand-navy"
+                        className="hidden sm:flex items-center rounded-md border border-brand-gold/25 bg-brand-navy/90 px-5 py-2.5 font-sans text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold transition-colors hover:bg-brand-gold hover:text-brand-navy"
                     >
                         {t("nav.ctaContact")}
                     </Link>
@@ -190,7 +194,7 @@ export default function Navbar() {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                        className="md:hidden p-2 text-brand-white/80 hover:text-brand-gold transition-colors"
+                        className="lg:hidden p-2 text-brand-white/80 hover:text-brand-gold transition-colors"
                     >
                         {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
                     </button>
@@ -204,7 +208,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: "auto" }}
                         exit={{ opacity: 0, height: 0 }}
-                        className="md:hidden border-t border-brand-white/5 bg-brand-navy/95 backdrop-blur-xl overflow-hidden"
+                        className="lg:hidden bg-gradient-to-b from-[#020617]/85 to-[#020617]/95 backdrop-blur-xl overflow-hidden"
                     >
                         <div className="container mx-auto px-6 py-10 space-y-8">
                             <div className="space-y-6">
