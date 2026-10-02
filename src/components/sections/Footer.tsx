@@ -2,7 +2,7 @@
 
 import { useMemo } from "react";
 import Link from "next/link";
-import Logo from "@/components/brand/Logo";
+import Image from "next/image";
 import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
 import {
@@ -109,7 +109,13 @@ export default function Footer() {
                             className="inline-block outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 rounded-sm"
                             aria-label={t("footer.homeAria")}
                         >
-                            <Logo className="scale-100 md:scale-125 origin-left" />
+                            <Image
+                                src="/brand/blackline-logo.png"
+                                alt="Blackline Public Adjusters LLC"
+                                width={812}
+                                height={479}
+                                className="h-auto w-48 select-none md:w-56"
+                            />
                         </Link>
                         <p className="text-brand-slate text-sm leading-relaxed max-w-sm font-sans">{t("footer.blurb")}</p>
                         {hasAnySocialUrl() ? (
@@ -205,9 +211,18 @@ export default function Footer() {
                 </div>
 
                 <div className="pt-8 border-t border-brand-white/5 flex flex-col md:flex-row items-center justify-between gap-6">
-                    <p className="text-[10px] uppercase tracking-[0.3em] text-brand-slate/60 text-center md:text-left">
-                        {t("footer.copyright")}
-                    </p>
+                    <div className="flex flex-col items-center gap-4 md:flex-row">
+                        <Image
+                            src="/brand/blackline-seal.png"
+                            alt="Blackline Public Adjusters LLC seal"
+                            width={56}
+                            height={56}
+                            className="shrink-0 select-none opacity-90"
+                        />
+                        <p className="text-[10px] uppercase tracking-[0.3em] text-brand-slate/60 text-center md:text-left">
+                            {t("footer.copyright")}
+                        </p>
+                    </div>
                     <div className="flex items-center gap-8 text-[10px] uppercase tracking-[0.2em] text-brand-slate/60">
                         <Link href="/privacy" className="hover:text-brand-gold transition-colors">
                             {t("footer.privacy")}
