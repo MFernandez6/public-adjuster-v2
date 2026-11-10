@@ -146,17 +146,17 @@ export const es = {
             {
                 title: "Precisión quirúrgica",
                 description:
-                    "Analizamos el lenguaje de la póliza y la evidencia del siniestro para construir un caso sólido. No solo ajustamos; lo volvemos forense.",
+                    "Leemos la póliza frente a la evidencia del siniestro y documentamos lo que encontramos.",
             },
             {
                 title: "Fuerza contractual",
                 description:
-                    "Las pólizas son contratos vinculantes. Nos aseguramos de que se apliquen tal como están escritas, sin concesiones.",
+                    "Las pólizas son contratos. Aplicamos el texto que rige el siniestro, incluidos los límites y las exclusiones.",
             },
             {
                 title: "La evidencia primero",
                 description:
-                    "Informes forenses irrefutables y datos al estándar de la industria son la base de cada reclamación que gestionamos.",
+                    "Notas de inspección, fotografías y mediciones al estándar de la industria son el expediente que presentamos a la aseguradora.",
             },
         ],
         hoverWord: "FUERZA",
@@ -203,7 +203,7 @@ export const es = {
     process: {
         eyebrow: "Protocolo de ejecución",
         heading: "BLACKLINED.",
-        sub: "De la línea roja a Blackline. Aplicamos la letra estricta de su póliza para maximizar la recuperación.",
+        sub: "De la línea roja a Blackline. Presentamos el siniestro según el texto de la póliza y negociamos a partir de ese expediente.",
         steps: [
             {
                 title: "Inspección forense",
@@ -279,7 +279,8 @@ export const es = {
         formErrorValidation: "Revise que todos los campos estén bien —incluido un correo y teléfono válidos.",
         formErrorRate: "Demasiados envíos desde esta red. Espere una hora o llámenos.",
         formErrorDelivery: "No pudimos enviar su mensaje. Inténtelo de nuevo o escriba por correo.",
-        formErrorConfig: "El sitio aún no puede entregar correo electrónico. Su mensaje no quedó en cola —llame o envíe correo.",
+        formErrorConfig: "No pudimos enviar el formulario automáticamente. Envíe el correo que abrió su aplicación, o llámenos.",
+        formMailto: "Su aplicación de correo tiene un mensaje listo. Envíelo para completar la solicitud.",
         formSuccess: "Gracias: recibimos su solicitud y nos pondremos en contacto pronto.",
         submit: "Solicitar contacto",
         submitting: "Enviando…",
@@ -314,7 +315,7 @@ export const es = {
         terms: "Términos",
         addressFallback:
             "Al servicio de asegurados en todo Florida, con oficinas en el sur de Florida.",
-        licenseLead: "Licencia de ajustador público de seguros en Florida:",
+        licenseLead: "Licencia DFS de Florida:",
     },
     aboutPage: {
         brand: "BLACKLINE PUBLIC ADJUSTERS LLC",
@@ -370,7 +371,7 @@ export const es = {
         teamHeading: "NUESTRO EQUIPO",
         teamSub:
             "Liderazgo y credenciales — en formato breve.",
-        paLicenseBadge: "Licencia de ajustador público de seguros — divulgación de publicidad DFS",
+        paLicenseBadge: "Licencia DFS de Florida",
         founding: "Ajustador fundador · Principal",
         headshotPlaceholderAria: "Espacio para fotografía profesional",
         miguelLine: "Inglés y español · Florida estatal · base Miami–Dade",
@@ -432,7 +433,7 @@ export const es = {
             },
             {
                 title: "Presentación y negociación",
-                body: "Una vez documentado y presentado el siniestro, impulsamos el proceso: plazos, solicitudes de la aseguradora y negociación hacia la máxima liquidación que su póliza permita.",
+                body: "Una vez documentado y presentado el siniestro, damos seguimiento a los plazos, respondemos a la aseguradora y negociamos los montos que el texto de la póliza y la evidencia respaldan.",
             },
         ],
         commCallout:
@@ -610,7 +611,7 @@ export const es = {
             },
             {
                 title: "Presentación y negociación",
-                body: "Presentamos un expediente completo y empujamos el siniestro en los plazos de la aseguradora — negociando hacia la máxima liquidación que su contrato permita.",
+                body: "Presentamos un expediente completo, seguimos los plazos de la aseguradora y negociamos los montos que el texto de la póliza y la evidencia respaldan.",
             },
         ],
         ctaTitle: "Inicie su reclamación residencial",
@@ -719,7 +720,7 @@ export const es = {
             },
             {
                 title: "Presentación y negociación",
-                body: "Presentamos un expediente completo y aceleramos el siniestro en rondas de revisión — negociando hacia la máxima liquidación que su contrato permita.",
+                body: "Presentamos un expediente completo, seguimos las rondas de revisión de la aseguradora y negociamos los montos que el texto de la póliza y la evidencia respaldan.",
             },
         ],
         ctaTitle: "Inicie su reclamación comercial",

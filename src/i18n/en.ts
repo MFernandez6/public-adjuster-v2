@@ -143,17 +143,17 @@ export const en = {
             {
                 title: "Surgical Precision",
                 description:
-                    "We dissect policy language and disaster evidence to build an undeniable case. We don't adjust; we forensicize.",
+                    "We read the policy against the evidence of the loss and document what we find.",
             },
             {
                 title: "Contractual Force",
                 description:
-                    "Insurance policies are binding contractual documents. We ensure they are enforced exactly as written, with zero compromise.",
+                    "Insurance policies are contracts. We apply the wording that governs the loss, including the limits and exclusions.",
             },
             {
                 title: "Evidence First",
                 description:
-                    "Indisputable forensic reports and industry-standard data form the unwavering foundation of every claim we handle.",
+                    "Inspection notes, photographs, and industry-standard measurements are the file we present to the carrier.",
             },
         ],
         hoverWord: "FORCE",
@@ -200,7 +200,7 @@ export const en = {
         eyebrow: "Execution Protocol",
         heading: "BLACKLINED.",
         sub:
-            "From Redline to Blackline. We enforce the strict letter of your policy to ensure maximum settlement recovery.",
+            "From Redline to Blackline. We present the loss under the policy wording and negotiate from that file.",
         steps: [
             {
                 title: "Forensic Inspection",
@@ -276,7 +276,8 @@ export const en = {
         formErrorValidation: "Check that all fields are filled correctly—including a valid email and phone.",
         formErrorRate: "Too many submissions from this network. Wait an hour or call us.",
         formErrorDelivery: "We could not send your message right now. Please try again or email us.",
-        formErrorConfig: "The site cannot deliver email yet. Your message was not queued—please call or email.",
+        formErrorConfig: "We could not deliver the form automatically. Send the email your mail app just opened, or call us.",
+        formMailto: "Your mail app has a message ready for us. Send it to finish the request.",
         formSuccess: "Thank you—we received your request and will follow up promptly.",
         submit: "Request contact",
         submitting: "Sending…",
@@ -307,11 +308,11 @@ export const en = {
         hq: "HQ Protocol",
         copyright:
             "© 2026 BLACKLINE PUBLIC ADJUSTERS LLC. ALL PROPERTY DATA PROTECTED BY SECURE FORENSIC PROTOCOL.",
-        privacy: "Privacy Protocol",
-        terms: "Terms of Authority",
+        privacy: "Privacy",
+        terms: "Terms",
         addressFallback:
             "Serving Florida policyholders statewide, with offices in South Florida.",
-        licenseLead: "Florida public adjuster license:",
+        licenseLead: "Florida DFS license:",
     },
     aboutPage: {
         brand: "BLACKLINE PUBLIC ADJUSTERS LLC",
@@ -367,7 +368,7 @@ export const en = {
         teamHeading: "OUR TEAM",
         teamSub:
             "Leadership and credentials — summarized for transparency.",
-        paLicenseBadge: "Florida public adjuster license (DFS advertising disclosure)",
+        paLicenseBadge: "Florida DFS license",
         founding: "Founding adjuster · Principal",
         headshotPlaceholderAria: "Headshot placeholder",
         miguelLine: "English & Spanish · Florida statewide · Miami–Dade base",
@@ -429,7 +430,7 @@ export const en = {
             },
             {
                 title: "Submission & negotiation",
-                body: "Once the claim is documented and submitted, we push the process forward — tracking deadlines, responding to carrier requests, and negotiating toward the maximum settlement your policy supports.",
+                body: "Once the claim is documented and submitted, we track deadlines, answer carrier requests, and negotiate the amounts the policy language and the evidence support.",
             },
         ],
         commCallout:
@@ -609,7 +610,7 @@ export const en = {
             },
             {
                 title: "Submission & negotiation",
-                body: "We submit a complete file, then push the claim through carrier timelines — negotiating toward the maximum settlement your contract supports.",
+                body: "We submit a complete file, then follow the carrier's timelines and negotiate the amounts the policy language and the evidence support.",
             },
         ],
         ctaTitle: "Start your homeowner claim",
@@ -718,7 +719,7 @@ export const en = {
             },
             {
                 title: "Submission & negotiation",
-                body: "We submit a complete file, then expedite the claim through review rounds — negotiating toward the maximum settlement your contract supports.",
+                body: "We submit a complete file, then work through the carrier's review rounds and negotiate the amounts the policy language and the evidence support.",
             },
         ],
         ctaTitle: "Start your commercial claim",

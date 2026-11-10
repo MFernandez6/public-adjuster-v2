@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { slidingWindowAllowed, clientIp } from "@/lib/rate-limit";
-import { siteUrl } from "@/config/site";
+import { primaryContactEmail, siteUrl } from "@/config/site";
 import { brandShortName, legalEntityName } from "@/config/branding";
 
 const contactSchema = z.object({
@@ -72,16 +72,18 @@ export async function POST(req: Request) {
     ].join("\n");
 
     const resendKey = process.env.RESEND_API_KEY?.trim();
-    const to = process.env.CONTACT_NOTIFICATION_EMAIL?.trim();
-    const from = process.env.RESEND_FROM_EMAIL?.trim();
+    const to = process.env.CONTACT_NOTIFICATION_EMAIL?.trim() || primaryContactEmail;
+    const from =
+        process.env.RESEND_FROM_EMAIL?.trim() ||
+        "Blackline Public Adjusters <noreply@blacklinepa.com>";
 
-    if (!resendKey || !from || !to) {
-        console.error("[contact] delivery not configured", { requestId, zip: oneLine(payload.zip) });
+    if (!resendKey) {
+        console.error("[contact] RESEND_API_KEY missing", { requestId, zip: oneLine(payload.zip) });
         return NextResponse.json(
             {
                 ok: false,
                 error: "delivery_not_configured",
-                message: "Your message was not sent. Please try again later.",
+                mailto: `mailto:${to}`,
             },
             { status: 503 }
         );

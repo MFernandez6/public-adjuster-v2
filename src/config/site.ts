@@ -13,11 +13,11 @@ function resolveSiteUrl(): string {
 export const siteUrl = resolveSiteUrl();
 
 /** E.164 for tel: links, e.g. +13055550100 */
-export const businessPhoneE164 = process.env.NEXT_PUBLIC_BUSINESS_PHONE_E164?.trim() ?? "";
+export const businessPhoneE164 = process.env.NEXT_PUBLIC_BUSINESS_PHONE_E164?.trim() || "+17864173869";
 
 /** Human-readable phone for display (optional) */
 export const businessPhoneDisplay =
-    process.env.NEXT_PUBLIC_BUSINESS_PHONE_DISPLAY?.trim() ?? "";
+    process.env.NEXT_PUBLIC_BUSINESS_PHONE_DISPLAY?.trim() || "(786) 417-3869";
 
 /**
  * Physical / mailing address lines. Use `|` in env to separate lines:
@@ -32,11 +32,21 @@ export function getBusinessAddressLines(): string[] {
     return [];
 }
 
-export const publicAdjusterLicenseNumber =
-    process.env.NEXT_PUBLIC_PUBLIC_ADJUSTER_LICENSE?.trim() ?? "";
+/**
+ * Advertising disclosure. Empty until NEXT_PUBLIC_PUBLIC_ADJUSTER_LICENSE is
+ * the public-adjuster number counsel approves. G279764 is a 6-20 license and
+ * must not be printed as the public-adjuster number.
+ */
+const BLOCKED_LICENSE_NUMBERS = new Set(["G279764"]);
+
+export const publicAdjusterLicenseNumber = (() => {
+    const value = process.env.NEXT_PUBLIC_PUBLIC_ADJUSTER_LICENSE?.trim() ?? "";
+    if (!value || BLOCKED_LICENSE_NUMBERS.has(value.toUpperCase())) return "";
+    return value;
+})();
 
 export const primaryContactEmail =
-    process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() ?? "";
+    process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "contact@blacklinepa.com";
 
 export const instagramUrl = process.env.NEXT_PUBLIC_INSTAGRAM_URL?.trim() ?? "";
 export const linkedinUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL?.trim() ?? "";

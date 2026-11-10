@@ -28,7 +28,7 @@ export function professionalServiceStructuredData(): Record<string, unknown> {
     if (publicAdjusterLicenseNumber) {
         data.identifier = {
             "@type": "PropertyValue",
-            name: "Florida public adjuster license",
+            name: "Florida DFS license",
             value: publicAdjusterLicenseNumber,
         };
     }

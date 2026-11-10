@@ -7,12 +7,13 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { ArrowRight, Lock, ShieldCheck } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
+import { primaryContactEmail } from "@/config/site";
 
 const DAMAGE_COUNT = 7;
 
 type SubmitStatus =
     | { type: null }
-    | { type: "ok" | "validation" | "rate" | "delivery" | "config" };
+    | { type: "ok" | "validation" | "rate" | "delivery" | "config" | "mailto" };
 
 export default function Contact() {
     const { t } = useLanguage();
@@ -79,7 +80,17 @@ export default function Contact() {
             } else if (res.status === 429) {
                 setStatus({ type: "rate" });
             } else if (res.status === 503 && payload.error === "delivery_not_configured") {
-                setStatus({ type: "config" });
+                const body = [
+                    `Name: ${firstName.trim()} ${lastName.trim()}`,
+                    `Email: ${email.trim()}`,
+                    `Phone: ${phone.trim()}`,
+                    `Property: ${address.trim()}`,
+                    `ZIP: ${zip.trim()}`,
+                    `Damage: ${damageLabel}`,
+                    `SMS consent: ${smsConsent ? "yes" : "no"}`,
+                ].join("\n");
+                window.location.href = `mailto:${primaryContactEmail}?subject=${encodeURIComponent("Blackline claim inquiry")}&body=${encodeURIComponent(body)}`;
+                setStatus({ type: "mailto" });
             } else if (res.status === 422) {
                 setStatus({ type: "validation" });
             } else {
@@ -101,6 +112,8 @@ export default function Contact() {
                 ? t("contact.formErrorRate")
                 : status.type === "config"
                   ? t("contact.formErrorConfig")
+                  : status.type === "mailto"
+                    ? t("contact.formMailto")
                   : status.type === "delivery"
                     ? t("contact.formErrorDelivery")
                     : null;
