@@ -25,7 +25,7 @@ const nextConfig: NextConfig = {
       },
       {
         key: "Permissions-Policy",
-        value: "camera=(), microphone=(), geolocation=()",
+        value: "camera=(), microphone=(), geolocation=(), payment=(), usb=()",
       },
       ...(enabled
         ? [
@@ -40,11 +40,12 @@ const nextConfig: NextConfig = {
         value: [
           "default-src 'self'",
           // Next.js and React hydrate with inline bootstrap; tighten further with nonces later if needed.
-          "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
+          `script-src 'self' 'unsafe-inline'${enabled ? "" : " 'unsafe-eval'"}`,
           "style-src 'self' 'unsafe-inline'",
           "img-src 'self' data: blob: https:",
           "font-src 'self' data:",
-          "connect-src 'self' https://api.resend.com https://vitals.vercel-insights.com",
+          "connect-src 'self' https://vitals.vercel-insights.com",
+          "object-src 'none'",
           "frame-ancestors 'none'",
           "base-uri 'self'",
           "form-action 'self'",
@@ -67,7 +68,7 @@ const nextConfig: NextConfig = {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     minimumCacheTTL: 60,
-    dangerouslyAllowSVG: true,
+    dangerouslyAllowSVG: false,
     contentDispositionType: 'attachment',
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },

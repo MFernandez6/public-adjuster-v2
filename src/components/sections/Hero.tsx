@@ -32,7 +32,7 @@ export default function Hero() {
                         muted
                         loop
                         playsInline
-                        preload="auto"
+                        preload="metadata"
                         poster="/videos/hurricane-aerial-poster.jpg"
                         aria-hidden
                     >

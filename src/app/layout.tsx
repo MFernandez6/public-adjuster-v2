@@ -7,7 +7,7 @@ import { siteUrl } from "@/config/site";
 import { legalEntityName, tradeName } from "@/config/branding";
 import { professionalServiceStructuredData } from "@/lib/structured-data";
 
-const structuredDataJson = JSON.stringify(professionalServiceStructuredData());
+const structuredDataJson = JSON.stringify(professionalServiceStructuredData()).replace(/</g, "\\u003c");
 
 const inter = Inter({
   variable: "--font-inter",

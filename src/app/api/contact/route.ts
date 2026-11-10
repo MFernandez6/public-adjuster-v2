@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { z } from "zod";
 import { slidingWindowAllowed, clientIp } from "@/lib/rate-limit";
-import { primaryContactEmail, siteUrl } from "@/config/site";
+import { siteUrl } from "@/config/site";
 import { brandShortName, legalEntityName } from "@/config/branding";
 
 const contactSchema = z.object({
@@ -16,7 +16,25 @@ const contactSchema = z.object({
     _hp: z.string().optional(),
 });
 
+/** Same-origin browser posts only; blocks cross-site form spam. */
+function sameOrigin(req: Request): boolean {
+    const origin = req.headers.get("origin");
+    if (!origin) return false;
+    const host = req.headers.get("x-forwarded-host") ?? req.headers.get("host");
+    try {
+        return new URL(origin).host === host;
+    } catch {
+        return false;
+    }
+}
+
+const oneLine = (value: string) => value.replace(/[\r\n]+/g, " ").trim();
+
 export async function POST(req: Request) {
+    if (!sameOrigin(req) || !req.headers.get("content-type")?.includes("application/json")) {
+        return NextResponse.json({ ok: false, error: "forbidden" }, { status: 403 });
+    }
+
     const ip = clientIp(req.headers);
     if (!slidingWindowAllowed(`contact:${ip}`, 12, 60 * 60 * 1000)) {
         return NextResponse.json({ ok: false, error: "rate_limited" }, { status: 429 });
@@ -38,6 +56,7 @@ export async function POST(req: Request) {
     }
 
     const payload = parsed.data;
+    const requestId = crypto.randomUUID();
     const textBody = [
         `New ${brandShortName} / ${legalEntityName} contact — ${siteUrl}`,
         "",
@@ -49,46 +68,49 @@ export async function POST(req: Request) {
         `Damage type: ${payload.damageType}`,
         `SMS consent: ${payload.smsConsent ? "yes" : "no"}`,
         `Submitted (UTC): ${new Date().toISOString()}`,
+        `Reference: ${requestId}`,
     ].join("\n");
 
     const resendKey = process.env.RESEND_API_KEY?.trim();
-    const to = process.env.CONTACT_NOTIFICATION_EMAIL?.trim() || primaryContactEmail;
+    const to = process.env.CONTACT_NOTIFICATION_EMAIL?.trim();
     const from = process.env.RESEND_FROM_EMAIL?.trim();
 
-    if (!resendKey || !from) {
-        console.warn(
-            "[contact] RESEND_API_KEY or RESEND_FROM_EMAIL missing — submission logged only:",
-            textBody.replace(/\n/g, " · ")
-        );
+    if (!resendKey || !from || !to) {
+        console.error("[contact] delivery not configured", { requestId, zip: oneLine(payload.zip) });
         return NextResponse.json(
             {
                 ok: false,
                 error: "delivery_not_configured",
-                message:
-                    "Form received but outbound email is not configured. Set RESEND_API_KEY and RESEND_FROM_EMAIL.",
+                message: "Your message was not sent. Please try again later.",
             },
             { status: 503 }
         );
     }
 
-    const res = await fetch("https://api.resend.com/emails", {
-        method: "POST",
-        headers: {
-            Authorization: `Bearer ${resendKey}`,
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-            from,
-            to: [to],
-            reply_to: payload.email,
-            subject: `${brandShortName} contact — ${payload.lastName}, ${payload.zip}`,
-            text: textBody,
-        }),
-    });
+    let res: Response;
+    try {
+        res = await fetch("https://api.resend.com/emails", {
+            method: "POST",
+            headers: {
+                Authorization: `Bearer ${resendKey}`,
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                from,
+                to: [to],
+                reply_to: payload.email,
+                subject: oneLine(`${brandShortName} contact — ${payload.lastName}, ${payload.zip}`),
+                text: textBody,
+            }),
+            signal: AbortSignal.timeout(10_000),
+        });
+    } catch {
+        console.error("[contact] Resend unreachable", { requestId });
+        return NextResponse.json({ ok: false, error: "delivery_failed" }, { status: 502 });
+    }
 
     if (!res.ok) {
-        const msg = await res.text();
-        console.error("[contact] Resend error", res.status, msg);
+        console.error("[contact] Resend error", { requestId, status: res.status });
         return NextResponse.json({ ok: false, error: "delivery_failed" }, { status: 502 });
     }
 

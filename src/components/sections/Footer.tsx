@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Mail, Phone, MapPin, Instagram, Linkedin, Twitter } from "lucide-react";
 import { useLanguage } from "@/contexts/language-context";
+import { legalEntityName } from "@/config/branding";
 import {
     businessPhoneDisplay,
     businessPhoneE164,
@@ -71,7 +72,9 @@ export default function Footer() {
                 title: t("footer.contact"),
                 links: [
                     { name: t("footer.links.audit"), href: "/#contact" },
-                    { name: t("footer.links.email"), href: `mailto:${primaryContactEmail}` },
+                    ...(primaryContactEmail
+                        ? [{ name: t("footer.links.email"), href: `mailto:${primaryContactEmail}` }]
+                        : []),
                 ],
             },
         ],
@@ -189,17 +192,19 @@ export default function Footer() {
                                     </div>
                                 </a>
                             ) : null}
-                            <div className="flex items-center gap-4 group">
-                                <div className="p-2 rounded-lg bg-brand-white/5 text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-navy transition-all">
-                                    <Mail className="w-4 h-4" />
+                            {primaryContactEmail ? (
+                                <div className="flex items-center gap-4 group">
+                                    <div className="p-2 rounded-lg bg-brand-white/5 text-brand-gold group-hover:bg-brand-gold group-hover:text-brand-navy transition-all">
+                                        <Mail className="w-4 h-4" />
+                                    </div>
+                                    <a
+                                        href={`mailto:${primaryContactEmail}`}
+                                        className="text-brand-slate text-xs font-sans tracking-wide transition-opacity hover:text-brand-gold outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 rounded-sm"
+                                    >
+                                        {primaryContactEmail}
+                                    </a>
                                 </div>
-                                <a
-                                    href={`mailto:${primaryContactEmail}`}
-                                    className="text-brand-slate text-xs font-sans tracking-wide transition-opacity hover:text-brand-gold outline-none focus-visible:ring-2 focus-visible:ring-brand-gold/50 rounded-sm"
-                                >
-                                    {primaryContactEmail}
-                                </a>
-                            </div>
+                            ) : null}
                             {license ? (
                                 <p className="pl-14 font-sans text-[10px] uppercase tracking-[0.25em] text-brand-white/55">
                                     {t("footer.licenseLead")}{" "}
@@ -219,9 +224,17 @@ export default function Footer() {
                             height={56}
                             className="shrink-0 select-none opacity-90"
                         />
-                        <p className="text-[10px] uppercase tracking-[0.3em] text-brand-slate/60 text-center md:text-left">
-                            {t("footer.copyright")}
-                        </p>
+                        <div className="space-y-1 text-center md:text-left">
+                            <p className="text-[10px] uppercase tracking-[0.3em] text-brand-slate/60">
+                                {t("footer.copyright")}
+                            </p>
+                            {license ? (
+                                <p className="text-[10px] uppercase tracking-[0.2em] text-brand-white/70">
+                                    {legalEntityName} · {t("footer.licenseLead")}{" "}
+                                    <span className="tracking-normal normal-case">{license}</span>
+                                </p>
+                            ) : null}
+                        </div>
                     </div>
                     <div className="flex items-center gap-8 text-[10px] uppercase tracking-[0.2em] text-brand-slate/60">
                         <Link href="/privacy" className="hover:text-brand-gold transition-colors">

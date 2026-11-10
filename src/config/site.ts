@@ -2,8 +2,15 @@
  * Public site configuration. Set via environment variables in production
  * (see `.env.example`). Never commit secrets.
  */
-export const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://blacklineadjusting.com";
+function resolveSiteUrl(): string {
+    const explicit = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+    if (explicit) return explicit.replace(/\/$/, "");
+    const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
+    if (vercel) return `https://${vercel}`;
+    return "http://localhost:3000";
+}
+
+export const siteUrl = resolveSiteUrl();
 
 /** E.164 for tel: links, e.g. +13055550100 */
 export const businessPhoneE164 = process.env.NEXT_PUBLIC_BUSINESS_PHONE_E164?.trim() ?? "";
@@ -29,7 +36,7 @@ export const publicAdjusterLicenseNumber =
     process.env.NEXT_PUBLIC_PUBLIC_ADJUSTER_LICENSE?.trim() ?? "";
 
 export const primaryContactEmail =
-    process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() ?? "contact@blacklineadjusting.com";
+    process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() ?? "";
 
 export const instagramUrl = process.env.NEXT_PUBLIC_INSTAGRAM_URL?.trim() ?? "";
 export const linkedinUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL?.trim() ?? "";

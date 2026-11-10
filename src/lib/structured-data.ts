@@ -3,6 +3,7 @@ import {
     businessPhoneE164,
     primaryContactEmail,
     getBusinessAddressLines,
+    publicAdjusterLicenseNumber,
 } from "@/config/site";
 import { legalEntityName } from "@/config/branding";
 
@@ -14,7 +15,7 @@ export function professionalServiceStructuredData(): Record<string, unknown> {
         "@type": "ProfessionalService",
         name: legalEntityName,
         url: siteUrl,
-        email: primaryContactEmail,
+        ...(primaryContactEmail ? { email: primaryContactEmail } : {}),
         description:
             "Blackline PA (Blackline Public Adjusters LLC) — Florida licensed public adjusting documenting property losses and negotiating insurance claims.",
         areaServed: {
@@ -23,6 +24,14 @@ export function professionalServiceStructuredData(): Record<string, unknown> {
         },
         priceRange: "$$",
     };
+
+    if (publicAdjusterLicenseNumber) {
+        data.identifier = {
+            "@type": "PropertyValue",
+            name: "Florida public adjuster license",
+            value: publicAdjusterLicenseNumber,
+        };
+    }
 
     const phone = businessPhoneE164.trim();
     if (phone) {
