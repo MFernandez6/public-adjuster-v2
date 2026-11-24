@@ -68,16 +68,11 @@ export default function Hero() {
                         >
                             {t("hero.accentLine")}
                         </motion.p>
-                        <motion.h1
-                            initial={{ opacity: 0, y: 24 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-                            className="font-serif text-4xl leading-[1.1] tracking-tighter sm:text-5xl md:text-7xl md:leading-[1] lg:text-8xl"
-                        >
+                        <h1 className="font-serif text-4xl leading-[1.1] tracking-tighter sm:text-5xl md:text-7xl md:leading-[1] lg:text-8xl">
                             {t("hero.line1")} <br />
                             <span className="gold-gradient text-glow">{t("hero.line2")}</span> <br />
                             {t("hero.line3")}
-                        </motion.h1>
+                        </h1>
 
                         <motion.div
                             initial={{ opacity: 0, y: 12 }}
