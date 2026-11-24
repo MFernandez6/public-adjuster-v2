@@ -12,7 +12,7 @@ export default function Hero() {
     const { t } = useLanguage();
 
     return (
-        <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-brand-deep text-brand-white noise-bg py-20">
+        <section className="relative flex min-h-screen items-center justify-center overflow-hidden bg-brand-deep text-brand-white noise-bg pt-32 pb-20 md:pt-40">
             <div className="absolute inset-0 z-0">
                 <div className="absolute inset-0">
                     <Image
@@ -50,7 +50,7 @@ export default function Hero() {
                         initial={{ opacity: 0, scale: 0.96 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.45, ease: "easeOut" }}
-                        className="mt-2 inline-flex items-center gap-3 rounded-full border border-brand-gold/20 bg-brand-white/[0.03] px-5 py-2.5 md:mt-4"
+                        className="mt-6 inline-flex items-center gap-3 rounded-full border border-brand-gold/20 bg-brand-white/[0.03] px-5 py-2.5 md:mt-8"
                     >
                         <div className="h-1.5 w-1.5 animate-pulse rounded-full bg-brand-gold" />
                         <span className="mr-[-0.4em] font-sans text-[10px] font-bold uppercase tracking-[0.4em] text-brand-gold md:text-xs">
