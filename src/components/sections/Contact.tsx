@@ -1,6 +1,8 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useRef, useState, type FormEvent } from "react";
+import { createPortal } from "react-dom";
+import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -105,7 +107,7 @@ export default function Contact() {
 
     const statusMessage =
         status.type === "ok"
-            ? t("contact.formSuccess")
+            ? null
             : status.type === "validation"
               ? t("contact.formErrorValidation")
               : status.type === "rate"
@@ -364,6 +366,83 @@ export default function Contact() {
                     </div>
                 </div>
             </div>
+            {status.type === "ok" ? (
+                <SentModal message={t("contact.formSuccess")} title={t("contact.formSuccessTitle")} closeLabel={t("contact.formSuccessClose")} onClose={() => setStatus({ type: null })} />
+            ) : null}
         </section>
+    );
+}
+
+function SentModal({
+    title,
+    message,
+    closeLabel,
+    onClose,
+}: {
+    title: string;
+    message: string;
+    closeLabel: string;
+    onClose: () => void;
+}) {
+    const closeRef = useRef<HTMLButtonElement>(null);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    useEffect(() => {
+        if (!mounted) return;
+        closeRef.current?.focus();
+        const onKey = (event: KeyboardEvent) => {
+            if (event.key === "Escape") onClose();
+        };
+        const previousOverflow = document.body.style.overflow;
+        document.body.style.overflow = "hidden";
+        document.addEventListener("keydown", onKey);
+        return () => {
+            document.body.style.overflow = previousOverflow;
+            document.removeEventListener("keydown", onKey);
+        };
+    }, [mounted, onClose]);
+
+    if (!mounted) return null;
+
+    return createPortal(
+        <div className="fixed inset-0 z-[80] flex items-center justify-center p-4" role="presentation">
+            <button type="button" aria-label={closeLabel} className="absolute inset-0 bg-black/55" onClick={onClose} />
+            <div
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="contact-sent-title"
+                className="relative w-full max-w-sm overflow-hidden rounded-2xl border border-brand-gold/30 bg-brand-navy shadow-2xl"
+            >
+                <div className="h-0.5 bg-[linear-gradient(90deg,transparent,var(--brand-gold),transparent)]" />
+                <div className="px-6 py-5">
+                    <Image
+                        src="/brand/blackline-mark.png"
+                        alt=""
+                        width={120}
+                        height={52}
+                        className="h-7 w-auto"
+                    />
+                    <h3 id="contact-sent-title" className="mt-4 font-serif text-xl tracking-tight text-brand-white">
+                        {title}
+                    </h3>
+                    <p className="mt-2 font-sans text-sm leading-relaxed text-brand-slate">{message}</p>
+                    <div className="mt-5 flex justify-end">
+                        <Button
+                            ref={closeRef}
+                            type="button"
+                            onClick={onClose}
+                            className="h-9 bg-brand-gold px-4 font-sans text-sm font-medium text-brand-navy hover:brightness-110"
+                        >
+                            {closeLabel}
+                        </Button>
+                    </div>
+                </div>
+            </div>
+        </div>,
+        document.body
     );
 }
