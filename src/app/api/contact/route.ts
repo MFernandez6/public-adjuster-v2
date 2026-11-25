@@ -3,6 +3,7 @@ import { z } from "zod";
 import { slidingWindowAllowed, clientIp } from "@/lib/rate-limit";
 import { primaryContactEmail, siteUrl } from "@/config/site";
 import { brandShortName, legalEntityName } from "@/config/branding";
+import { escapeHtml, noreplyFromAddress, signatureHtml, signatureText } from "@/lib/email-signature";
 
 const contactSchema = z.object({
     firstName: z.string().trim().min(1).max(120),
@@ -69,13 +70,27 @@ export async function POST(req: Request) {
         `SMS consent: ${payload.smsConsent ? "yes" : "no"}`,
         `Submitted (UTC): ${new Date().toISOString()}`,
         `Reference: ${requestId}`,
+        "",
+        signatureText("noreply"),
     ].join("\n");
+
+    const htmlBody = `<div style="font-family:Arial,Helvetica,sans-serif;font-size:14px;line-height:22px;color:#1c1915;">
+<p style="margin:0 0 12px;">New ${escapeHtml(brandShortName)} / ${escapeHtml(legalEntityName)} contact — <a href="${escapeHtml(siteUrl)}">${escapeHtml(siteUrl)}</a></p>
+<p style="margin:0;">Name: ${escapeHtml(`${payload.firstName} ${payload.lastName}`)}<br/>
+Email: ${escapeHtml(payload.email)}<br/>
+Phone: ${escapeHtml(payload.phone)}<br/>
+Property address: ${escapeHtml(payload.address)}<br/>
+ZIP: ${escapeHtml(payload.zip)}<br/>
+Damage type: ${escapeHtml(payload.damageType)}<br/>
+SMS consent: ${payload.smsConsent ? "yes" : "no"}<br/>
+Submitted (UTC): ${escapeHtml(new Date().toISOString())}<br/>
+Reference: ${escapeHtml(requestId)}</p>
+<div style="margin-top:20px;">${signatureHtml("noreply")}</div>
+</div>`;
 
     const resendKey = process.env.RESEND_API_KEY?.trim();
     const to = process.env.CONTACT_NOTIFICATION_EMAIL?.trim() || primaryContactEmail;
-    const from =
-        process.env.RESEND_FROM_EMAIL?.trim() ||
-        "Blackline Public Adjusters <noreply@blacklinepa.com>";
+    const from = process.env.RESEND_FROM_EMAIL?.trim() || noreplyFromAddress();
 
     if (!resendKey) {
         console.error("[contact] RESEND_API_KEY missing", { requestId, zip: oneLine(payload.zip) });
@@ -103,6 +118,7 @@ export async function POST(req: Request) {
                 reply_to: payload.email,
                 subject: oneLine(`${brandShortName} contact — ${payload.lastName}, ${payload.zip}`),
                 text: textBody,
+                html: htmlBody,
             }),
             signal: AbortSignal.timeout(10_000),
         });

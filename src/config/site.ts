@@ -46,7 +46,7 @@ export const publicAdjusterLicenseNumber = (() => {
 })();
 
 export const primaryContactEmail =
-    process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "contact@blacklinepa.com";
+    process.env.NEXT_PUBLIC_CONTACT_EMAIL?.trim() || "contact@blacklinepublicadjusters.com";
 
 export const instagramUrl = process.env.NEXT_PUBLIC_INSTAGRAM_URL?.trim() ?? "";
 export const linkedinUrl = process.env.NEXT_PUBLIC_LINKEDIN_URL?.trim() ?? "";
